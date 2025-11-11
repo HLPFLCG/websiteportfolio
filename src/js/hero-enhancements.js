@@ -23,10 +23,26 @@
     function initEnhancedParticles() {
         if (typeof particlesJS === 'undefined') return;
         
-        const particlesContainer = document.getElementById('particles-js');
-        if (!particlesContainer) return;
+        // Support multiple particle containers for different pages
+        const particleContainers = [
+            'particles-js',
+            'particles-js-services',
+            'particles-js-contact',
+            'particles-js-portfolio',
+            'particles-js-pricing',
+            'particles-js-about'
+        ];
         
-        particlesJS('particles-js', {
+        particleContainers.forEach(containerId => {
+            const container = document.getElementById(containerId);
+            if (container) {
+                initParticlesForContainer(containerId);
+            }
+        });
+    }
+    
+    function initParticlesForContainer(containerId) {
+        particlesJS(containerId, {
             particles: {
                 number: {
                     value: 80,
@@ -117,7 +133,7 @@
         
         // Reduce particles on mobile
         if (window.innerWidth < 768) {
-            particlesJS('particles-js', {
+            particlesJS(containerId, {
                 particles: {
                     number: {
                         value: 40

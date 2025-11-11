@@ -21,6 +21,9 @@
     <link rel="stylesheet" href="src/css/header-enhancements.css">
     <link rel="stylesheet" href="src/css/animations.css">
     <link rel="stylesheet" href="src/css/logo-styles.css">
+    <link rel="stylesheet" href="src/css/hero-enhancements.css">
+    <link rel="stylesheet" href="src/css/hero-fixes.css">
+    <link rel="stylesheet" href="src/css/visibility-fixes.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <!-- Favicons -->
@@ -58,12 +61,32 @@
     </nav>
 
     <!-- Page Header -->
-    <section class="page-header bg-dark">
+
+    <!-- Hero Section -->
+    <section class="hero hero-secondary">
+        <div class="hero-background" id="particles-js-about"></div>
         <div class="container">
-            <h1 class="page-title">About HLPFL</h1>
-            <p class="page-subtitle">We help entrepreneurs build their online presence with premium websites that don't break the bank.</p>
+            <div class="hero-content">
+                <div class="hero-badge">About Us</div>
+                <h1 class="hero-title">
+                    Our Story
+                </h1>
+                <p class="hero-subtitle">
+                    Building exceptional digital experiences for entrepreneurs
+                </p>
+                <div class="hero-cta">
+                    <a href="contact.html" class="btn btn-primary btn-lg">Work With Us</a>
+                    <a href="portfolio.html" class="btn btn-secondary btn-lg">View Portfolio</a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
         </div>
     </section>
+
 
     <!-- Our Story -->
     <section class="section bg-light">
@@ -205,6 +228,7 @@
     <script src="src/js/seo-enhancements.js"></script>
     <script src="src/js/main.js"></script>
     <script src="src/js/critical-fixes.js"></script>
+    <script src="src/js/hero-enhancements.js"></script>
     <script src="src/js/production-cleanup.js"></script>
 </body>
 </html>

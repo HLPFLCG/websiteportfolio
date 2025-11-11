@@ -21,6 +21,10 @@
     <link rel="stylesheet" href="src/css/header-enhancements.css">
     <link rel="stylesheet" href="src/css/animations.css">
     <link rel="stylesheet" href="src/css/logo-styles.css">
+    <link rel="stylesheet" href="src/css/hero-enhancements.css">
+    <link rel="stylesheet" href="src/css/hero-fixes.css">
+    <link rel="stylesheet" href="src/css/visibility-fixes.css">
+    <link rel="stylesheet" href="src/css/portfolio-redesign.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <!-- Favicons -->
@@ -58,12 +62,32 @@
     </nav>
 
     <!-- Page Header -->
-    <section class="page-header bg-dark">
+
+    <!-- Hero Section -->
+    <section class="hero hero-secondary">
+        <div class="hero-background" id="particles-js-portfolio"></div>
         <div class="container">
-            <h1 class="page-title">Our Work</h1>
-            <p class="page-subtitle">Real projects. Real results. Real businesses we've helped grow.</p>
+            <div class="hero-content">
+                <div class="hero-badge">Our Work</div>
+                <h1 class="hero-title">
+                    Portfolio
+                </h1>
+                <p class="hero-subtitle">
+                    Explore our latest projects and see the quality we deliver
+                </p>
+                <div class="hero-cta">
+                    <a href="contact.html" class="btn btn-primary btn-lg">Start Your Project</a>
+                    <a href="services.html" class="btn btn-secondary btn-lg">View Services</a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
         </div>
     </section>
+
 
     <!-- Portfolio Filter -->
     <section class="portfolio-filter-section bg-light">
@@ -441,6 +465,7 @@
     <script src="src/js/main.js"></script>
     <script src="src/js/portfolio.js"></script>
     <script src="src/js/critical-fixes.js"></script>
+    <script src="src/js/hero-enhancements.js"></script>
     <script src="src/js/production-cleanup.js"></script>
 </body>
 </html>

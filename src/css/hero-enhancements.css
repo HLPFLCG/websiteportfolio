@@ -425,3 +425,71 @@ body.dark-mode .hero {
         display: none;
     }
 }
+/* ============================================
+   SECONDARY PAGE HERO SECTIONS
+   ============================================ */
+
+/* Secondary Hero - Smaller, Cleaner Version */
+.hero-secondary {
+    min-height: 60vh;
+    padding: 8rem 0 4rem;
+}
+
+.hero-secondary .hero-content {
+    max-width: 900px;
+}
+
+.hero-secondary .hero-title {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+}
+
+.hero-secondary .hero-subtitle {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    max-width: 700px;
+}
+
+/* Secondary Hero - Remove Features Section */
+.hero-secondary .hero-features {
+    display: none;
+}
+
+/* Particle Containers for Secondary Pages */
+#particles-js-services,
+#particles-js-contact,
+#particles-js-portfolio,
+#particles-js-pricing,
+#particles-js-about {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0.6;
+}
+
+/* Mobile Adjustments for Secondary Heroes */
+@media (max-width: 768px) {
+    .hero-secondary {
+        min-height: 50vh;
+        padding: 6rem 0 3rem;
+    }
+    
+    .hero-secondary .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-secondary .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero-secondary .hero-cta {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .hero-secondary .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
