@@ -1,0 +1,358 @@
+/* ===================================
+   COMPREHENSIVE WEBSITE OVERHAUL
+   =================================== */
+
+/* ===================================
+   1. NAVBAR FIXES - CRITICAL
+   =================================== */
+
+/* Fix navbar covering hero section */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(26, 29, 35, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Add padding to body to account for fixed navbar */
+body {
+    padding-top: 80px;
+}
+
+/* Hero section should start below navbar */
+.hero {
+    margin-top: 0;
+    padding-top: 4rem;
+}
+
+/* Cleaner navbar design */
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Logo styling */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.logo-container:hover {
+    opacity: 0.8;
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+}
+
+/* Navigation links */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #c87941;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #c87941;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* CTA Button in nav */
+.nav-menu .btn-primary {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+    margin-left: 1rem;
+}
+
+/* ===================================
+   2. MOBILE OPTIMIZATION - CRITICAL
+   =================================== */
+
+@media (max-width: 768px) {
+    /* Simpler mobile navbar */
+    body {
+        padding-top: 70px;
+    }
+    
+    .navbar {
+        padding: 0.75rem 0;
+    }
+    
+    .nav-wrapper {
+        padding: 0 1.25rem;
+    }
+    
+    .logo-img {
+        height: 32px;
+    }
+    
+    .logo-text {
+        font-size: 1.25rem;
+    }
+    
+    /* Mobile menu */
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: calc(100vh - 70px);
+        background: #1a1d23;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding: 2rem;
+        transition: right 0.3s ease;
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.3);
+        overflow-y: auto;
+    }
+    
+    .nav-menu.active {
+        right: 0;
+    }
+    
+    .nav-link {
+        width: 100%;
+        padding: 1rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 1.125rem;
+    }
+    
+    .nav-link::after {
+        display: none;
+    }
+    
+    .nav-menu .btn-primary {
+        width: 100%;
+        margin: 1rem 0 0 0;
+        text-align: center;
+    }
+    
+    /* Mobile menu button */
+    .mobile-menu-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 44px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+    }
+    
+    .mobile-menu-btn span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: #ffffff;
+        margin: 3px 0;
+        transition: all 0.3s ease;
+        border-radius: 2px;
+    }
+    
+    .mobile-menu-btn.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .mobile-menu-btn.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .mobile-menu-btn.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    /* Simpler hero on mobile */
+    .hero {
+        min-height: 80vh;
+        padding-top: 2rem;
+    }
+    
+    .hero-content {
+        padding: 2rem 1rem;
+    }
+    
+    .hero-title {
+        font-size: 2rem !important;
+        line-height: 1.2;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem !important;
+        line-height: 1.6;
+    }
+    
+    .hero-cta {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .hero-cta .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    /* Hide hero features on mobile for simplicity */
+    .hero-features {
+        display: none;
+    }
+    
+    /* Simpler sections on mobile */
+    .section {
+        padding: 3rem 0;
+    }
+    
+    .container {
+        padding: 0 1.25rem;
+    }
+    
+    /* Single column grids on mobile */
+    .stats-grid,
+    .value-grid,
+    .portfolio-grid,
+    .service-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+}
+
+/* Hide mobile menu button on desktop */
+@media (min-width: 769px) {
+    .mobile-menu-btn {
+        display: none;
+    }
+}
+
+/* ===================================
+   3. SIMPLIFIED MOBILE STYLES
+   =================================== */
+
+@media (max-width: 768px) {
+    /* Reduce visual complexity on mobile */
+    .hero-background {
+        opacity: 0.3 !important;
+    }
+    
+    /* Simpler animations on mobile */
+    [data-aos] {
+        animation: none !important;
+    }
+    
+    /* Larger touch targets */
+    a, button, .btn {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    /* Better spacing */
+    .section-title {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    /* Simpler cards */
+    .card,
+    .value-card,
+    .portfolio-card,
+    .service-card {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* ===================================
+   4. ENSURE HERO IS FULLY VISIBLE
+   =================================== */
+
+/* Make sure hero content is never covered */
+.hero-content {
+    position: relative;
+    z-index: 10;
+    padding-top: 2rem;
+}
+
+/* Ensure scroll indicator doesn't interfere */
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+}
+
+/* ===================================
+   5. PERFORMANCE OPTIMIZATIONS
+   =================================== */
+
+/* Reduce animations for better mobile performance */
+@media (max-width: 768px) {
+    * {
+        animation-duration: 0.3s !important;
+    }
+    
+    .hero {
+        background-size: 200% 200% !important;
+    }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition-duration: 0.01ms !important;
+    }
+}
