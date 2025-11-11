@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | HLPFL Consulting Group</title>
+    <meta name="description" content="Get in touch to discuss your web development project. Free consultation, no obligation.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="src/css/main.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">HLPFL Consulting</span>
+                </a>
+                <div class="nav-menu" id="nav-menu">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="portfolio.html" class="nav-link">Portfolio</a>
+                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="process.html" class="nav-link">Process</a>
+                    <a href="pricing.html" class="nav-link">Pricing</a>
+                    <a href="contact.html" class="btn btn-primary">Get Started</a>
+                </div>
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Let's Talk</h1>
+            <p class="page-subtitle">Ready to start your project? Have questions? Let's connect.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper" data-aos="fade-right">
+                    <h2 class="contact-form-title">Send Us a Message</h2>
+                    <p class="contact-form-subtitle">Fill out the form below and we'll get back to you within 24 hours.</p>
+                    
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Your Name *</label>
+                            <input type="text" id="name" name="name" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address *</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Phone Number (Optional)</label>
+                            <input type="tel" id="phone" name="phone" class="form-input">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="business" class="form-label">Business Name</label>
+                            <input type="text" id="business" name="business" class="form-input">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="website" class="form-label">Current Website (if any)</label>
+                            <input type="url" id="website" name="website" class="form-input" placeholder="https://">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">What are you looking for? *</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="services" value="website">
+                                    <span>Custom Website ($5,000)</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="services" value="logo">
+                                    <span>Logo Design ($1,500)</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="services" value="branding">
+                                    <span>Branding Kit ($500)</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="services" value="complete">
+                                    <span>Complete Package</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="services" value="questions">
+                                    <span>Just have questions</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">Tell us about your project *</label>
+                            <textarea id="message" name="message" class="form-textarea" rows="5" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Preferred Contact Method</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="contact-method" value="email" checked>
+                                    <span>Email</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="contact-method" value="phone">
+                                    <span>Phone</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="contact-method" value="either">
+                                    <span>Either</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">Send Message</button>
+                        
+                        <p class="form-note">We'll respond within 24 hours (usually much faster!)</p>
+                    </form>
+
+                    <div id="form-success" class="form-message success" style="display: none;">
+                        <p>✓ Thank you! Your message has been sent successfully. We'll get back to you soon.</p>
+                    </div>
+
+                    <div id="form-error" class="form-message error" style="display: none;">
+                        <p>✗ Oops! Something went wrong. Please try again or email us directly.</p>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info-wrapper" data-aos="fade-left">
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon">📧</div>
+                        <h3 class="contact-info-title">Email</h3>
+                        <p class="contact-info-text">hello@hlpflconsultinggroup.com</p>
+                        <p class="contact-info-note">We respond within 24 hours</p>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon">📅</div>
+                        <h3 class="contact-info-title">Schedule a Call</h3>
+                        <p class="contact-info-text">Book a free 15-30 minute consultation</p>
+                        <a href="#" class="contact-info-link">Schedule Now →</a>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon">💬</div>
+                        <h3 class="contact-info-title">Social Media</h3>
+                        <p class="contact-info-text">Follow us for tips and updates</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="LinkedIn">LinkedIn</a>
+                            <a href="#" class="social-link" aria-label="Twitter">Twitter</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card highlight">
+                        <h3 class="contact-info-title">Why Choose Us?</h3>
+                        <ul class="contact-info-list">
+                            <li>✓ Free consultation, no obligation</li>
+                            <li>✓ 72-hour turnaround available</li>
+                            <li>✓ Fixed pricing, no surprises</li>
+                            <li>✓ 30 days of support included</li>
+                            <li>✓ 98% client satisfaction rate</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq-section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Quick Answers</h2>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item" data-aos="fade-up">
+                    <h3 class="faq-question">How quickly will you respond?</h3>
+                    <p class="faq-answer">Within 24 hours, usually within a few hours. We respect your time and know you're eager to get started.</p>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="faq-question">Is the consultation really free?</h3>
+                    <p class="faq-answer">Yes! The initial consultation is completely free with no obligation. We'll discuss your needs, answer your questions, and provide a custom proposal.</p>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="faq-question">What information should I prepare?</h3>
+                    <p class="faq-answer">Just come ready to talk about your business and goals. We'll guide you through everything else. If you have examples of websites you like, that's helpful but not required.</p>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="faq-question">Do you work with businesses outside your area?</h3>
+                    <p class="faq-answer">Absolutely! We work with clients nationwide. Everything is handled remotely, so your location doesn't matter.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Prefer to See Our Work First?</h2>
+                <p class="cta-description">Check out our portfolio to see examples of websites we've built for businesses like yours.</p>
+                <div class="cta-buttons">
+                    <a href="portfolio.html" class="btn btn-accent btn-lg">View Portfolio</a>
+                    <a href="pricing.html" class="btn btn-secondary btn-lg">View Pricing</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <span class="logo-text">HLPFL Consulting</span>
+                    </div>
+                    <p class="footer-description">
+                        Transforming business visions into reality with premium web development.
+                    </p>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Custom Web Design</a></li>
+                        <li><a href="services.html#logo">Logo Design</a></li>
+                        <li><a href="services.html#branding">Branding Kit</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="process.html">Process</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="contact.html">Get in Touch</a></li>
+                        <li><a href="mailto:hello@hlpflconsultinggroup.com">hello@hlpflconsultinggroup.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2024 HLPFL Consulting Group. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="src/js/main.js"></script>
+    <script src="src/js/contact.js"></script>
+</body>
+</html>
