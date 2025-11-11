@@ -232,45 +232,18 @@
         }
 
         try {
-            // TODO: Replace with actual FormSpree endpoint
-            // const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
-            //     method: 'POST',
-            //     body: formData,
-            //     headers: {
-            //         'Accept': 'application/json'
-            //     }
-            // });
-
-            // Simulate API call for now
-            await new Promise(resolve => setTimeout(resolve, 1500));
-
-            // Simulate success
-            const response = { ok: true };
+            // FormSpree endpoint configured
+            const response = await fetch('https://formspree.io/f/mgvreyge', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
 
             if (response.ok) {
-                // Show success message
-                if (successMsg) {
-                    successMsg.style.display = 'block';
-                    successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                }
-
-                // Reset form
-                form.reset();
-                
-                // Clear validation states
-                inputs.forEach(input => {
-                    input.classList.remove('valid', 'invalid');
-                });
-
-                // Update progress bar
-                const progressBar = document.querySelector('.form-progress-bar');
-                if (progressBar) progressBar.style.width = '0%';
-
-                // Hide success message after 5 seconds
-                setTimeout(() => {
-                    if (successMsg) successMsg.style.display = 'none';
-                }, 5000);
-
+                // Redirect to thank you page
+                window.location.href = 'thank-you.html';
             } else {
                 throw new Error('Form submission failed');
             }
