@@ -1,0 +1,100 @@
+/* ============================================
+   HERO TEXT VISIBILITY FIXES
+   ============================================ */
+
+/* Fix hero title visibility - override conflicting styles */
+.hero-title {
+    font-size: clamp(2.5rem, 8vw, 5rem) !important;
+    font-weight: 800 !important;
+    margin-bottom: 1.5rem !important;
+    line-height: 1.2 !important;
+    color: #ffffff !important;
+    opacity: 1 !important;
+    transform: none !important;
+    animation: fadeInUp 1s ease forwards !important;
+    /* Remove gradient text effect that causes invisibility */
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: #ffffff !important;
+    background-clip: unset !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Ensure typed text is visible */
+.typed-text {
+    color: var(--accent-copper) !important;
+    opacity: 1 !important;
+}
+
+/* Fix hero subtitle visibility */
+.hero-subtitle {
+    font-size: clamp(1.25rem, 3vw, 2rem) !important;
+    color: rgba(255, 255, 255, 0.95) !important;
+    margin-bottom: 2rem !important;
+    font-weight: 400 !important;
+    opacity: 1 !important;
+    transform: none !important;
+    animation: fadeInUp 1s ease 0.3s forwards !important;
+}
+
+/* Fix hero CTA visibility */
+.hero-cta {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: fadeInUp 1s ease 0.6s forwards !important;
+}
+
+/* Fix hero features visibility */
+.hero-features {
+    opacity: 1 !important;
+    animation: fadeInUp 1s ease 0.9s forwards !important;
+}
+
+/* Ensure hero content is above particles */
+.hero-content {
+    position: relative !important;
+    z-index: 10 !important;
+}
+
+/* Fix hero badge visibility */
+.hero-badge {
+    color: #ffffff !important;
+    opacity: 1 !important;
+}
+
+/* Simple fade in animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile fixes */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem !important;
+        color: #ffffff !important;
+        opacity: 1 !important;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.125rem !important;
+        color: rgba(255, 255, 255, 0.95) !important;
+        opacity: 1 !important;
+    }
+}
+
+/* Ensure visibility on all backgrounds */
+.hero-title,
+.hero-subtitle,
+.hero-badge,
+.typed-text {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
