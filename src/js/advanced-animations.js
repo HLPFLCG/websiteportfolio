@@ -38,6 +38,9 @@ class AdvancedAnimations {
 
         gsap.registerPlugin(ScrollTrigger);
 
+        // Simple hero fade in (no text breaking)
+        this.heroFadeIn();
+        
         // Hero parallax effect
         this.heroParallax();
         
@@ -50,8 +53,21 @@ class AdvancedAnimations {
         // Floating elements
         this.floatingElements();
         
-        // Text reveal animations
+        // Text reveal animations (section titles only)
         this.textReveals();
+    }
+    
+    heroFadeIn() {
+        const heroContent = document.querySelector('.hero-content');
+        if (!heroContent) return;
+        
+        gsap.from(heroContent, {
+            opacity: 0,
+            y: 30,
+            duration: 1,
+            ease: 'power2.out',
+            delay: 0.2
+        });
     }
 
     heroParallax() {
@@ -137,9 +153,14 @@ class AdvancedAnimations {
     }
 
     textReveals() {
-        const headings = document.querySelectorAll('.section-title, .hero-title');
+        // Only apply to section titles, NOT hero title
+        const headings = document.querySelectorAll('.section-title');
         
         headings.forEach(heading => {
+            // Skip if already processed
+            if (heading.dataset.animated) return;
+            heading.dataset.animated = 'true';
+            
             const text = heading.textContent;
             heading.innerHTML = '';
             
