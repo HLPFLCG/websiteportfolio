@@ -1,0 +1,588 @@
+/* ===================================
+   SERVICES PAGE REDESIGN
+   Modern, Interactive Service Cards
+   =================================== */
+
+/* Service Cards Enhancement */
+.service-detail-card {
+    background: linear-gradient(135deg, var(--color-dark-1) 0%, var(--color-dark-2) 100%);
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-detail-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-accent-1), var(--color-accent-2));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-detail-card:hover::before {
+    transform: scaleX(1);
+}
+
+.service-detail-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 80px rgba(200, 121, 65, 0.2);
+}
+
+/* Service Badge */
+.service-detail-badge {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background: linear-gradient(135deg, var(--color-accent-1), var(--color-accent-2));
+    color: var(--color-dark-1);
+    font-weight: 600;
+    font-size: 0.875rem;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    animation: badge-pulse 2s ease-in-out infinite;
+}
+
+@keyframes badge-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* Service Title */
+.service-detail-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-light);
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--color-light), var(--color-accent-1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Service Price */
+.service-detail-price {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--color-accent-1);
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.service-detail-price::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-accent-1), transparent);
+}
+
+/* Service Grid */
+.service-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    margin: 3rem 0;
+}
+
+/* Service Lists */
+.service-detail-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.service-detail-list li {
+    padding: 0.75rem 0;
+    color: var(--color-light);
+    font-size: 1rem;
+    line-height: 1.6;
+    position: relative;
+    padding-left: 2rem;
+    transition: all 0.3s ease;
+}
+
+.service-detail-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent-1);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.service-detail-list li:hover {
+    padding-left: 2.5rem;
+    color: var(--color-accent-1);
+}
+
+/* Add-On Cards */
+.addon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.addon-card {
+    background: var(--color-dark-2);
+    border-radius: 16px;
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid transparent;
+}
+
+.addon-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, var(--color-accent-1), var(--color-secondary-1));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 0;
+}
+
+.addon-card:hover::before {
+    opacity: 0.1;
+}
+
+.addon-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: var(--color-accent-1);
+    box-shadow: 0 20px 40px rgba(200, 121, 65, 0.2);
+}
+
+.addon-card > * {
+    position: relative;
+    z-index: 1;
+}
+
+.addon-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    display: block;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.addon-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--color-light);
+    margin-bottom: 1rem;
+}
+
+.addon-price {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--color-accent-1);
+    margin-bottom: 1rem;
+}
+
+.addon-description {
+    color: var(--color-text-secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.addon-subheading {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-accent-1);
+    margin: 1.5rem 0 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.addon-features {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 2rem;
+}
+
+.addon-features li {
+    padding: 0.5rem 0;
+    color: var(--color-light);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.addon-features li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent-1);
+}
+
+/* Package Cards */
+.packages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.package-card {
+    background: var(--color-dark-2);
+    border-radius: 20px;
+    padding: 2.5rem;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid var(--color-dark-3);
+}
+
+.package-card.featured {
+    background: linear-gradient(135deg, var(--color-dark-2), var(--color-dark-3));
+    border-color: var(--color-accent-1);
+    transform: scale(1.05);
+    box-shadow: 0 20px 60px rgba(200, 121, 65, 0.3);
+}
+
+.package-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: var(--color-accent-1);
+    box-shadow: 0 20px 40px rgba(200, 121, 65, 0.2);
+}
+
+.package-card.featured:hover {
+    transform: translateY(-10px) scale(1.07);
+}
+
+.package-badge {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    background: linear-gradient(135deg, var(--color-accent-1), var(--color-accent-2));
+    color: var(--color-dark-1);
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.package-name {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--color-light);
+    margin-bottom: 1rem;
+}
+
+.package-price {
+    margin: 1.5rem 0;
+}
+
+.price-amount {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--color-accent-1);
+}
+
+.package-description {
+    color: var(--color-text-secondary);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.package-features {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.package-features li {
+    padding: 0.75rem 0;
+    color: var(--color-light);
+    border-bottom: 1px solid var(--color-dark-3);
+    transition: all 0.3s ease;
+}
+
+.package-features li:hover {
+    padding-left: 1rem;
+    color: var(--color-accent-1);
+}
+
+/* Not Included Section */
+.not-included-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.not-included-card {
+    background: var(--color-dark-2);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid var(--color-dark-3);
+}
+
+.not-included-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-accent-1);
+    box-shadow: 0 10px 30px rgba(200, 121, 65, 0.15);
+}
+
+.not-included-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.not-included-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-light);
+    margin-bottom: 0.5rem;
+}
+
+.not-included-cost {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-accent-1);
+    margin-bottom: 1rem;
+}
+
+.not-included-description {
+    color: var(--color-text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.not-included-note {
+    background: var(--color-dark-2);
+    border-left: 4px solid var(--color-accent-1);
+    padding: 1.5rem;
+    margin-top: 3rem;
+    border-radius: 8px;
+}
+
+.not-included-note p {
+    color: var(--color-light);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Payment Cards */
+.payment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.payment-card {
+    background: var(--color-dark-2);
+    border-radius: 16px;
+    padding: 2.5rem;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid var(--color-dark-3);
+    position: relative;
+    overflow: hidden;
+}
+
+.payment-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(200, 121, 65, 0.1), transparent);
+    transition: left 0.6s ease;
+}
+
+.payment-card:hover::before {
+    left: 100%;
+}
+
+.payment-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--color-accent-1);
+    box-shadow: 0 20px 40px rgba(200, 121, 65, 0.2);
+}
+
+.payment-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.payment-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-light);
+    margin-bottom: 1rem;
+}
+
+.payment-discount {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, var(--color-accent-1), var(--color-accent-2));
+    color: var(--color-dark-1);
+    font-weight: 600;
+    font-size: 0.875rem;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+}
+
+.payment-description {
+    color: var(--color-text-secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.payment-example {
+    background: var(--color-dark-3);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+}
+
+.payment-example strong {
+    color: var(--color-accent-1);
+}
+
+/* Package Note */
+.package-note {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 1.5rem;
+    background: var(--color-dark-2);
+    border-radius: 12px;
+    border: 2px solid var(--color-accent-1);
+}
+
+.package-note p {
+    color: var(--color-light);
+    font-size: 1.125rem;
+    margin: 0;
+}
+
+/* FAQ Section Enhancements */
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.faq-item {
+    background: var(--color-dark-2);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.faq-item:hover {
+    border-color: var(--color-accent-1);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(200, 121, 65, 0.15);
+}
+
+.faq-question {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-light);
+    margin-bottom: 1rem;
+}
+
+.faq-answer {
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .service-detail-card {
+        padding: 2rem;
+    }
+    
+    .service-detail-title {
+        font-size: 2rem;
+    }
+    
+    .service-detail-price {
+        font-size: 2.5rem;
+    }
+    
+    .service-detail-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .addon-grid,
+    .packages-grid,
+    .not-included-grid,
+    .payment-grid,
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .package-card.featured {
+        transform: scale(1);
+    }
+    
+    .package-card.featured:hover {
+        transform: translateY(-10px) scale(1.02);
+    }
+}
+
+/* Animation Classes */
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Smooth Scroll Behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Service CTA Enhancement */
+.service-detail-cta {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 3rem;
+    border-top: 2px solid var(--color-dark-3);
+}
+
+.service-detail-cta .btn {
+    min-width: 250px;
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+}
