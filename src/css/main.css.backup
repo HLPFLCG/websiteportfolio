@@ -5,50 +5,24 @@
 /* CSS Variables */
 :root {
     /* Colors */
-    --color-dark-900: #1a1d23;
-    --color-dark-800: #23272f;
-    --color-dark-700: #2d323c;
+    --color-dark-900: #0A0E27;
+    --color-dark-800: #1E293B;
+    --color-dark-700: #334155;
     --color-dark-600: #475569;
-    --color-primary-500: #c87941;
-    --color-primary-600: #e09560;
-    --color-primary-700: #a65f2f;
-    --color-accent-500: #2c5f6f;
-    --color-accent-600: #3d7a8c;
+    --color-primary-500: #6366F1;
+    --color-primary-600: #4F46E5;
+    --color-primary-700: #4338CA;
+    --color-accent-500: #10B981;
+    --color-accent-600: #059669;
     --color-white: #FFFFFF;
-    --color-gray-50: #f8fafc;
-    --color-gray-100: #f1f5f9;
-    --color-gray-200: #e2e8f0;
-    --color-gray-300: #cbd5e1;
-    
-    /* Text Colors */
-    --text-primary: #2d3748;
-    --text-muted: #64748b;
-    --text-light: #94a3b8;
-    --text-on-dark: #f8fafc;
-    
-    /* Additional Accent Shades */
-    --color-primary-subtle: #f4e4d7;
-    --color-accent-700: #1e4450;
-    --color-accent-subtle: #e6f2f5;
-    
-    /* Gradients */
-    --gradient-gold: linear-gradient(135deg, #c87941 0%, #e09560 100%);
-    --gradient-teal: linear-gradient(135deg, #2c5f6f 0%, #3d7a8c 100%);
-    --gradient-hero: linear-gradient(135deg, #1a1d23 0%, #23272f 100%);
-    
-    /* Shadows */
-    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.06);
-    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.06);
-    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.08), 0 4px 6px rgba(0, 0, 0, 0.05);
-    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.10), 0 10px 10px rgba(0, 0, 0, 0.04);
-    
-    /* Glows */
-    --glow-gold: 0 0 20px rgba(200, 121, 65, 0.25);
-    --glow-teal: 0 0 20px rgba(44, 95, 111, 0.25);
+    --color-gray-50: #F9FAFB;
+    --color-gray-100: #F3F4F6;
+    --color-gray-200: #E5E7EB;
+    --color-gray-300: #D1D5DB;
     
     /* Typography */
-    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    --font-display: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-display: 'Space Grotesk', 'Inter', sans-serif;
     
     /* Spacing */
     --space-1: 0.25rem;
@@ -62,9 +36,9 @@
     --space-24: 6rem;
     
     /* Transitions */
-    --transition-fast: 0.15s ease-out;
-    --transition-base: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    --transition-slow: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    --transition-fast: 150ms ease;
+    --transition-base: 300ms ease;
+    --transition-slow: 500ms ease;
 }
 
 /* Reset & Base Styles */
@@ -81,8 +55,8 @@ html {
 
 body {
     font-family: var(--font-sans);
-    color: var(--text-on-dark);
-    background-color: var(--color-dark-900);
+    color: var(--color-dark-900);
+    background-color: var(--color-white);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -155,31 +129,17 @@ img {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: var(--space-4);
-    color: var(--text-primary);
 }
 
 .section-subtitle {
     font-size: 1.125rem;
-    color: var(--text-muted);
+    color: var(--color-dark-600);
     max-width: 600px;
     margin: 0 auto;
 }
 
 .bg-light {
-    background-color: var(--color-white);
-}
-
-.bg-dark {
-    background-color: var(--color-dark-900);
-    color: var(--text-on-dark);
-}
-
-.bg-dark .section-title {
-    color: var(--text-on-dark);
-}
-
-.bg-dark .section-subtitle {
-    color: var(--text-light);
+    background-color: var(--color-gray-50);
 }
 
 /* Buttons */
@@ -197,39 +157,36 @@ img {
 }
 
 .btn-primary {
-    background: var(--gradient-gold);
+    background-color: var(--color-primary-500);
     color: var(--color-white);
-    box-shadow: var(--shadow-md);
 }
 
 .btn-primary:hover {
-    background: linear-gradient(135deg, #e09560 0%, #f0b080 100%);
+    background-color: var(--color-primary-600);
     transform: translateY(-2px);
-    box-shadow: var(--shadow-lg), var(--glow-gold);
+    box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
 }
 
 .btn-secondary {
     background-color: transparent;
-    color: var(--color-primary-500);
-    border: 2px solid var(--color-primary-500);
+    color: var(--color-white);
+    border: 2px solid var(--color-white);
 }
 
 .btn-secondary:hover {
-    background-color: var(--color-primary-500);
-    color: var(--color-white);
-    box-shadow: var(--shadow-md), var(--glow-gold);
+    background-color: var(--color-white);
+    color: var(--color-dark-900);
 }
 
 .btn-accent {
-    background: var(--gradient-teal);
+    background-color: var(--color-accent-500);
     color: var(--color-white);
-    box-shadow: var(--shadow-md);
 }
 
 .btn-accent:hover {
-    background: linear-gradient(135deg, #3d7a8c 0%, #4d95ab 100%);
+    background-color: var(--color-accent-600);
     transform: translateY(-2px);
-    box-shadow: var(--shadow-lg), var(--glow-teal);
+    box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
 }
 
 .btn-outline {
@@ -260,10 +217,9 @@ img {
     left: 0;
     right: 0;
     z-index: 1000;
-    background-color: rgba(26, 29, 35, 0.95);
+    background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
-    box-shadow: var(--shadow-md);
-    border-bottom: 1px solid rgba(226, 232, 240, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     transition: all var(--transition-base);
 }
 
@@ -277,7 +233,7 @@ img {
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
-    background: var(--gradient-gold);
+    background: linear-gradient(135deg, var(--color-primary-500), var(--color-accent-500));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -296,15 +252,14 @@ img {
 }
 
 .nav-link {
-    color: var(--text-on-dark);
+    color: var(--color-dark-700);
     font-weight: 500;
     transition: color var(--transition-base);
-    position: relative;
 }
 
 .nav-link:hover,
 .nav-link.active {
-    color: var(--color-primary-600);
+    color: var(--color-primary-500);
 }
 
 .mobile-menu-btn {
@@ -381,7 +336,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--gradient-hero);
+    background: linear-gradient(135deg, var(--color-dark-900) 0%, var(--color-primary-900) 50%, var(--color-dark-900) 100%);
     color: var(--color-white);
     overflow: hidden;
     padding-top: 80px;
@@ -767,23 +722,22 @@ img {
 
 .service-card {
     background-color: var(--color-white);
-    border: 1px solid var(--color-gray-200);
+    border: 2px solid var(--color-gray-200);
     border-radius: 1rem;
     padding: var(--space-8);
     transition: all var(--transition-base);
     position: relative;
-    box-shadow: var(--shadow-sm);
 }
 
 .service-card:hover {
     border-color: var(--color-primary-500);
-    box-shadow: var(--shadow-xl);
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.1);
     transform: translateY(-4px);
 }
 
 .service-card.featured {
     border-color: var(--color-primary-500);
-    box-shadow: var(--shadow-lg), var(--glow-gold);
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
 }
 
 .service-badge {
@@ -916,10 +870,9 @@ img {
 
 /* Footer */
 .footer {
-    background-color: var(--color-dark-800);
-    color: var(--text-light);
+    background-color: var(--color-dark-900);
+    color: var(--color-gray-300);
     padding: var(--space-16) 0 var(--space-8);
-    border-top: 1px solid var(--color-gray-300);
 }
 
 .footer-content {
@@ -1039,275 +992,4 @@ img {
 .loading {
     opacity: 0.5;
     pointer-events: none;
-}
-/* ===================================
-   Form Styles - HLPFL Brand
-   =================================== */
-
-.form-group {
-    margin-bottom: var(--space-6);
-}
-
-.form-label {
-    display: block;
-    margin-bottom: var(--space-2);
-    font-weight: 500;
-    color: var(--text-primary);
-}
-
-.form-input,
-.form-textarea,
-.form-select {
-    width: 100%;
-    padding: 0.75rem 1rem;
-    border: 2px solid var(--color-gray-200);
-    border-radius: 0.5rem;
-    font-family: var(--font-sans);
-    font-size: 1rem;
-    color: var(--text-primary);
-    background-color: var(--color-white);
-    transition: all var(--transition-base);
-}
-
-.form-input:focus,
-.form-textarea:focus,
-.form-select:focus {
-    outline: none;
-    border-color: var(--color-primary-500);
-    box-shadow: 0 0 0 3px rgba(200, 121, 65, 0.1);
-}
-
-.form-textarea {
-    min-height: 150px;
-    resize: vertical;
-}
-
-.form-checkbox,
-.form-radio {
-    margin-right: var(--space-2);
-    accent-color: var(--color-primary-500);
-}
-
-.form-error {
-    color: #dc2626;
-    font-size: 0.875rem;
-    margin-top: var(--space-1);
-}
-
-.form-success {
-    color: #059669;
-    font-size: 0.875rem;
-    margin-top: var(--space-1);
-}
-
-/* Dark background form styles */
-.bg-dark .form-label {
-    color: var(--text-on-dark);
-}
-
-.bg-dark .form-input,
-.bg-dark .form-textarea,
-.bg-dark .form-select {
-    background-color: var(--color-dark-700);
-    border-color: var(--color-dark-600);
-    color: var(--text-on-dark);
-}
-
-.bg-dark .form-input:focus,
-.bg-dark .form-textarea:focus,
-.bg-dark .form-select:focus {
-    border-color: var(--color-primary-500);
-    background-color: var(--color-dark-800);
-}
-
-.bg-dark .form-input::placeholder,
-.bg-dark .form-textarea::placeholder {
-    color: var(--text-light);
-}
-
-/* ===================================
-   Additional Dark Theme Refinements
-   =================================== */
-
-/* Ensure all text on dark backgrounds is readable */
-.bg-dark h1,
-.bg-dark h2,
-.bg-dark h3,
-.bg-dark h4,
-.bg-dark h5,
-.bg-dark h6 {
-    color: var(--text-on-dark);
-}
-
-.bg-dark p,
-.bg-dark li {
-    color: var(--text-light);
-}
-
-/* Stats/Numbers styling */
-.stat-number {
-    background: var(--gradient-gold);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-/* Icon styling */
-.icon {
-    color: var(--color-primary-500);
-    transition: color var(--transition-base);
-}
-
-.icon:hover {
-    color: var(--color-primary-600);
-}
-
-/* Portfolio cards */
-.portfolio-card {
-    background-color: var(--color-white);
-    border: 1px solid var(--color-gray-200);
-    border-radius: 1rem;
-    overflow: hidden;
-    transition: all var(--transition-base);
-    box-shadow: var(--shadow-sm);
-}
-
-.portfolio-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-xl);
-    border-color: var(--color-primary-500);
-}
-
-/* Pricing cards */
-.pricing-card {
-    background-color: var(--color-white);
-    border: 2px solid var(--color-gray-200);
-    border-radius: 1rem;
-    padding: var(--space-8);
-    transition: all var(--transition-base);
-    box-shadow: var(--shadow-sm);
-}
-
-.pricing-card:hover {
-    border-color: var(--color-primary-500);
-    box-shadow: var(--shadow-lg), var(--glow-gold);
-    transform: translateY(-4px);
-}
-
-.pricing-card.featured {
-    border-color: var(--color-primary-500);
-    box-shadow: var(--shadow-lg), var(--glow-gold);
-    position: relative;
-}
-
-.pricing-card.featured::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: var(--gradient-gold);
-}
-
-/* Process steps */
-.process-step {
-    background-color: var(--color-white);
-    border: 1px solid var(--color-gray-200);
-    border-radius: 1rem;
-    padding: var(--space-6);
-    transition: all var(--transition-base);
-}
-
-.process-step:hover {
-    border-color: var(--color-primary-500);
-    box-shadow: var(--shadow-md);
-}
-
-.process-number {
-    background: var(--gradient-gold);
-    color: var(--color-white);
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 1.25rem;
-    margin-bottom: var(--space-4);
-}
-
-/* Testimonials */
-.testimonial-card {
-    background-color: var(--color-white);
-    border: 1px solid var(--color-gray-200);
-    border-radius: 1rem;
-    padding: var(--space-6);
-    box-shadow: var(--shadow-sm);
-}
-
-/* CTA sections */
-.cta-section {
-    background: var(--gradient-hero);
-    color: var(--text-on-dark);
-    padding: var(--space-16) 0;
-    position: relative;
-    overflow: hidden;
-}
-
-.cta-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: var(--gradient-gold);
-}
-
-/* Links in dark sections */
-.bg-dark a:not(.btn) {
-    color: var(--color-primary-600);
-    text-decoration: underline;
-}
-
-.bg-dark a:not(.btn):hover {
-    color: var(--color-primary-500);
-}
-
-/* Selection color */
-::selection {
-    background-color: var(--color-primary-500);
-    color: var(--color-white);
-}
-
-::-moz-selection {
-    background-color: var(--color-primary-500);
-    color: var(--color-white);
-}
-
-/* Scrollbar styling */
-::-webkit-scrollbar {
-    width: 12px;
-    height: 12px;
-}
-
-::-webkit-scrollbar-track {
-    background: var(--color-dark-800);
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--gradient-gold);
-    border-radius: 6px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, var(--color-primary-600) 0%, var(--color-primary-500) 100%);
-}
-
-/* Focus visible for accessibility */
-*:focus-visible {
-    outline: 3px solid var(--color-primary-500);
-    outline-offset: 2px;
 }
