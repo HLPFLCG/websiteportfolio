@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | HLPFL</title>
-    <meta name="description" content="View our portfolio of projects across web development, business services, and digital solutions.">
+    <title>Portfolio | HLPFL - Our Work</title>
+    <meta name="description" content="Explore our portfolio of exceptional websites and digital experiences we've created for entrepreneurs and businesses.">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,21 +13,10 @@
     
     <!-- Styles -->
     <link rel="stylesheet" href="src/css/main.css">
-    <link rel="stylesheet" href="src/css/advanced-features.css">
-    <link rel="stylesheet" href="src/css/fixes.css">
-    <link rel="stylesheet" href="src/css/mobile-responsive.css">
-    <link rel="stylesheet" href="src/css/mobile-enhancements.css">
-    <link rel="stylesheet" href="src/css/critical-fixes.css">
-    <link rel="stylesheet" href="src/css/header-enhancements.css">
-    <link rel="stylesheet" href="src/css/animations.css">
-    <link rel="stylesheet" href="src/css/logo-styles.css">
-    <link rel="stylesheet" href="src/css/hero-enhancements.css">
-    <link rel="stylesheet" href="src/css/hero-fixes.css">
-    <link rel="stylesheet" href="src/css/visibility-fixes.css">
-    <link rel="stylesheet" href="src/css/portfolio-redesign.css">
     <link rel="stylesheet" href="src/css/overhaul-fixes.css">
     <link rel="stylesheet" href="src/css/font-overhaul.css">
     <link rel="stylesheet" href="src/css/footer-redesign.css">
+    <link rel="stylesheet" href="src/css/premium-experience.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <!-- Favicons -->
@@ -45,7 +34,7 @@
         <div class="container">
             <div class="nav-wrapper">
                 <a href="index.html" class="logo logo-container">
-                    <img src="favicons/hlpflpfpaffinity.png" alt="HLPFL Logo" class="logo-img">
+                    <img src="favicons/logo-header.png" alt="HLPFL Logo" class="logo-img">
                     <span class="logo-text">HLPFL</span>
                 </a>
                 <div class="nav-menu" id="nav-menu">
@@ -53,6 +42,7 @@
                     <a href="portfolio.html" class="nav-link active">Portfolio</a>
                     <a href="services.html" class="nav-link">Services</a>
                     <a href="pricing.html" class="nav-link">Pricing</a>
+                    <a href="about.html" class="nav-link">About</a>
                     <a href="contact.html" class="btn btn-primary">Get Started</a>
                 </div>
                 <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
@@ -64,8 +54,6 @@
         </div>
     </nav>
 
-    <!-- Page Header -->
-
     <!-- Hero Section -->
     <section class="hero hero-secondary">
         <div class="hero-background" id="particles-js-portfolio"></div>
@@ -73,10 +61,10 @@
             <div class="hero-content">
                 <div class="hero-badge">Our Work</div>
                 <h1 class="hero-title">
-                    Portfolio
+                    Exceptional Results
                 </h1>
                 <p class="hero-subtitle">
-                    Explore our latest projects and see the quality we deliver
+                    Real projects. Real results. Real businesses we've helped grow.
                 </p>
                 <div class="hero-cta">
                     <a href="contact.html" class="btn btn-primary btn-lg">Start Your Project</a>
@@ -91,296 +79,151 @@
         </div>
     </section>
 
-
-    <!-- Portfolio Filter -->
-    <section class="portfolio-filter-section bg-light">
+    <!-- Stats Section -->
+    <section class="stats-section bg-dark">
         <div class="container">
-            <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="music">Music Business</button>
-                <button class="filter-btn" data-filter="equity">Private Equity</button>
-                <button class="filter-btn" data-filter="consulting">Consulting</button>
+            <div class="stats-grid">
+                <div class="stat-item" data-aos="fade-up">
+                    <div class="stat-number" data-count="500">0</div>
+                    <div class="stat-label">Websites Delivered</div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-number">72hrs</div>
+                    <div class="stat-label">Average Delivery</div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-number">$50M+</div>
+                    <div class="stat-label">Revenue Generated</div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Client Retention</div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Grid -->
-    <section class="section portfolio-section bg-light">
+    <!-- Featured Projects Section -->
+    <section class="section bg-light">
         <div class="container">
-            <div class="portfolio-grid-full">
-                <!-- HLPFL Project -->
-                <div class="portfolio-card-full" data-category="music" data-aos="fade-up">
-                    <div class="portfolio-image-full">
-                        <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=1200&h=800&fit=crop" alt="HLPFL Music Business Services">
-                    </div>
-                    <div class="portfolio-content-full">
-                        <div class="portfolio-tags">
-                            <span class="tag">Music Business</span>
-                            <span class="tag">Services Platform</span>
-                        </div>
-                        <h2 class="portfolio-title-full">HLPFL.org</h2>
-                        <p class="portfolio-description-full">
-                            A comprehensive music business services platform helping independent musicians build legally solid, privacy-first businesses with standout brands. From entity filing to contracts, web design to strategic guidance, HLPFL provides complete music business solutions.
-                        </p>
-                        <div class="portfolio-highlights">
-                            <div class="highlight-item">
-                                <div class="highlight-number">500+</div>
-                                <div class="highlight-label">Careers Launched</div>
-                            </div>
-                            <div class="highlight-item">
-                                <div class="highlight-number">98%</div>
-                                <div class="highlight-label">Success Rate</div>
-                            </div>
-                            <div class="highlight-item">
-                                <div class="highlight-number">$50M+</div>
-                                <div class="highlight-label">Revenue Protected</div>
-                            </div>
-                        </div>
-                        <a href="#hlpfl" class="btn btn-primary">View Case Study</a>
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Showcasing our best work across different industries</p>
+            </div>
+            <div class="value-grid">
+                <!-- Project 1: HLPFL.org -->
+                <div class="value-card" data-aos="fade-up">
+                    <div class="value-icon">🎵</div>
+                    <h3 class="value-title">HLPFL Music Services</h3>
+                    <p class="value-description">
+                        Music business services platform helping independent musicians build legally solid businesses with standout brands. Features include service showcase, resource center, and client portal.
+                    </p>
+                    <div style="margin-top: 1.5rem;">
+                        <span style="display: inline-block; padding: 0.5rem 1rem; background: rgba(200, 121, 65, 0.1); border-radius: 20px; font-size: 0.875rem; color: #c87941; margin-right: 0.5rem;">Music Business</span>
+                        <span style="display: inline-block; padding: 0.5rem 1rem; background: rgba(44, 95, 111, 0.1); border-radius: 20px; font-size: 0.875rem; color: #2c5f6f;">Services</span>
                     </div>
                 </div>
 
-                <!-- Zaitsev Project -->
-                <div class="portfolio-card-full" data-category="equity" data-aos="fade-up">
-                    <div class="portfolio-image-full">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=800&fit=crop" alt="Zaitsev Holding Group">
-                    </div>
-                    <div class="portfolio-content-full">
-                        <div class="portfolio-tags">
-                            <span class="tag">Private Equity</span>
-                            <span class="tag">Corporate</span>
-                        </div>
-                        <h2 class="portfolio-title-full">Zaitsev.co</h2>
-                        <p class="portfolio-description-full">
-                            A Wyoming-based private equity and holding company managing a diverse portfolio of businesses. The sophisticated website showcases multiple portfolio companies while conveying professionalism, trust, and strategic vision.
-                        </p>
-                        <div class="portfolio-highlights">
-                            <div class="highlight-item">
-                                <div class="highlight-number">7+</div>
-                                <div class="highlight-label">Portfolio Companies</div>
-                            </div>
-                            <div class="highlight-item">
-                                <div class="highlight-number">100%</div>
-                                <div class="highlight-label">Professional Design</div>
-                            </div>
-                            <div class="highlight-item">
-                                <div class="highlight-number">Fast</div>
-                                <div class="highlight-label">Load Times</div>
-                            </div>
-                        </div>
-                        <a href="#zaitsev" class="btn btn-primary">View Case Study</a>
+                <!-- Project 2: Zaitsev.co -->
+                <div class="value-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="value-icon">💼</div>
+                    <h3 class="value-title">Zaitsev Holding Group</h3>
+                    <p class="value-description">
+                        Private equity firm website showcasing portfolio companies, investment strategy, and team expertise. Clean, professional design that builds trust with potential partners and investors.
+                    </p>
+                    <div style="margin-top: 1.5rem;">
+                        <span style="display: inline-block; padding: 0.5rem 1rem; background: rgba(200, 121, 65, 0.1); border-radius: 20px; font-size: 0.875rem; color: #c87941; margin-right: 0.5rem;">Private Equity</span>
+                        <span style="display: inline-block; padding: 0.5rem 1rem; background: rgba(44, 95, 111, 0.1); border-radius: 20px; font-size: 0.875rem; color: #2c5f6f;">Corporate</span>
                     </div>
                 </div>
 
-                <!-- HCJK Project -->
-                <div class="portfolio-card-full" data-category="consulting" data-aos="fade-up">
-                    <div class="portfolio-image-full">
-                        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200&h=800&fit=crop" alt="HCJK Consulting">
-                    </div>
-                    <div class="portfolio-content-full">
-                        <div class="portfolio-tags">
-                            <span class="tag">Consulting</span>
-                            <span class="tag">Business Services</span>
-                        </div>
-                        <h2 class="portfolio-title-full">HCJK.org</h2>
-                        <p class="portfolio-description-full">
-                            Professional consulting services platform helping businesses grow with strategic guidance and operational excellence. Modern design with clear service communication and professional presentation.
-                        </p>
-                        <div class="portfolio-highlights">
-                            <div class="highlight-item">
-                                <div class="highlight-number">Custom</div>
-                                <div class="highlight-label">Solution</div>
-                            </div>
-                            <div class="highlight-item">
-                                <div class="highlight-number">Modern</div>
-                                <div class="highlight-label">Design</div>
-                            </div>
-                            <div class="highlight-item">
-                                <div class="highlight-number">Mobile</div>
-                                <div class="highlight-label">Optimized</div>
-                            </div>
-                        </div>
-                        <a href="#hcjk" class="btn btn-primary">View Case Study</a>
+                <!-- Project 3: HCJK.org -->
+                <div class="value-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="value-icon">🏛️</div>
+                    <h3 class="value-title">HCJK Foundation</h3>
+                    <p class="value-description">
+                        Non-profit organization website focused on community impact and donor engagement. Features donation system, impact stories, and volunteer portal with seamless user experience.
+                    </p>
+                    <div style="margin-top: 1.5rem;">
+                        <span style="display: inline-block; padding: 0.5rem 1rem; background: rgba(200, 121, 65, 0.1); border-radius: 20px; font-size: 0.875rem; color: #c87941; margin-right: 0.5rem;">Non-Profit</span>
+                        <span style="display: inline-block; padding: 0.5rem 1rem; background: rgba(44, 95, 111, 0.1); border-radius: 20px; font-size: 0.875rem; color: #2c5f6f;">Community</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Case Study: HLPFL -->
-    <section class="section case-study bg-dark" id="hlpfl">
+    <!-- Results Section -->
+    <section class="section bg-dark">
         <div class="container">
-            <div class="case-study-header">
-                <span class="case-study-label">Case Study</span>
-                <h2 class="case-study-title">HLPFL.org - Music Business Services Platform</h2>
-                <p class="case-study-subtitle">Helping independent musicians build legally solid businesses with standout brands</p>
+            <div class="section-header">
+                <h2 class="section-title">Real Results</h2>
+                <p class="section-subtitle">The impact we've made for our clients</p>
             </div>
-
-            <div class="case-study-content">
-                <div class="case-study-section">
-                    <h3 class="case-study-heading">The Challenge</h3>
-                    <p>HLPFL needed a comprehensive platform to showcase their music business services while establishing credibility in a competitive industry. The website needed to communicate complex services clearly while appealing to creative professionals.</p>
+            <div class="value-grid">
+                <div class="value-card" data-aos="fade-up">
+                    <div class="value-icon">📈</div>
+                    <h3 class="value-title">500+ Careers Launched</h3>
+                    <p class="value-description">
+                        Helped over 500 musicians and entrepreneurs launch successful careers with professional websites that convert visitors into customers.
+                    </p>
                 </div>
-
-                <div class="case-study-section">
-                    <h3 class="case-study-heading">The Solution</h3>
-                    <p>We created a modern, musician-friendly design with bold visuals and clear service communication. The website features a statistics dashboard showcasing their success (500+ careers, 98% success rate, $50M+ protected), a timeline visualization of company growth, and a resource center positioning HLPFL as an industry authority.</p>
+                <div class="value-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="value-icon">💰</div>
+                    <h3 class="value-title">$50M+ Revenue Protected</h3>
+                    <p class="value-description">
+                        Our clients have collectively generated over $50 million in revenue through their digital presence and online platforms.
+                    </p>
                 </div>
-
-                <div class="case-study-section">
-                    <h3 class="case-study-heading">Key Features</h3>
-                    <ul class="feature-list">
-                        <li>Service showcase (Legal Foundation, Artist Branding, Music Rights)</li>
-                        <li>Founder profile and company story</li>
-                        <li>Statistics dashboard with impressive metrics</li>
-                        <li>Timeline visualization of company growth</li>
-                        <li>Resource center for musicians</li>
-                        <li>Mobile-optimized for on-the-go musicians</li>
-                    </ul>
-                </div>
-
-                <div class="case-study-section">
-                    <h3 class="case-study-heading">Results</h3>
-                    <div class="results-grid">
-                        <div class="result-item">
-                            <div class="result-number">500+</div>
-                            <div class="result-label">Music Careers Launched</div>
-                        </div>
-                        <div class="result-item">
-                            <div class="result-number">98%</div>
-                            <div class="result-label">Client Success Rate</div>
-                        </div>
-                        <div class="result-item">
-                            <div class="result-number">$50M+</div>
-                            <div class="result-label">Artist Revenue Protected</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="case-study-section">
-                    <h3 class="case-study-heading">Technologies Used</h3>
-                    <div class="tech-tags">
-                        <span class="tech-tag">HTML5</span>
-                        <span class="tech-tag">CSS3</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">Responsive Design</span>
-                        <span class="tech-tag">SEO Optimized</span>
-                    </div>
-                </div>
-
-                <div class="case-study-testimonial">
-                    <p class="testimonial-quote">"The website perfectly captures our mission and makes it easy for musicians to understand how we can help them. It's been instrumental in growing our business."</p>
-                    <div class="testimonial-author-info">
-                        <div class="author-name">Jim Rockel</div>
-                        <div class="author-title">Founder & CEO, HLPFL</div>
-                    </div>
+                <div class="value-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="value-icon">⭐</div>
+                    <h3 class="value-title">98% Success Rate</h3>
+                    <p class="value-description">
+                        98% of our clients are still thriving two years after launch, a testament to the quality and effectiveness of our work.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Case Study: Zaitsev -->
-    <section class="section case-study bg-light" id="zaitsev">
+    <!-- Testimonials Section -->
+    <section class="section testimonials-section bg-light">
         <div class="container">
-            <div class="case-study-header">
-                <span class="case-study-label">Case Study</span>
-                <h2 class="case-study-title">Zaitsev.co - Private Equity Holding Company</h2>
-                <p class="case-study-subtitle">Professional digital presence for a diverse portfolio of businesses</p>
+            <div class="section-header">
+                <h2 class="section-title">What Our Clients Say</h2>
             </div>
-
-            <div class="case-study-content">
-                <div class="case-study-section">
-                    <h3 class="case-study-heading">The Challenge</h3>
-                    <p>Zaitsev Holding Group needed a sophisticated website to showcase their diverse portfolio of 7+ companies while maintaining a professional, trustworthy image for potential investors and partners. The challenge was presenting varied industries cohesively.</p>
-                </div>
-
-                <div class="case-study-section">
-                    <h3 class="case-study-heading">The Solution</h3>
-                    <p>We designed a premium corporate website with elegant aesthetics, featuring comprehensive portfolio showcases for each company, individual company profiles with detailed information, and strategic navigation for different stakeholder audiences. The clean, professional design system maintains consistency across diverse holdings.</p>
-                </div>
-
-                <div class="case-study-section">
-                    <h3 class="case-study-heading">Portfolio Companies Showcased</h3>
-                    <ul class="feature-list">
-                        <li>The Smoke Shack (Retail)</li>
-                        <li>HLPFL Co (Music Business Services)</li>
-                        <li>HLPFL Consulting Group (Business Consulting)</li>
-                        <li>Takeout (Food Delivery Technology)</li>
-                        <li>OnlyGainz → RVNU (Creator Economy Platform)</li>
-                        <li>Grippy Sox Club (Mental Health & Apparel)</li>
-                        <li>HLPFL Fitness LLC (Personal Training)</li>
-                    </ul>
-                </div>
-
-                <div class="case-study-section">
-                    <h3 class="case-study-heading">Results</h3>
-                    <div class="results-grid">
-                        <div class="result-item">
-                            <div class="result-number">7+</div>
-                            <div class="result-label">Portfolio Companies</div>
-                        </div>
-                        <div class="result-item">
-                            <div class="result-number">Enhanced</div>
-                            <div class="result-label">Professional Image</div>
-                        </div>
-                        <div class="result-item">
-                            <div class="result-number">Streamlined</div>
-                            <div class="result-label">Investor Relations</div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card" data-aos="fade-up">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">"The website perfectly captures our mission and makes it easy for musicians to understand how we can help them. It's been instrumental in growing our business."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <div class="author-name">Jim Rockel</div>
+                            <div class="author-title">Founder & CEO, HLPFL</div>
                         </div>
                     </div>
                 </div>
-
-                <div class="case-study-testimonial">
-                    <p class="testimonial-quote">"The website elevated our professional image and makes it easy to present our portfolio to potential investors and partners."</p>
-                    <div class="testimonial-author-info">
-                        <div class="author-name">Zaitsev Holding Group</div>
-                        <div class="author-title">Private Equity Firm</div>
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">"The website elevated our professional image and makes it easy to present our portfolio to potential investors and partners."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <div class="author-name">Zaitsev Holding Group</div>
+                            <div class="author-title">Private Equity Firm</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Case Study: HCJK -->
-    <section class="section case-study bg-dark" id="hcjk">
-        <div class="container">
-            <div class="case-study-header">
-                <span class="case-study-label">Case Study</span>
-                <h2 class="case-study-title">HCJK.org - Professional Consulting Services</h2>
-                <p class="case-study-subtitle">Modern consulting platform with clear service communication</p>
-            </div>
-
-            <div class="case-study-content">
-                <div class="case-study-section">
-                    <h3 class="case-study-heading">The Challenge</h3>
-                    <p>HCJK needed a professional consulting website that clearly communicated their services while establishing credibility and trust with potential clients. The site needed to be modern, fast, and mobile-optimized.</p>
-                </div>
-
-                <div class="case-study-section">
-                    <h3 class="case-study-heading">The Solution</h3>
-                    <p>We created a clean, professional design with strategic use of white space and clear information hierarchy. The website features service breakdowns, case studies, and a streamlined contact process to convert visitors into leads.</p>
-                </div>
-
-                <div class="case-study-section">
-                    <h3 class="case-study-heading">Key Features</h3>
-                    <ul class="feature-list">
-                        <li>Clear service communication</li>
-                        <li>Professional design aesthetic</li>
-                        <li>Mobile-responsive layout</li>
-                        <li>Fast loading times</li>
-                        <li>SEO optimized</li>
-                        <li>Contact form integration</li>
-                    </ul>
-                </div>
-
-                <div class="case-study-section">
-                    <h3 class="case-study-heading">Technologies Used</h3>
-                    <div class="tech-tags">
-                        <span class="tech-tag">HTML5</span>
-                        <span class="tech-tag">CSS3</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">Responsive Design</span>
-                        <span class="tech-tag">Performance Optimized</span>
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">"I was skeptical about the 72-hour timeline, but they delivered exactly what they promised. The website looks amazing and has already brought in new clients."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <div class="author-name">Sarah Johnson</div>
+                            <div class="author-title">Founder, Creative Studio</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -391,11 +234,11 @@
     <section class="section cta-section bg-dark">
         <div class="container">
             <div class="cta-content">
-                <h2 class="cta-title">Ready to Join Our Portfolio?</h2>
-                <p class="cta-description">Let's create something amazing together. Schedule a free consultation to discuss your project.</p>
+                <h2 class="cta-title">Ready to Join Our Success Stories?</h2>
+                <p class="cta-description">Let's build your dream website together. Book a free consultation to discuss your project and get a custom proposal.</p>
                 <div class="cta-buttons">
-                    <a href="contact.html" class="btn btn-accent btn-lg">Start Your Project</a>
-                    <a href="pricing.html" class="btn btn-secondary btn-lg">View Pricing</a>
+                    <a href="contact.html" class="btn btn-primary btn-lg">Get Started Today</a>
+                    <a href="services.html" class="btn btn-secondary btn-lg">View Our Services</a>
                 </div>
             </div>
         </div>
@@ -407,10 +250,10 @@
             <div class="footer-content">
                 <div class="footer-column">
                     <div class="footer-logo">
-                        <span class="logo-text">HLPFL Consulting</span>
+                        <span class="logo-text">HLPFL</span>
                     </div>
                     <p class="footer-description">
-                        Transforming business visions into reality with premium web development.
+                        Transforming business visions into reality with premium web development. Quality, speed, and affordability—no compromises.
                     </p>
                 </div>
                 <div class="footer-column">
@@ -444,31 +287,15 @@
     </footer>
 
     <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- Advanced Features Scripts -->
-    <script src="src/js/header-enhancements.js"></script>
-    <script src="src/js/magnetic-buttons.js"></script>
-    <script src="src/js/scroll-animations-enhanced.js"></script>
-    <script src="src/js/micro-interactions.js"></script>
-    <script src="src/js/page-transitions.js"></script>
-    <script src="src/js/theme-manager.js"></script>
-    <script src="src/js/performance-monitor.js"></script>
-    <script src="src/js/lazy-loader.js"></script>
-    <script src="src/js/card-3d-effects.js"></script>
-    <script src="src/js/advanced-animations.js"></script>
-    <script src="src/js/skills-visualization.js"></script>
-    <script src="src/js/interactive-timeline.js"></script>
-    <script src="src/js/mobile-optimizations.js"></script>
-    <script src="src/js/init-advanced-features.js"></script>
-    
-    <!-- Original Scripts -->
     <script src="src/js/mobile-gestures.js"></script>
     <script src="src/js/performance-optimizer.js"></script>
     <script src="src/js/seo-enhancements.js"></script>
     <script src="src/js/main.js"></script>
-    <script src="src/js/portfolio.js"></script>
     <script src="src/js/critical-fixes.js"></script>
     <script src="src/js/hero-enhancements.js"></script>
+    <script src="src/js/premium-features.js"></script>
     <script src="src/js/production-cleanup.js"></script>
 </body>
 </html>
