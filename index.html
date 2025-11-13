@@ -806,9 +806,11 @@
         }
     </style>
 <script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
-</head>
-<body>
-    <!-- Loading Screen -->
+       
+          
+   </head>
+   <body>
+           <!-- Loading Screen -->
     <div class="loading-screen" id="loadingScreen">
         <img src="hlpfl-logo-full.svg" alt="HLPFL Logo" class="loading-logo">
         <div class="loading-bar-container">
@@ -816,7 +818,6 @@
         </div>
         <div class="loading-percentage" id="loadingPercentage">0%</div>
     </div>
-
     <!-- Floating Particles -->
     <div class="particles" id="particles"></div>
 
@@ -1265,24 +1266,7 @@
     </footer>
 
     <script>
-        // Loading Screen
-        let progress = 0;
-        const loadingBar = document.getElementById('loadingBar');
-        const loadingPercentage = document.getElementById('loadingPercentage');
-        const loadingScreen = document.getElementById('loadingScreen');
         
-        const loadingInterval = setInterval(() => {
-            progress += Math.random() * 30;
-            if (progress >= 100) {
-                progress = 100;
-                clearInterval(loadingInterval);
-                setTimeout(() => {
-                    loadingScreen.classList.add('hidden');
-                }, 500);
-            }
-            loadingBar.style.width = progress + '%';
-            loadingPercentage.textContent = Math.floor(progress) + '%';
-        }, 200);
 
         // Create Floating Particles
         const particlesContainer = document.getElementById('particles');
@@ -1347,5 +1331,6 @@
             });
         });
     </script>
-</body>
+   
+   </body>
 </html>

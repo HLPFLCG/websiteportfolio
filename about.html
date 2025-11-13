@@ -283,6 +283,116 @@
             50% { transform: rotate(-45deg) translateY(10px); }
         }
         
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+            padding: 8rem 2rem 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(200, 121, 65, 0.15) 0%, transparent 70%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+            50% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.8; }
+        }
+        
+        .hero-content {
+            max-width: 1200px;
+            position: relative;
+            z-index: 2;
+            text-align: left;
+        }
+        
+        .hero h1 {
+            font-size: clamp(3.5rem, 8vw, 7rem);
+            font-weight: 700;
+            margin-bottom: 2rem;
+            line-height: 1.1;
+        }
+        
+        .hero h1 .white-text {
+            color: var(--text);
+            display: block;
+        }
+        
+        .hero h1 .copper-text {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+        }
+        
+        .hero p {
+            font-size: clamp(1.1rem, 2vw, 1.35rem);
+            color: var(--text-muted);
+            margin-bottom: 3rem;
+            max-width: 650px;
+            line-height: 1.7;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .scroll-indicator {
+            position: absolute;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+        
+        .scroll-indicator:hover {
+            transform: translateX(-50%) translateY(5px);
+        }
+        
+        .scroll-text {
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        
+        .scroll-arrow {
+            width: 24px;
+            height: 24px;
+            border-left: 2px solid var(--text-muted);
+            border-bottom: 2px solid var(--text-muted);
+            transform: rotate(-45deg);
+            animation: scrollBounce 2s infinite;
+        }
+        
+        @keyframes scrollBounce {
+            0%, 100% { transform: rotate(-45deg) translateY(0); }
+            50% { transform: rotate(-45deg) translateY(10px); }
+        }
+
         /* Section Styles */
         section {
             padding: 6rem 2rem;
@@ -676,9 +786,11 @@
         }
     </style>
 <script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
-</head>
-<body>
-    <!-- Loading Screen -->
+       
+          
+   </head>
+   <body>
+           <!-- Loading Screen -->
     <div class="loading-screen" id="loadingScreen">
         <img src="hlpfl-logo-full.svg" alt="HLPFL Logo" class="loading-logo">
         <div class="loading-bar-container">
@@ -686,29 +798,28 @@
         </div>
         <div class="loading-percentage" id="loadingPercentage">0%</div>
     </div>
-
     <!-- Floating Particles -->
     <div class="particles" id="particles"></div>
 
     <!-- Header -->
-    <header id="header">
-        <nav>
-            <a href="index.html"><img src="hlpfl-symbol.svg" alt="HLPFL" class="logo"></a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="about.html" class="active">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <a href="contact.html" class="cta-button">Get My Free Quote</a>
-            <button class="mobile-menu-toggle">☰</button>
-        </nav>
-    </header>
+           <header id="header">
+           <nav>
+               <a href="index.html"><img src="hlpfl-symbol.svg" alt="HLPFL" class="logo"></a>
+               <ul class="nav-links">
+                   <li><a href="index.html">Home</a></li>
+                   <li><a href="services.html">Services</a></li>
+                   <li><a href="portfolio.html">Portfolio</a></li>
+                   <li><a href="about.html"class="active">About</a></li>
+                   <li><a href="contact.html">Contact</a></li>
+               </ul>
+               <a href="contact.html" class="cta-button">Contact</a>
+               <button class="mobile-menu-toggle">☰</button>
+           </nav>
+       </header>
 
-    <!-- Page Header -->
-    <div class="page-header">
-        <div class="page-header-content reveal">
+               <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content reveal">
             <h1>
                 <span class="white-text">About</span>
                 <span class="copper-text">HLPFL</span>
@@ -719,6 +830,7 @@
             <span class="scroll-text">SCROLL</span>
             <div class="scroll-arrow"></div>
         </div>
+    </section>
     </div>
 
     <!-- Our Story Section -->
@@ -951,24 +1063,7 @@
     </footer>
 
     <script>
-        // Loading Screen
-        let progress = 0;
-        const loadingBar = document.getElementById('loadingBar');
-        const loadingPercentage = document.getElementById('loadingPercentage');
-        const loadingScreen = document.getElementById('loadingScreen');
         
-        const loadingInterval = setInterval(() => {
-            progress += Math.random() * 30;
-            if (progress >= 100) {
-                progress = 100;
-                clearInterval(loadingInterval);
-                setTimeout(() => {
-                    loadingScreen.classList.add('hidden');
-                }, 500);
-            }
-            loadingBar.style.width = progress + '%';
-            loadingPercentage.textContent = Math.floor(progress) + '%';
-        }, 200);
 
         // Create Floating Particles
         const particlesContainer = document.getElementById('particles');
@@ -1010,5 +1105,6 @@
             });
         });
     </script>
-</body>
+   
+   </body>
 </html>
