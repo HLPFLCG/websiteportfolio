@@ -107,7 +107,7 @@ function simulateFormSubmission(data) {
     return new Promise((resolve, reject) => {
         // Simulate network delay
         setTimeout(() => {
-            console.log('Form data:', data);
+            // Form data ready for submission
             
             // In production, replace this with actual API call:
             // fetch('YOUR_FORM_ENDPOINT', {
