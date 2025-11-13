@@ -29,7 +29,7 @@
 - [x] Ensure animations are performant
 
 ## 5. Testing and Deployment
-- [ ] Test all pages for consistency
-- [ ] Verify responsive design on all pages
-- [ ] Create new branch and commit changes
-- [ ] Push to GitHub and create pull request
+- [x] Test all pages for consistency
+- [x] Verify responsive design on all pages
+- [x] Create new branch and commit changes
+- [x] Push to GitHub and create pull request

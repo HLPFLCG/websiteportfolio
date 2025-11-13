@@ -747,38 +747,18 @@
         }
     </style>
 <script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
-       <link rel="stylesheet" href="enhanced-loading.css">
-          <link rel="stylesheet" href="hero-section.css">
+       
+          
    </head>
    <body>
-       <!-- Loading Screen -->
-       <div class="loading-screen" id="loadingScreen">
-           <div class="loading-particles"></div>
-           <img src="hlpfl-logo-full.svg" alt="HLPFL Logo" class="loading-logo">
-           <div class="loading-circle-container">
-               <svg class="loading-circle" viewBox="0 0 200 200">
-                   <defs>
-                       <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                           <stop offset="0%" style="stop-color:#c87941;stop-opacity:1" />
-                           <stop offset="100%" style="stop-color:#e09560;stop-opacity:1" />
-                       </linearGradient>
-                   </defs>
-                   <circle class="loading-circle-bg" cx="100" cy="100" r="90"></circle>
-                   <circle class="loading-circle-progress" id="loadingCircleProgress" cx="100" cy="100" r="90"></circle>
-               </svg>
-               <div class="loading-orbit">
-                   <div class="loading-dot"></div>
-                   <div class="loading-dot"></div>
-                   <div class="loading-dot"></div>
-               </div>
-               <div class="loading-percentage" id="loadingPercentage">0%</div>
-           </div>
-           <div class="loading-text">LOADING EXPERIENCE</div>
-       </div>
+           <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <img src="hlpfl-logo-full.svg" alt="HLPFL Logo" class="loading-logo">
+        <div class="loading-bar-container">
+            <div class="loading-bar" id="loadingBar"></div>
         </div>
         <div class="loading-percentage" id="loadingPercentage">0%</div>
     </div>
-
     <!-- Floating Particles -->
     <div class="particles-container" id="particlesContainer"></div>
 
@@ -805,16 +785,18 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-background"></div>
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Let's Build Something Amazing</h1>
-                <p class="hero-subtitle">
-                    Ready to start your project? Fill out the form below and we'll get back to you within 24 hours.
-                </p>
-            </div>
+        <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content reveal">
+            <h1>
+                <span class="white-text">Get In</span>
+                <span class="copper-text">Touch</span>
+            </h1>
+            <p>Ready to start your project? Let's have a conversation about your vision and how we can help bring it to life.</p>
+        </div>
+        <div class="scroll-indicator" onclick="document.querySelector('#contact-form').scrollIntoView({behavior: 'smooth'})">
+            <span class="scroll-text">SCROLL</span>
+            <div class="scroll-arrow"></div>
         </div>
     </section>
     
@@ -1052,6 +1034,6 @@
         window.addEventListener('scroll', revealOnScroll);
         revealOnScroll();
     </script>
-   <script src="enhanced-loading.js"></script>
+   
    </body>
 </html>

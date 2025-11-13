@@ -854,38 +854,18 @@
         }
     </style>
 <script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
-       <link rel="stylesheet" href="enhanced-loading.css">
-          <link rel="stylesheet" href="hero-section.css">
+       
+          
    </head>
    <body>
-       <!-- Loading Screen -->
-       <div class="loading-screen" id="loadingScreen">
-           <div class="loading-particles"></div>
-           <img src="hlpfl-logo-full.svg" alt="HLPFL Logo" class="loading-logo">
-           <div class="loading-circle-container">
-               <svg class="loading-circle" viewBox="0 0 200 200">
-                   <defs>
-                       <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                           <stop offset="0%" style="stop-color:#c87941;stop-opacity:1" />
-                           <stop offset="100%" style="stop-color:#e09560;stop-opacity:1" />
-                       </linearGradient>
-                   </defs>
-                   <circle class="loading-circle-bg" cx="100" cy="100" r="90"></circle>
-                   <circle class="loading-circle-progress" id="loadingCircleProgress" cx="100" cy="100" r="90"></circle>
-               </svg>
-               <div class="loading-orbit">
-                   <div class="loading-dot"></div>
-                   <div class="loading-dot"></div>
-                   <div class="loading-dot"></div>
-               </div>
-               <div class="loading-percentage" id="loadingPercentage">0%</div>
-           </div>
-           <div class="loading-text">LOADING EXPERIENCE</div>
-       </div>
+           <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <img src="hlpfl-logo-full.svg" alt="HLPFL Logo" class="loading-logo">
+        <div class="loading-bar-container">
+            <div class="loading-bar" id="loadingBar"></div>
         </div>
         <div class="loading-percentage" id="loadingPercentage">0%</div>
     </div>
-
     <!-- Floating Particles -->
     <div class="particles-container" id="particlesContainer"></div>
 
@@ -912,57 +892,33 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-background"></div>
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    Explore our successful projects and see how we've helped businesses grow with custom web solutions
-                </p>
-            </div>
-        </div>
-    </section>
-
-     <!-- Hero Section -->
+        <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content reveal">
             <h1>
-                   <span class=white-text>Your First Website</span>
-                   <span class=copper-text>Shouldn't Break the Bank</span>
-               </h1>
-            <p>High-quality websites for first-time founders at prices you can actually afford. No outsourcing, full transparency, 100% US-based work.</p>
-            <div class="hero-cta">
-                <a href="contact.html" class="cta-button">Get Your Free Quote</a>
-                <a href="#how-it-works" class="secondary-button">See How It Works</a>
-            </div>
+                <span class="white-text">Our</span>
+                <span class="copper-text">Portfolio</span>
+            </h1>
+            <p>Explore our successful projects and see how we've helped businesses grow with custom web solutions.</p>
         </div>
+        <div class="scroll-indicator" onclick="document.querySelector('#portfolio').scrollIntoView({behavior: 'smooth'})">
+            <span class="scroll-text">SCROLL</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
 
-    <!-- Stats Section -->
-    <section class="stats-section">
-           <div class="scroll-indicator" onclick="document.querySelector('#stats-section').scrollIntoView({behavior: 'smooth'})">
-               <span class="scroll-text">SCROLL</span>
-               <div class="scroll-arrow"></div>
-           </div>
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item reveal">
-                    <div class="stat-number" data-count="500">0</div>
-                    <div class="stat-label">Projects Completed</div>
-                </div>
-                <div class="stat-item reveal">
-                    <div class="stat-number">98%</div>
-                    <div class="stat-label">Client Satisfaction</div>
-                </div>
-                <div class="stat-item reveal">
-                    <div class="stat-number">$50M+</div>
-                    <div class="stat-label">Revenue Generated</div>
-                </div>
-                <div class="stat-item reveal">
-                    <div class="stat-number">15+</div>
-                    <div class="stat-label">Industries Served</div>
-                </div>
-            </div>
+         <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content reveal">
+            <h1>
+                <span class="white-text">Our</span>
+                <span class="copper-text">Portfolio</span>
+            </h1>
+            <p>Explore our successful projects and see how we've helped businesses grow with custom web solutions.</p>
+        </div>
+        <div class="scroll-indicator" onclick="document.querySelector('#portfolio').scrollIntoView({behavior: 'smooth'})">
+            <span class="scroll-text">SCROLL</span>
+            <div class="scroll-arrow"></div>
         </div>
     </section>
 
@@ -1244,6 +1200,6 @@
         
         window.addEventListener('scroll', animateNumbers);
     </script>
-   <script src="enhanced-loading.js"></script>
+   
    </body>
 </html>
