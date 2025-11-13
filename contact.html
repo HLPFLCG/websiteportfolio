@@ -804,11 +804,775 @@
                 transform: scale(1);
             }
         }
+    
+        /* Enhanced Contact Form Styles */
+        .contact-section {
+            padding: 6rem 2rem;
+            background: var(--dark);
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .contact-info {
+            padding: 2rem 0;
+        }
+        
+        .contact-info h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .contact-info > p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 3rem;
+        }
+        
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background: var(--dark-light);
+            border-radius: 15px;
+            border: 2px solid rgba(200, 121, 65, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .contact-method:hover {
+            border-color: var(--primary);
+            transform: translateX(10px);
+        }
+        
+        .contact-method-icon {
+            font-size: 2.5rem;
+            flex-shrink: 0;
+        }
+        
+        .contact-method-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+        
+        .contact-method-content p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+        
+        .contact-method-content a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-method-content a:hover {
+            color: var(--primary-light);
+        }
+        
+        /* Form Wrapper */
+        .contact-form-wrapper {
+            background: var(--dark-light);
+            padding: 3rem;
+            border-radius: 20px;
+            border: 2px solid rgba(200, 121, 65, 0.1);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .form-label {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            padding: 1rem 1.25rem;
+            background: var(--dark);
+            border: 2px solid rgba(200, 121, 65, 0.2);
+            border-radius: 12px;
+            color: var(--text);
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+        
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(200, 121, 65, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .form-input::placeholder,
+        .form-textarea::placeholder {
+            color: var(--text-muted);
+            opacity: 0.6;
+        }
+        
+        .form-select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23C87941' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            padding-right: 3rem;
+        }
+        
+        .form-select option {
+            background: var(--dark);
+            color: var(--text);
+        }
+        
+        .form-textarea {
+            min-height: 150px;
+            resize: vertical;
+            line-height: 1.6;
+        }
+        
+        .form-submit {
+            width: 100%;
+            padding: 1.25rem 2rem;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+        
+        .form-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(200, 121, 65, 0.4);
+        }
+        
+        .form-submit:active {
+            transform: translateY(-1px);
+        }
+        
+        .form-message {
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 600;
+            display: none;
+        }
+        
+        .form-message.success {
+            background: rgba(34, 197, 94, 0.1);
+            color: #22c55e;
+            border: 2px solid rgba(34, 197, 94, 0.3);
+            display: block;
+        }
+        
+        .form-message.error {
+            background: rgba(239, 68, 68, 0.1);
+            color: #ef4444;
+            border: 2px solid rgba(239, 68, 68, 0.3);
+            display: block;
+        }
+        
+        /* Responsive Design for Contact Form */
+        @media (max-width: 968px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .contact-form-wrapper {
+                padding: 2rem;
+            }
+            
+            .contact-method:hover {
+                transform: translateY(-5px);
+            }
+        }
+
+    
+        /* Enhanced Footer Styles */
+        footer {
+            background: var(--dark-light);
+            padding: 4rem 2rem 2rem;
+            border-top: 1px solid rgba(200, 121, 65, 0.2);
+        }
+        
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .footer-logo {
+            margin-bottom: 1rem;
+        }
+        
+        .footer-logo svg {
+            width: 80px;
+            height: 80px;
+        }
+        
+        .footer-section h3 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.25rem;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .footer-section a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .footer-section a:hover {
+            color: var(--primary);
+            transform: translateX(5px);
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(200, 121, 65, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.25rem;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px) !important;
+        }
+        
+        .footer-cta {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-cta:hover {
+            transform: translateY(-3px) !important;
+            box-shadow: 0 10px 30px rgba(200, 121, 65, 0.4);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-muted);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        
+        @media (max-width: 968px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+    
+        /* Enhanced Loading Screen */
+        #loadingScreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #000000 0%, #1a0a00 50%, #000000 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+        
+        #loadingScreen.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        /* Floating Particles Background */
+        .loading-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .particle {
+            position: absolute;
+            background: radial-gradient(circle, rgba(200, 121, 65, 0.8) 0%, rgba(200, 121, 65, 0) 70%);
+            border-radius: 50%;
+            animation: float linear infinite;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) scale(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) scale(1);
+                opacity: 0;
+            }
+        }
+        
+        /* Loading Content */
+        .loading-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        .loading-logo {
+            width: 300px;
+            height: auto;
+            filter: drop-shadow(0 0 30px rgba(200, 121, 65, 0.5));
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% {
+                filter: drop-shadow(0 0 30px rgba(200, 121, 65, 0.5));
+            }
+            50% {
+                filter: drop-shadow(0 0 50px rgba(200, 121, 65, 0.8));
+            }
+        }
+        
+        .loading-bar-container {
+            width: 300px;
+            height: 8px;
+            background: rgba(200, 121, 65, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 0 20px rgba(200, 121, 65, 0.3);
+        }
+        
+        .loading-bar {
+            height: 100%;
+            background: linear-gradient(90deg, 
+                var(--primary) 0%, 
+                var(--primary-light) 50%, 
+                var(--primary) 100%);
+            background-size: 200% 100%;
+            border-radius: 10px;
+            transition: width 0.3s ease;
+            animation: shimmer 1.5s linear infinite;
+            box-shadow: 0 0 20px rgba(200, 121, 65, 0.6);
+        }
+        
+        @keyframes shimmer {
+            0% {
+                background-position: -200% 0;
+            }
+            100% {
+                background-position: 200% 0;
+            }
+        }
+        
+        .loading-percentage {
+            margin-top: 1rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-shadow: 0 0 20px rgba(200, 121, 65, 0.5);
+        }
+
+    
+        /* Cookie Consent Banner */
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--dark-light);
+            border-top: 2px solid var(--primary);
+            padding: 1.5rem 2rem;
+            z-index: 9998;
+            transform: translateY(100%);
+            transition: transform 0.4s ease;
+            box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.5);
+        }
+        
+        .cookie-banner.show {
+            transform: translateY(0);
+        }
+        
+        .cookie-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .cookie-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .cookie-text p {
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+        }
+        
+        .cookie-text a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .cookie-text a:hover {
+            color: var(--primary-light);
+        }
+        
+        .cookie-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .cookie-btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            font-size: 1rem;
+        }
+        
+        .cookie-btn-accept {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+        }
+        
+        .cookie-btn-accept:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(200, 121, 65, 0.4);
+        }
+        
+        .cookie-btn-decline {
+            background: transparent;
+            border: 2px solid rgba(200, 121, 65, 0.3);
+            color: var(--text-muted);
+        }
+        
+        .cookie-btn-decline:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+        
+        @media (max-width: 768px) {
+            .cookie-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .cookie-actions {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .cookie-btn {
+                flex: 1;
+            }
+        }
+
+    
+        /* Subtle Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Logo hover animation */
+        .logo:hover {
+            animation: bounce 0.6s ease;
+        }
+        
+        /* Button ripple effect */
+        .cta-button, .btn-primary, .form-submit {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-button::after, .btn-primary::after, .form-submit::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .cta-button:active::after, .btn-primary:active::after, .form-submit:active::after {
+            width: 300px;
+            height: 300px;
+        }
+        
+        /* Konami Code Easter Egg */
+        .konami-active {
+            animation: rainbow 3s linear infinite;
+        }
+        
+        @keyframes rainbow {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
+        }
+        
+        /* Secret Developer Mode */
+        .dev-mode-active * {
+            outline: 1px solid rgba(200, 121, 65, 0.3) !important;
+        }
+        
+        /* Shake animation for errors */
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+            20%, 40%, 60%, 80% { transform: translateX(5px); }
+        }
+        
+        .shake {
+            animation: shake 0.5s;
+        }
+        
+        /* Floating animation for icons */
+        @keyframes float-icon {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        .service-icon, .value-icon, .contact-method-icon {
+            animation: float-icon 3s ease-in-out infinite;
+        }
+        
+        /* Stagger animation delays for icons */
+        .service-icon:nth-child(1), .value-icon:nth-child(1) {
+            animation-delay: 0s;
+        }
+        
+        .service-icon:nth-child(2), .value-icon:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        
+        .service-icon:nth-child(3), .value-icon:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+    
+        /* Performance Optimizations */
+        * {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        /* Reduce motion for users who prefer it */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+        
+        /* Optimize images */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* GPU acceleration for animations */
+        .service-card,
+        .portfolio-card,
+        .value-card,
+        .pricing-card,
+        .cta-button,
+        .btn {
+            will-change: transform;
+            transform: translateZ(0);
+            backface-visibility: hidden;
+        }
+        
+        /* Optimize font loading */
+        @font-face {
+            font-display: swap;
+        }
+
     </style>
 <script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
        
           
-   </head>
+   
+    <!-- Performance & Security -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+</head>
 <body>
            <!-- Loading Screen -->
     <div class="loading-screen" id="loadingScreen">
@@ -832,7 +1596,7 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
-            <a href="contact.html" class="cta-button">Contact</a>
+            
             <button class="mobile-menu-toggle">☰</button>
         </nav>
     </header>
@@ -953,14 +1717,34 @@
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <div class="footer-section">
+            <div class="footer-section footer-brand">
+                <div class="footer-logo">
+                    <svg width="120" height="120" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="footerLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#C87941;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#E89A6A;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="100" cy="100" r="90" fill="none" stroke="url(#footerLogoGradient)" stroke-width="8"/>
+                        <text x="100" y="120" font-family="Arial, sans-serif" font-size="80" font-weight="bold" 
+                              fill="url(#footerLogoGradient)" text-anchor="middle">H</text>
+                    </svg>
+                </div>
                 <h3>HLPFL</h3>
-                <p style="color: var(--text-muted); line-height: 1.8;">Affordable, high-quality websites for first-time founders. 100% US-based work from Grand Rapids, MI.</p>
+                <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 1.5rem;">
+                    Affordable, high-quality websites for first-time founders. 100% US-based work from Grand Rapids, MI.
+                </p>
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+                    <a href="#" class="social-link" aria-label="GitHub">⚡</a>
+                </div>
             </div>
             <div class="footer-section">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="#home">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
                     <li><a href="about.html">About</a></li>
@@ -973,26 +1757,69 @@
                     <li><a href="services.html">Web Development</a></li>
                     <li><a href="services.html">Web Design</a></li>
                     <li><a href="services.html">E-commerce</a></li>
-                    <li><a href="services.html">SEO</a></li>
-                    <li><a href="services.html#faq">FAQ</a></li>
+                    <li><a href="services.html">SEO Optimization</a></li>
+                    <li><a href="services.html">Maintenance</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h3>Contact</h3>
+                <h3>Get In Touch</h3>
                 <ul>
-                    <li><a href="mailto:contact@hlpfl.dev">contact@hlpfl.dev</a></li>
-                    <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+                    <li><a href="mailto:hello@hlpfl.dev">hello@hlpfl.dev</a></li>
                     <li>Grand Rapids, MI</li>
+                    <li>24-hour response time</li>
                 </ul>
+                <a href="contact.html" class="footer-cta">Start Your Project →</a>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 HLPFL. All rights reserved. | <a href="#" style="color: var(--primary);">Privacy Policy</a> | <a href="#" style="color: var(--primary);">Terms of Service</a></p>
+            <p>&copy; 2024 HLPFL. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#" style="color: var(--primary);">Privacy Policy</a>
+                <span style="color: var(--text-muted);">•</span>
+                <a href="#" style="color: var(--primary);">Terms of Service</a>
+                <span style="color: var(--text-muted);">•</span>
+                <a href="#" style="color: var(--primary);">Cookie Policy</a>
+            </div>
         </div>
     </footer>
 
 <script>
         // Loading Screen
+
+        // Create floating particles
+        function createParticles() {
+            const particlesContainer = document.querySelector('.loading-particles');
+            if (!particlesContainer) return;
+            
+            const particleCount = 30;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                
+                // Random size between 2px and 8px
+                const size = Math.random() * 6 + 2;
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+                
+                // Random horizontal position
+                particle.style.left = Math.random() * 100 + '%';
+                
+                // Random animation duration between 10s and 20s
+                const duration = Math.random() * 10 + 10;
+                particle.style.animationDuration = duration + 's';
+                
+                // Random delay
+                const delay = Math.random() * 5;
+                particle.style.animationDelay = delay + 's';
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+        
+        // Initialize particles
+        createParticles();
+
         let progress = 0;
         const loadingBar = document.getElementById('loadingBar');
         const loadingPercentage = document.getElementById('loadingPercentage');
@@ -1073,7 +1900,309 @@
                 }
             });
         });
+    
+        // Cookie Consent Banner
+        function showCookieBanner() {
+            const banner = document.getElementById('cookieBanner');
+            const consent = localStorage.getItem('cookieConsent');
+            
+            if (!consent) {
+                setTimeout(() => {
+                    banner.classList.add('show');
+                }, 1000);
+            }
+        }
+        
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            hideCookieBanner();
+        }
+        
+        function declineCookies() {
+            localStorage.setItem('cookieConsent', 'declined');
+            hideCookieBanner();
+        }
+        
+        function hideCookieBanner() {
+            const banner = document.getElementById('cookieBanner');
+            banner.classList.remove('show');
+        }
+        
+        // Show banner on page load
+        showCookieBanner();
+
+    
+        // Easter Eggs and Animations
+        
+        // Konami Code Easter Egg (↑ ↑ ↓ ↓ ← → ← → B A)
+        let konamiCode = [];
+        const konamiSequence = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+        
+        document.addEventListener('keydown', (e) => {
+            konamiCode.push(e.key);
+            konamiCode = konamiCode.slice(-10);
+            
+            if (konamiCode.join('') === konamiSequence.join('')) {
+                activateKonamiMode();
+            }
+        });
+        
+        function activateKonamiMode() {
+            document.body.classList.add('konami-active');
+            
+            // Create confetti effect
+            for (let i = 0; i < 50; i++) {
+                createConfetti();
+            }
+            
+            setTimeout(() => {
+                document.body.classList.remove('konami-active');
+            }, 5000);
+            
+            console.log('🎮 Konami Code Activated! You found the secret!');
+        }
+        
+        function createConfetti() {
+            const confetti = document.createElement('div');
+            confetti.style.position = 'fixed';
+            confetti.style.width = '10px';
+            confetti.style.height = '10px';
+            confetti.style.background = `hsl(${Math.random() * 360}, 70%, 60%)`;
+            confetti.style.left = Math.random() * 100 + '%';
+            confetti.style.top = '-10px';
+            confetti.style.borderRadius = '50%';
+            confetti.style.pointerEvents = 'none';
+            confetti.style.zIndex = '10000';
+            confetti.style.animation = `fall ${Math.random() * 3 + 2}s linear`;
+            
+            document.body.appendChild(confetti);
+            
+            setTimeout(() => {
+                confetti.remove();
+            }, 5000);
+        }
+        
+        // Add fall animation for confetti
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fall {
+                to {
+                    transform: translateY(100vh) rotate(360deg);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Developer Mode (Press 'D' 3 times quickly)
+        let dPresses = 0;
+        let dTimer;
+        
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'd' || e.key === 'D') {
+                dPresses++;
+                clearTimeout(dTimer);
+                
+                if (dPresses === 3) {
+                    toggleDevMode();
+                    dPresses = 0;
+                }
+                
+                dTimer = setTimeout(() => {
+                    dPresses = 0;
+                }, 1000);
+            }
+        });
+        
+        function toggleDevMode() {
+            document.body.classList.toggle('dev-mode-active');
+            const isActive = document.body.classList.contains('dev-mode-active');
+            console.log(isActive ? '🔧 Developer Mode: ON' : '🔧 Developer Mode: OFF');
+        }
+        
+        // Logo click counter (10 clicks = surprise)
+        let logoClicks = 0;
+        const logo = document.querySelector('.logo');
+        
+        if (logo) {
+            logo.addEventListener('click', () => {
+                logoClicks++;
+                
+                if (logoClicks === 10) {
+                    logoSurprise();
+                    logoClicks = 0;
+                }
+            });
+        }
+        
+        function logoSurprise() {
+            const messages = [
+                '🎉 You found the secret!',
+                '🚀 Keep clicking for more surprises!',
+                '💎 You are persistent!',
+                '🌟 Achievement Unlocked: Logo Master',
+                '🎨 Thanks for exploring!'
+            ];
+            
+            const message = messages[Math.floor(Math.random() * messages.length)];
+            
+            // Create toast notification
+            const toast = document.createElement('div');
+            toast.textContent = message;
+            toast.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: linear-gradient(135deg, #C87941, #E89A6A);
+                color: white;
+                padding: 1rem 2rem;
+                border-radius: 10px;
+                font-weight: 600;
+                z-index: 10000;
+                animation: slideInRight 0.5s ease;
+                box-shadow: 0 10px 40px rgba(200, 121, 65, 0.4);
+            `;
+            
+            document.body.appendChild(toast);
+            
+            setTimeout(() => {
+                toast.style.animation = 'slideInRight 0.5s ease reverse';
+                setTimeout(() => toast.remove(), 500);
+            }, 3000);
+        }
+        
+        // Add smooth reveal on scroll for elements
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.6s ease forwards';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all cards and sections
+        document.querySelectorAll('.service-card, .portfolio-card, .value-card, .pricing-card').forEach(el => {
+            observer.observe(el);
+        });
+
+    
+        // Performance Optimizations
+        
+        // Lazy load images
+        if ('loading' in HTMLImageElement.prototype) {
+            const images = document.querySelectorAll('img[loading="lazy"]');
+            images.forEach(img => {
+                img.src = img.dataset.src;
+            });
+        } else {
+            // Fallback for browsers that don't support lazy loading
+            const script = document.createElement('script');
+            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js';
+            document.body.appendChild(script);
+        }
+        
+        // Debounce scroll events for better performance
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+        
+        // Optimize scroll event listeners
+        const optimizedScroll = debounce(() => {
+            // Scroll-based animations
+        }, 10);
+        
+        window.addEventListener('scroll', optimizedScroll, { passive: true });
+        
+        // Preload critical resources
+        function preloadCriticalResources() {
+            const criticalLinks = document.querySelectorAll('a[href*="contact"], a[href*="services"]');
+            criticalLinks.forEach(link => {
+                const url = link.getAttribute('href');
+                if (url && !url.startsWith('#')) {
+                    const preloadLink = document.createElement('link');
+                    preloadLink.rel = 'prefetch';
+                    preloadLink.href = url;
+                    document.head.appendChild(preloadLink);
+                }
+            });
+        }
+        
+        // Preload on idle
+        if ('requestIdleCallback' in window) {
+            requestIdleCallback(preloadCriticalResources);
+        } else {
+            setTimeout(preloadCriticalResources, 2000);
+        }
+        
+        // Service Worker for offline support (optional)
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                // Uncomment to enable service worker
+                // navigator.serviceWorker.register('/sw.js');
+            });
+        }
+        
+        // Monitor performance
+        if ('PerformanceObserver' in window) {
+            const perfObserver = new PerformanceObserver((list) => {
+                for (const entry of list.getEntries()) {
+                    if (entry.entryType === 'largest-contentful-paint') {
+                        console.log('LCP:', entry.startTime);
+                    }
+                }
+            });
+            
+            try {
+                perfObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+            } catch (e) {
+                // Browser doesn't support this metric
+            }
+        }
+        
+        // Optimize form submissions
+        const forms = document.querySelectorAll('form');
+        forms.forEach(form => {
+            form.addEventListener('submit', (e) => {
+                const submitBtn = form.querySelector('[type="submit"]');
+                if (submitBtn) {
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = 'Sending...';
+                }
+            });
+        });
+
     </script>
    
-   </body>
+   
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <p>
+                    <strong>🍪 We use cookies</strong> to enhance your browsing experience and analyze our traffic. 
+                    By clicking "Accept", you consent to our use of cookies. 
+                    <a href="#" onclick="event.preventDefault();">Learn more</a>
+                </p>
+            </div>
+            <div class="cookie-actions">
+                <button class="cookie-btn cookie-btn-accept" onclick="acceptCookies()">Accept All</button>
+                <button class="cookie-btn cookie-btn-decline" onclick="declineCookies()">Decline</button>
+            </div>
+        </div>
+    </div>
+
+</body>
 </html>

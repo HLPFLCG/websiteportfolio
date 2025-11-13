@@ -804,11 +804,552 @@
                 transform: scale(1);
             }
         }
+    
+        /* Enhanced Footer Styles */
+        footer {
+            background: var(--dark-light);
+            padding: 4rem 2rem 2rem;
+            border-top: 1px solid rgba(200, 121, 65, 0.2);
+        }
+        
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .footer-logo {
+            margin-bottom: 1rem;
+        }
+        
+        .footer-logo svg {
+            width: 80px;
+            height: 80px;
+        }
+        
+        .footer-section h3 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.25rem;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .footer-section a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .footer-section a:hover {
+            color: var(--primary);
+            transform: translateX(5px);
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(200, 121, 65, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.25rem;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px) !important;
+        }
+        
+        .footer-cta {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-cta:hover {
+            transform: translateY(-3px) !important;
+            box-shadow: 0 10px 30px rgba(200, 121, 65, 0.4);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-muted);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        
+        @media (max-width: 968px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+    
+        /* Enhanced Loading Screen */
+        #loadingScreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #000000 0%, #1a0a00 50%, #000000 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+        
+        #loadingScreen.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        /* Floating Particles Background */
+        .loading-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .particle {
+            position: absolute;
+            background: radial-gradient(circle, rgba(200, 121, 65, 0.8) 0%, rgba(200, 121, 65, 0) 70%);
+            border-radius: 50%;
+            animation: float linear infinite;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) scale(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) scale(1);
+                opacity: 0;
+            }
+        }
+        
+        /* Loading Content */
+        .loading-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        .loading-logo {
+            width: 300px;
+            height: auto;
+            filter: drop-shadow(0 0 30px rgba(200, 121, 65, 0.5));
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% {
+                filter: drop-shadow(0 0 30px rgba(200, 121, 65, 0.5));
+            }
+            50% {
+                filter: drop-shadow(0 0 50px rgba(200, 121, 65, 0.8));
+            }
+        }
+        
+        .loading-bar-container {
+            width: 300px;
+            height: 8px;
+            background: rgba(200, 121, 65, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 0 20px rgba(200, 121, 65, 0.3);
+        }
+        
+        .loading-bar {
+            height: 100%;
+            background: linear-gradient(90deg, 
+                var(--primary) 0%, 
+                var(--primary-light) 50%, 
+                var(--primary) 100%);
+            background-size: 200% 100%;
+            border-radius: 10px;
+            transition: width 0.3s ease;
+            animation: shimmer 1.5s linear infinite;
+            box-shadow: 0 0 20px rgba(200, 121, 65, 0.6);
+        }
+        
+        @keyframes shimmer {
+            0% {
+                background-position: -200% 0;
+            }
+            100% {
+                background-position: 200% 0;
+            }
+        }
+        
+        .loading-percentage {
+            margin-top: 1rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-shadow: 0 0 20px rgba(200, 121, 65, 0.5);
+        }
+
+    
+        /* Cookie Consent Banner */
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--dark-light);
+            border-top: 2px solid var(--primary);
+            padding: 1.5rem 2rem;
+            z-index: 9998;
+            transform: translateY(100%);
+            transition: transform 0.4s ease;
+            box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.5);
+        }
+        
+        .cookie-banner.show {
+            transform: translateY(0);
+        }
+        
+        .cookie-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .cookie-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .cookie-text p {
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+        }
+        
+        .cookie-text a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .cookie-text a:hover {
+            color: var(--primary-light);
+        }
+        
+        .cookie-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .cookie-btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            font-size: 1rem;
+        }
+        
+        .cookie-btn-accept {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+        }
+        
+        .cookie-btn-accept:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(200, 121, 65, 0.4);
+        }
+        
+        .cookie-btn-decline {
+            background: transparent;
+            border: 2px solid rgba(200, 121, 65, 0.3);
+            color: var(--text-muted);
+        }
+        
+        .cookie-btn-decline:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+        
+        @media (max-width: 768px) {
+            .cookie-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .cookie-actions {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .cookie-btn {
+                flex: 1;
+            }
+        }
+
+    
+        /* Subtle Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Logo hover animation */
+        .logo:hover {
+            animation: bounce 0.6s ease;
+        }
+        
+        /* Button ripple effect */
+        .cta-button, .btn-primary, .form-submit {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-button::after, .btn-primary::after, .form-submit::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .cta-button:active::after, .btn-primary:active::after, .form-submit:active::after {
+            width: 300px;
+            height: 300px;
+        }
+        
+        /* Konami Code Easter Egg */
+        .konami-active {
+            animation: rainbow 3s linear infinite;
+        }
+        
+        @keyframes rainbow {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
+        }
+        
+        /* Secret Developer Mode */
+        .dev-mode-active * {
+            outline: 1px solid rgba(200, 121, 65, 0.3) !important;
+        }
+        
+        /* Shake animation for errors */
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+            20%, 40%, 60%, 80% { transform: translateX(5px); }
+        }
+        
+        .shake {
+            animation: shake 0.5s;
+        }
+        
+        /* Floating animation for icons */
+        @keyframes float-icon {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        .service-icon, .value-icon, .contact-method-icon {
+            animation: float-icon 3s ease-in-out infinite;
+        }
+        
+        /* Stagger animation delays for icons */
+        .service-icon:nth-child(1), .value-icon:nth-child(1) {
+            animation-delay: 0s;
+        }
+        
+        .service-icon:nth-child(2), .value-icon:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        
+        .service-icon:nth-child(3), .value-icon:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+    
+        /* Performance Optimizations */
+        * {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        /* Reduce motion for users who prefer it */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+        
+        /* Optimize images */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* GPU acceleration for animations */
+        .service-card,
+        .portfolio-card,
+        .value-card,
+        .pricing-card,
+        .cta-button,
+        .btn {
+            will-change: transform;
+            transform: translateZ(0);
+            backface-visibility: hidden;
+        }
+        
+        /* Optimize font loading */
+        @font-face {
+            font-display: swap;
+        }
+
     </style>
 <script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
        
           
-   </head>
+   
+    <!-- Performance & Security -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+</head>
    <body>
            <!-- Loading Screen -->
     <div class="loading-screen" id="loadingScreen">
@@ -832,409 +1373,45 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <a href="contact.html" class="cta-button">Contact</a>
+            
             <button class="mobile-menu-toggle">☰</button>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-content reveal">
-            <h1>
-                   <span class=white-text>Your First Website</span>
-                   <span class=copper-text>Shouldn't Break the Bank</span>
-               </h1>
-            <p>High-quality websites for first-time founders at prices you can actually afford. No outsourcing, full transparency, 100% US-based work.</p>
-            <div class="hero-cta">
-                <a href="contact.html" class="cta-button">Get Your Free Quote</a>
-                <a href="#how-it-works" class="secondary-button">See How It Works</a>
-            </div>
-        </div>
-           <div class="scroll-indicator" onclick="document.querySelector('#value-props').scrollIntoView({behavior: 'smooth'})">
-               <span class="scroll-text">SCROLL</span>
-               <div class="scroll-arrow"></div>
-           </div>
-    </section>
-
-    <!-- Trust Badges Bar -->
-    <div class="trust-badges">
-        <div class="trust-badges-container">
-            <div class="trust-badge">
-                <div class="trust-badge-icon">⚡</div>
-                <h3>72-Hour Delivery*</h3>
-                <p>Efficient turnaround guaranteed</p>
-            </div>
-            <div class="trust-badge">
-                <div class="trust-badge-icon">💰</div>
-                <h3>Founder Friendly Pricing</h3>
-                <p>Sliding scale for your budget, we know it's hard out here. </p>
-            </div>
-            <div class="trust-badge">
-                <div class="trust-badge-icon">🇺🇸</div>
-                <h3>100% US-Based</h3>
-                <p>No international outsourcing - ever</p>
-            </div>
-            <div class="trust-badge">
-                <div class="trust-badge-icon">🤝</div>
-                <h3>Full Transparency</h3>
-                <p>No hidden fees or surprises</p>
-            </div>
-            <div class="trust-badge">
-                <div class="trust-badge-icon">🚀</div>
-                <h3>Real Partnership</h3>
-                <p>We grow with your success</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Value Propositions -->
-    <section id="value-props">
-        <div class="container">
-            <div class="section-header reveal">
-                <h2>Why Choose HLPFL?</h2>
-                <p>We understand the challenges first-time founders face. That's why we've built a service that actually works for you.</p>
-            </div>
-            <div class="value-props">
-                <div class="value-card reveal">
-                    <div class="value-icon">⚡</div>
-                    <h3>Lightning-Fast Delivery</h3>
-                    <p>Get your website live in 72 hours when you provide all materials. We use AI-powered development to deliver quality at speed without compromising on excellence.</p>
-                </div>
-                <div class="value-card reveal">
-                    <div class="value-icon">💰</div>
-                    <h3>Actually Affordable</h3>
-                    <p>Sliding scale pricing based on your budget. We believe every founder deserves a professional website, regardless of their current financial situation.</p>
-                </div>
-                <div class="value-card reveal">
-                    <div class="value-icon">🇺🇸</div>
-                    <h3>100% US-Based Work</h3>
-                    <p>No outsourcing, no language barriers, no timezone issues. All work is done right here in Grand Rapids, MI by our dedicated team.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Process Section -->
-    <section id="how-it-works">
-        <div class="container">
-            <div class="section-header reveal">
-                <h2>How It Works</h2>
-                <p>Four simple steps to get your website live</p>
-            </div>
-            <div class="value-props">
-                <div class="value-card reveal">
-                    <div class="value-icon">1️⃣</div>
-                    <h3>Discovery Call</h3>
-                    <p>Find out if we're a good fit for one another. No promises, we're not for everyone.</p>
-                </div>
-                <div class="value-card reveal">
-                    <div class="value-icon">2️⃣</div>
-                    <h3>Provide Materials</h3>
-                    <p>Share your content, images, branding, and any assets you have. Don't have everything? No worries.</p>
-                </div>
-                <div class="value-card reveal">
-                    <div class="value-icon">3️⃣</div>
-                    <h3>We Build</h3>
-                    <p>Our team gets to work using development tools to create your custom website efficiently without cutting corners.</p>
-                </div>
-                <div class="value-card reveal">
-                    <div class="value-icon">4️⃣</div>
-                    <h3>Review & Launch</h3>
-                    <p>You review, we refine, and then we launch. Typically within 72 hours of receiving all materials. Then we celebrate your success!</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section>
-        <div class="container">
-            <div class="stats reveal">
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <h3>72hrs</h3>
-                        <p>Average Turnaround</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>100%</h3>
-                        <p>US-Based Work</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>6+</h3>
-                        <p>Years Experience</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>20+</h3>
-                        <p>Ventures Built</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials">
-        <div class="container">
-            <div class="section-header reveal">
-                <h2>What Our Clients Say</h2>
-                <p>Real feedback from real founders who took the leap</p>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card reveal">
-                    <div class="testimonial-rating">★★★★★</div>
-                    <p class="testimonial-text">"As a first-time founder with limited budget, HLPFL was a lifesaver. They delivered a professional website in 3 days that helped me land my first clients. The sliding scale pricing meant I could actually afford it!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">SM</div>
-                        <div class="author-info">
-                            <h4>Heather</h4>
-                            <p>Founder, HCJK Collection, www.hcjk.org</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card reveal">
-                    <div class="testimonial-rating">★★★★★</div>
-                    <p class="testimonial-text">"I was skeptical about the 72-hour promise, but they actually delivered! The transparency throughout the process was refreshing. No hidden fees, no surprises, just honest work from a US-based team."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">JC</div>
-                        <div class="author-info">
-                            <h4>James Chen</h4>
-                            <p>Founder, [COMPANY NAME]</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card reveal">
-                    <div class="testimonial-rating">★★★★★</div>
-                    <p class="testimonial-text">"After two failed business attempts, I was hesitant to invest in a website. HLPFL worked with my budget and created something that actually converts. Three months later, I'm profitable!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">MJ</div>
-                        <div class="author-info">
-                            <h4>Marcus Johnson</h4>
-                            <p>Founder, [COMPANY NAME]</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card reveal">
-                    <div class="testimonial-rating">★★★★★</div>
-                    <p class="testimonial-text">"The AI-powered development didn't mean cookie-cutter results. My website is unique, professional, and exactly what I envisioned. Plus, the support after launch has been incredible."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">EW</div>
-                        <div class="author-info">
-                            <h4>Emily Williams</h4>
-                            <p>Founder, [COMPANY NAME]</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card reveal">
-                    <div class="testimonial-rating">★★★★★</div>
-                    <p class="testimonial-text">"I appreciated the real partnership approach. They didn't just build a website and disappear. They genuinely care about my success and have been there for questions and updates."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">DR</div>
-                        <div class="author-info">
-                            <h4>David Rodriguez</h4>
-                            <p>Founder, [COMPANY NAME]</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card reveal">
-                    <div class="testimonial-rating">★★★★★</div>
-                    <p class="testimonial-text">"Being 100% US-based made all the difference. Communication was seamless, no timezone issues, and I could actually talk to the people building my site. Worth every penny!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">AL</div>
-                        <div class="author-info">
-                            <h4>Amanda Lee</h4>
-                            <p>Founder, [COMPANY NAME]</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section id="pricing">
-        <div class="container">
-            <div class="section-header reveal">
-                <h2>Simple, Transparent Pricing</h2>
-                <p>Choose the package that fits your needs and budget. No hidden fees, ever.</p>
-            </div>
-            <div class="pricing-grid">
-                <div class="pricing-card reveal">
-                    <h3>Starter</h3>
-                    <div class="pricing-price">$_____</div>
-                    <p class="pricing-period">One-time payment</p>
-                    <ul class="pricing-features">
-                        <li>Single-page website</li>
-                        <li>Mobile responsive design</li>
-                        <li>Contact form integration</li>
-                        <li>Basic SEO setup</li>
-                        <li>72-hour delivery</li>
-                        <li>1 round of revisions</li>
-                        <li>30 days support</li>
-                    </ul>
-                    <a href="contact.html" class="cta-button">Get Started</a>
-                </div>
-                <div class="pricing-card featured reveal">
-                    <div class="pricing-badge">MOST POPULAR</div>
-                    <h3>Professional</h3>
-                    <div class="pricing-price">$_____</div>
-                    <p class="pricing-period">One-time payment</p>
-                    <ul class="pricing-features">
-                        <li>Up to 5 pages</li>
-                        <li>Custom design</li>
-                        <li>Advanced animations</li>
-                        <li>Contact & booking forms</li>
-                        <li>Full SEO optimization</li>
-                        <li>72-hour delivery</li>
-                        <li>3 rounds of revisions</li>
-                        <li>90 days support</li>
-                        <li>Analytics setup</li>
-                    </ul>
-                    <a href="contact.html" class="cta-button">Get Started</a>
-                </div>
-                <div class="pricing-card reveal">
-                    <h3>Enterprise</h3>
-                    <div class="pricing-price">$_____</div>
-                    <p class="pricing-period">One-time payment</p>
-                    <ul class="pricing-features">
-                        <li>Unlimited pages</li>
-                        <li>Premium custom design</li>
-                        <li>Advanced features</li>
-                        <li>E-commerce integration</li>
-                        <li>Custom functionality</li>
-                        <li>Priority delivery</li>
-                        <li>Unlimited revisions</li>
-                        <li>6 months support</li>
-                        <li>Advanced analytics</li>
-                        <li>Ongoing maintenance</li>
-                    </ul>
-                    <a href="contact.html" class="cta-button">Get Started</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section id="faq">
-        <div class="container">
-            <div class="section-header reveal">
-                <h2>Frequently Asked Questions</h2>
-                <p>Everything you need to know about working with HLPFL</p>
-            </div>
-            <div class="faq-container">
-                <div class="faq-item reveal">
-                    <div class="faq-question">
-                        <span>How can you deliver a website in 72 hours?</span>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            We use AI-powered development tools combined with our 6+ years of experience to streamline the process. When you provide all materials upfront (content, images, branding), we can work efficiently without back-and-forth delays. Our process is optimized for speed without sacrificing quality.
-                        </div>
-                    </div>
-                </div>
-                <div class="faq-item reveal">
-                    <div class="faq-question">
-                        <span>What if I don't have all my content ready?</span>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            No problem! We'll help you figure out what you need during the discovery call. If you need more time to gather materials, we'll work with your timeline. The 72-hour delivery starts once we have everything we need from you.
-                        </div>
-                    </div>
-                </div>
-                <div class="faq-item reveal">
-                    <div class="faq-question">
-                        <span>How does the sliding scale pricing work?</span>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            During our discovery call, we'll discuss your budget honestly. We offer flexible pricing based on your current financial situation and the scope of your project. Our goal is to make professional web development accessible to all first-time founders, regardless of budget constraints.
-                        </div>
-                    </div>
-                </div>
-                <div class="faq-item reveal">
-                    <div class="faq-question">
-                        <span>What happens after my website launches?</span>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            All packages include post-launch support (30-180 days depending on your package). We're here to answer questions, make minor updates, and ensure your website continues to perform well. We also offer ongoing maintenance packages if you need continued support.
-                        </div>
-                    </div>
-                </div>
-                <div class="faq-item reveal">
-                    <div class="faq-question">
-                        <span>Do you offer refunds if I'm not satisfied?</span>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            We're committed to your satisfaction. All packages include multiple rounds of revisions to ensure you're happy with the final product. If there's an issue, we'll work with you to make it right. We believe in full transparency and real partnership with our clients.
-                        </div>
-                    </div>
-                </div>
-                <div class="faq-item reveal">
-                    <div class="faq-question">
-                        <span>Can you help with hosting and domain setup?</span>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            Absolutely! We can guide you through the entire process of purchasing a domain and setting up hosting. We'll recommend affordable, reliable hosting providers and can even handle the technical setup for you if needed.
-                        </div>
-                    </div>
-                </div>
-                <div class="faq-item reveal">
-                    <div class="faq-question">
-                        <span>What makes you different from other web developers?</span>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            We're 100% US-based (no outsourcing), offer sliding scale pricing for first-time founders, deliver in 72 hours, and maintain full transparency throughout the process. We're not just building websites – we're partnering with founders to help them succeed. Plus, our founder is only 24 with 6+ years of entrepreneurial experience, so we truly understand the challenges you're facing.
-                        </div>
-                    </div>
-                </div>
-                <div class="faq-item reveal">
-                    <div class="faq-question">
-                        <span>Will my website be mobile-friendly?</span>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            Yes! Every website we build is fully responsive and optimized for all devices – desktop, tablet, and mobile. With over 60% of web traffic coming from mobile devices, this is a non-negotiable part of our process.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Final CTA Section -->
-    <section style="background: var(--dark-light); border-radius: 30px; margin: 4rem 2rem;">
-        <div class="container" style="text-align: center; padding: 4rem 2rem;">
-            <div class="reveal">
-                <h2 style="font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 1.5rem; background: linear-gradient(135deg, var(--primary), var(--primary-light)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Ready to Launch Your Website?</h2>
-                <p style="font-size: 1.25rem; color: var(--text-muted); margin-bottom: 2.5rem; max-width: 700px; margin-left: auto; margin-right: auto;">Let's have a free 30-minute discovery call to discuss your vision and see if we're a good fit. No pressure, no sales pitch – just honest conversation about your goals.</p>
-                <a href="contact.html" class="cta-button" style="font-size: 1.1rem; padding: 1rem 2.5rem;">Get My Free Quote</a>
-            </div>
-        </div>
-    </section>
+    
 
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <div class="footer-section">
+            <div class="footer-section footer-brand">
+                <div class="footer-logo">
+                    <svg width="120" height="120" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="footerLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#C87941;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#E89A6A;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="100" cy="100" r="90" fill="none" stroke="url(#footerLogoGradient)" stroke-width="8"/>
+                        <text x="100" y="120" font-family="Arial, sans-serif" font-size="80" font-weight="bold" 
+                              fill="url(#footerLogoGradient)" text-anchor="middle">H</text>
+                    </svg>
+                </div>
                 <h3>HLPFL</h3>
-                <p style="color: var(--text-muted); line-height: 1.8;">Affordable, high-quality websites for first-time founders. 100% US-based work from Grand Rapids, MI.</p>
+                <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 1.5rem;">
+                    Affordable, high-quality websites for first-time founders. 100% US-based work from Grand Rapids, MI.
+                </p>
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+                    <a href="#" class="social-link" aria-label="GitHub">⚡</a>
+                </div>
             </div>
             <div class="footer-section">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="#home">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
                     <li><a href="about.html">About</a></li>
@@ -1247,26 +1424,69 @@
                     <li><a href="services.html">Web Development</a></li>
                     <li><a href="services.html">Web Design</a></li>
                     <li><a href="services.html">E-commerce</a></li>
-                    <li><a href="services.html">SEO</a></li>
-                    <li><a href="services.html#faq">FAQ</a></li>
+                    <li><a href="services.html">SEO Optimization</a></li>
+                    <li><a href="services.html">Maintenance</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h3>Contact</h3>
+                <h3>Get In Touch</h3>
                 <ul>
-                    <li><a href="mailto:contact@hlpfl.dev">contact@hlpfl.dev</a></li>
-                    <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+                    <li><a href="mailto:hello@hlpfl.dev">hello@hlpfl.dev</a></li>
                     <li>Grand Rapids, MI</li>
+                    <li>24-hour response time</li>
                 </ul>
+                <a href="contact.html" class="footer-cta">Start Your Project →</a>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 HLPFL. All rights reserved. | <a href="#" style="color: var(--primary);">Privacy Policy</a> | <a href="#" style="color: var(--primary);">Terms of Service</a></p>
+            <p>&copy; 2024 HLPFL. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#" style="color: var(--primary);">Privacy Policy</a>
+                <span style="color: var(--text-muted);">•</span>
+                <a href="#" style="color: var(--primary);">Terms of Service</a>
+                <span style="color: var(--text-muted);">•</span>
+                <a href="#" style="color: var(--primary);">Cookie Policy</a>
+            </div>
         </div>
     </footer>
 
     <script>
         // Loading Screen
+
+        // Create floating particles
+        function createParticles() {
+            const particlesContainer = document.querySelector('.loading-particles');
+            if (!particlesContainer) return;
+            
+            const particleCount = 30;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                
+                // Random size between 2px and 8px
+                const size = Math.random() * 6 + 2;
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+                
+                // Random horizontal position
+                particle.style.left = Math.random() * 100 + '%';
+                
+                // Random animation duration between 10s and 20s
+                const duration = Math.random() * 10 + 10;
+                particle.style.animationDuration = duration + 's';
+                
+                // Random delay
+                const delay = Math.random() * 5;
+                particle.style.animationDelay = delay + 's';
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+        
+        // Initialize particles
+        createParticles();
+
         let progress = 0;
         const loadingBar = document.getElementById('loadingBar');
         const loadingPercentage = document.getElementById('loadingPercentage');
@@ -1347,7 +1567,309 @@
                 }
             });
         });
+    
+        // Cookie Consent Banner
+        function showCookieBanner() {
+            const banner = document.getElementById('cookieBanner');
+            const consent = localStorage.getItem('cookieConsent');
+            
+            if (!consent) {
+                setTimeout(() => {
+                    banner.classList.add('show');
+                }, 1000);
+            }
+        }
+        
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            hideCookieBanner();
+        }
+        
+        function declineCookies() {
+            localStorage.setItem('cookieConsent', 'declined');
+            hideCookieBanner();
+        }
+        
+        function hideCookieBanner() {
+            const banner = document.getElementById('cookieBanner');
+            banner.classList.remove('show');
+        }
+        
+        // Show banner on page load
+        showCookieBanner();
+
+    
+        // Easter Eggs and Animations
+        
+        // Konami Code Easter Egg (↑ ↑ ↓ ↓ ← → ← → B A)
+        let konamiCode = [];
+        const konamiSequence = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+        
+        document.addEventListener('keydown', (e) => {
+            konamiCode.push(e.key);
+            konamiCode = konamiCode.slice(-10);
+            
+            if (konamiCode.join('') === konamiSequence.join('')) {
+                activateKonamiMode();
+            }
+        });
+        
+        function activateKonamiMode() {
+            document.body.classList.add('konami-active');
+            
+            // Create confetti effect
+            for (let i = 0; i < 50; i++) {
+                createConfetti();
+            }
+            
+            setTimeout(() => {
+                document.body.classList.remove('konami-active');
+            }, 5000);
+            
+            console.log('🎮 Konami Code Activated! You found the secret!');
+        }
+        
+        function createConfetti() {
+            const confetti = document.createElement('div');
+            confetti.style.position = 'fixed';
+            confetti.style.width = '10px';
+            confetti.style.height = '10px';
+            confetti.style.background = `hsl(${Math.random() * 360}, 70%, 60%)`;
+            confetti.style.left = Math.random() * 100 + '%';
+            confetti.style.top = '-10px';
+            confetti.style.borderRadius = '50%';
+            confetti.style.pointerEvents = 'none';
+            confetti.style.zIndex = '10000';
+            confetti.style.animation = `fall ${Math.random() * 3 + 2}s linear`;
+            
+            document.body.appendChild(confetti);
+            
+            setTimeout(() => {
+                confetti.remove();
+            }, 5000);
+        }
+        
+        // Add fall animation for confetti
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fall {
+                to {
+                    transform: translateY(100vh) rotate(360deg);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Developer Mode (Press 'D' 3 times quickly)
+        let dPresses = 0;
+        let dTimer;
+        
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'd' || e.key === 'D') {
+                dPresses++;
+                clearTimeout(dTimer);
+                
+                if (dPresses === 3) {
+                    toggleDevMode();
+                    dPresses = 0;
+                }
+                
+                dTimer = setTimeout(() => {
+                    dPresses = 0;
+                }, 1000);
+            }
+        });
+        
+        function toggleDevMode() {
+            document.body.classList.toggle('dev-mode-active');
+            const isActive = document.body.classList.contains('dev-mode-active');
+            console.log(isActive ? '🔧 Developer Mode: ON' : '🔧 Developer Mode: OFF');
+        }
+        
+        // Logo click counter (10 clicks = surprise)
+        let logoClicks = 0;
+        const logo = document.querySelector('.logo');
+        
+        if (logo) {
+            logo.addEventListener('click', () => {
+                logoClicks++;
+                
+                if (logoClicks === 10) {
+                    logoSurprise();
+                    logoClicks = 0;
+                }
+            });
+        }
+        
+        function logoSurprise() {
+            const messages = [
+                '🎉 You found the secret!',
+                '🚀 Keep clicking for more surprises!',
+                '💎 You are persistent!',
+                '🌟 Achievement Unlocked: Logo Master',
+                '🎨 Thanks for exploring!'
+            ];
+            
+            const message = messages[Math.floor(Math.random() * messages.length)];
+            
+            // Create toast notification
+            const toast = document.createElement('div');
+            toast.textContent = message;
+            toast.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: linear-gradient(135deg, #C87941, #E89A6A);
+                color: white;
+                padding: 1rem 2rem;
+                border-radius: 10px;
+                font-weight: 600;
+                z-index: 10000;
+                animation: slideInRight 0.5s ease;
+                box-shadow: 0 10px 40px rgba(200, 121, 65, 0.4);
+            `;
+            
+            document.body.appendChild(toast);
+            
+            setTimeout(() => {
+                toast.style.animation = 'slideInRight 0.5s ease reverse';
+                setTimeout(() => toast.remove(), 500);
+            }, 3000);
+        }
+        
+        // Add smooth reveal on scroll for elements
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.6s ease forwards';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all cards and sections
+        document.querySelectorAll('.service-card, .portfolio-card, .value-card, .pricing-card').forEach(el => {
+            observer.observe(el);
+        });
+
+    
+        // Performance Optimizations
+        
+        // Lazy load images
+        if ('loading' in HTMLImageElement.prototype) {
+            const images = document.querySelectorAll('img[loading="lazy"]');
+            images.forEach(img => {
+                img.src = img.dataset.src;
+            });
+        } else {
+            // Fallback for browsers that don't support lazy loading
+            const script = document.createElement('script');
+            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js';
+            document.body.appendChild(script);
+        }
+        
+        // Debounce scroll events for better performance
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+        
+        // Optimize scroll event listeners
+        const optimizedScroll = debounce(() => {
+            // Scroll-based animations
+        }, 10);
+        
+        window.addEventListener('scroll', optimizedScroll, { passive: true });
+        
+        // Preload critical resources
+        function preloadCriticalResources() {
+            const criticalLinks = document.querySelectorAll('a[href*="contact"], a[href*="services"]');
+            criticalLinks.forEach(link => {
+                const url = link.getAttribute('href');
+                if (url && !url.startsWith('#')) {
+                    const preloadLink = document.createElement('link');
+                    preloadLink.rel = 'prefetch';
+                    preloadLink.href = url;
+                    document.head.appendChild(preloadLink);
+                }
+            });
+        }
+        
+        // Preload on idle
+        if ('requestIdleCallback' in window) {
+            requestIdleCallback(preloadCriticalResources);
+        } else {
+            setTimeout(preloadCriticalResources, 2000);
+        }
+        
+        // Service Worker for offline support (optional)
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                // Uncomment to enable service worker
+                // navigator.serviceWorker.register('/sw.js');
+            });
+        }
+        
+        // Monitor performance
+        if ('PerformanceObserver' in window) {
+            const perfObserver = new PerformanceObserver((list) => {
+                for (const entry of list.getEntries()) {
+                    if (entry.entryType === 'largest-contentful-paint') {
+                        console.log('LCP:', entry.startTime);
+                    }
+                }
+            });
+            
+            try {
+                perfObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+            } catch (e) {
+                // Browser doesn't support this metric
+            }
+        }
+        
+        // Optimize form submissions
+        const forms = document.querySelectorAll('form');
+        forms.forEach(form => {
+            form.addEventListener('submit', (e) => {
+                const submitBtn = form.querySelector('[type="submit"]');
+                if (submitBtn) {
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = 'Sending...';
+                }
+            });
+        });
+
     </script>
    
-   </body>
+   
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <p>
+                    <strong>🍪 We use cookies</strong> to enhance your browsing experience and analyze our traffic. 
+                    By clicking "Accept", you consent to our use of cookies. 
+                    <a href="#" onclick="event.preventDefault();">Learn more</a>
+                </p>
+            </div>
+            <div class="cookie-actions">
+                <button class="cookie-btn cookie-btn-accept" onclick="acceptCookies()">Accept All</button>
+                <button class="cookie-btn cookie-btn-decline" onclick="declineCookies()">Decline</button>
+            </div>
+        </div>
+    </div>
+
+</body>
 </html>

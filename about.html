@@ -804,11 +804,714 @@
                 transform: scale(1);
             }
         }
+    
+        /* Interactive Timeline */
+        .timeline-section {
+            padding: 6rem 2rem;
+            background: var(--dark);
+            position: relative;
+        }
+        
+        .timeline-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        /* Horizontal Timeline for Desktop */
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            position: relative;
+            padding: 4rem 0;
+        }
+        
+        /* Timeline Line */
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, 
+                var(--primary) 0%, 
+                var(--primary-light) 50%, 
+                var(--primary) 100%);
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+        
+        .timeline-item {
+            flex: 1;
+            position: relative;
+            text-align: center;
+            z-index: 2;
+        }
+        
+        .timeline-dot {
+            width: 30px;
+            height: 30px;
+            background: var(--primary);
+            border: 4px solid var(--dark);
+            border-radius: 50%;
+            margin: 0 auto 2rem;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 0 0 0 0 rgba(200, 121, 65, 0.4);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(200, 121, 65, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(200, 121, 65, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(200, 121, 65, 0);
+            }
+        }
+        
+        .timeline-item:hover .timeline-dot {
+            transform: scale(1.3);
+            background: var(--primary-light);
+            animation: none;
+        }
+        
+        .timeline-year {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .timeline-content {
+            background: var(--dark-light);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 2px solid rgba(200, 121, 65, 0.1);
+            transition: all 0.4s ease;
+            opacity: 0.7;
+            transform: translateY(20px);
+        }
+        
+        .timeline-item:hover .timeline-content {
+            opacity: 1;
+            transform: translateY(0);
+            border-color: var(--primary);
+            box-shadow: 0 10px 40px rgba(200, 121, 65, 0.2);
+        }
+        
+        .timeline-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--text);
+        }
+        
+        .timeline-description {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+        
+        /* Vertical Timeline for Mobile */
+        @media (max-width: 968px) {
+            .timeline {
+                flex-direction: column;
+                padding: 2rem 0;
+            }
+            
+            .timeline::before {
+                top: 0;
+                bottom: 0;
+                left: 15px;
+                right: auto;
+                width: 4px;
+                height: 100%;
+                background: linear-gradient(180deg, 
+                    var(--primary) 0%, 
+                    var(--primary-light) 50%, 
+                    var(--primary) 100%);
+            }
+            
+            .timeline-item {
+                display: flex;
+                align-items: flex-start;
+                margin-bottom: 3rem;
+                text-align: left;
+            }
+            
+            .timeline-item:last-child {
+                margin-bottom: 0;
+            }
+            
+            .timeline-dot {
+                margin: 0;
+                flex-shrink: 0;
+                margin-right: 2rem;
+            }
+            
+            .timeline-content {
+                flex: 1;
+                transform: translateX(20px);
+            }
+            
+            .timeline-item:hover .timeline-content {
+                transform: translateX(0);
+            }
+        }
+
+    
+        /* Enhanced Footer Styles */
+        footer {
+            background: var(--dark-light);
+            padding: 4rem 2rem 2rem;
+            border-top: 1px solid rgba(200, 121, 65, 0.2);
+        }
+        
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .footer-logo {
+            margin-bottom: 1rem;
+        }
+        
+        .footer-logo svg {
+            width: 80px;
+            height: 80px;
+        }
+        
+        .footer-section h3 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.25rem;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .footer-section a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .footer-section a:hover {
+            color: var(--primary);
+            transform: translateX(5px);
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(200, 121, 65, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.25rem;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px) !important;
+        }
+        
+        .footer-cta {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-cta:hover {
+            transform: translateY(-3px) !important;
+            box-shadow: 0 10px 30px rgba(200, 121, 65, 0.4);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-muted);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        
+        @media (max-width: 968px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+    
+        /* Enhanced Loading Screen */
+        #loadingScreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #000000 0%, #1a0a00 50%, #000000 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+        
+        #loadingScreen.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        /* Floating Particles Background */
+        .loading-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .particle {
+            position: absolute;
+            background: radial-gradient(circle, rgba(200, 121, 65, 0.8) 0%, rgba(200, 121, 65, 0) 70%);
+            border-radius: 50%;
+            animation: float linear infinite;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) scale(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) scale(1);
+                opacity: 0;
+            }
+        }
+        
+        /* Loading Content */
+        .loading-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        .loading-logo {
+            width: 300px;
+            height: auto;
+            filter: drop-shadow(0 0 30px rgba(200, 121, 65, 0.5));
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% {
+                filter: drop-shadow(0 0 30px rgba(200, 121, 65, 0.5));
+            }
+            50% {
+                filter: drop-shadow(0 0 50px rgba(200, 121, 65, 0.8));
+            }
+        }
+        
+        .loading-bar-container {
+            width: 300px;
+            height: 8px;
+            background: rgba(200, 121, 65, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 0 20px rgba(200, 121, 65, 0.3);
+        }
+        
+        .loading-bar {
+            height: 100%;
+            background: linear-gradient(90deg, 
+                var(--primary) 0%, 
+                var(--primary-light) 50%, 
+                var(--primary) 100%);
+            background-size: 200% 100%;
+            border-radius: 10px;
+            transition: width 0.3s ease;
+            animation: shimmer 1.5s linear infinite;
+            box-shadow: 0 0 20px rgba(200, 121, 65, 0.6);
+        }
+        
+        @keyframes shimmer {
+            0% {
+                background-position: -200% 0;
+            }
+            100% {
+                background-position: 200% 0;
+            }
+        }
+        
+        .loading-percentage {
+            margin-top: 1rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-shadow: 0 0 20px rgba(200, 121, 65, 0.5);
+        }
+
+    
+        /* Cookie Consent Banner */
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--dark-light);
+            border-top: 2px solid var(--primary);
+            padding: 1.5rem 2rem;
+            z-index: 9998;
+            transform: translateY(100%);
+            transition: transform 0.4s ease;
+            box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.5);
+        }
+        
+        .cookie-banner.show {
+            transform: translateY(0);
+        }
+        
+        .cookie-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .cookie-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .cookie-text p {
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+        }
+        
+        .cookie-text a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .cookie-text a:hover {
+            color: var(--primary-light);
+        }
+        
+        .cookie-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .cookie-btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            font-size: 1rem;
+        }
+        
+        .cookie-btn-accept {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+        }
+        
+        .cookie-btn-accept:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(200, 121, 65, 0.4);
+        }
+        
+        .cookie-btn-decline {
+            background: transparent;
+            border: 2px solid rgba(200, 121, 65, 0.3);
+            color: var(--text-muted);
+        }
+        
+        .cookie-btn-decline:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+        
+        @media (max-width: 768px) {
+            .cookie-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .cookie-actions {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .cookie-btn {
+                flex: 1;
+            }
+        }
+
+    
+        /* Subtle Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Logo hover animation */
+        .logo:hover {
+            animation: bounce 0.6s ease;
+        }
+        
+        /* Button ripple effect */
+        .cta-button, .btn-primary, .form-submit {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-button::after, .btn-primary::after, .form-submit::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .cta-button:active::after, .btn-primary:active::after, .form-submit:active::after {
+            width: 300px;
+            height: 300px;
+        }
+        
+        /* Konami Code Easter Egg */
+        .konami-active {
+            animation: rainbow 3s linear infinite;
+        }
+        
+        @keyframes rainbow {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
+        }
+        
+        /* Secret Developer Mode */
+        .dev-mode-active * {
+            outline: 1px solid rgba(200, 121, 65, 0.3) !important;
+        }
+        
+        /* Shake animation for errors */
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+            20%, 40%, 60%, 80% { transform: translateX(5px); }
+        }
+        
+        .shake {
+            animation: shake 0.5s;
+        }
+        
+        /* Floating animation for icons */
+        @keyframes float-icon {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        .service-icon, .value-icon, .contact-method-icon {
+            animation: float-icon 3s ease-in-out infinite;
+        }
+        
+        /* Stagger animation delays for icons */
+        .service-icon:nth-child(1), .value-icon:nth-child(1) {
+            animation-delay: 0s;
+        }
+        
+        .service-icon:nth-child(2), .value-icon:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        
+        .service-icon:nth-child(3), .value-icon:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+    
+        /* Performance Optimizations */
+        * {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        /* Reduce motion for users who prefer it */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+        
+        /* Optimize images */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* GPU acceleration for animations */
+        .service-card,
+        .portfolio-card,
+        .value-card,
+        .pricing-card,
+        .cta-button,
+        .btn {
+            will-change: transform;
+            transform: translateZ(0);
+            backface-visibility: hidden;
+        }
+        
+        /* Optimize font loading */
+        @font-face {
+            font-display: swap;
+        }
+
     </style>
 <script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
        
           
-   </head>
+   
+    <!-- Performance & Security -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+</head>
 <body>
            <!-- Loading Screen -->
     <div class="loading-screen" id="loadingScreen">
@@ -832,227 +1535,47 @@
                 <li><a href="about.html" class="active">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <a href="contact.html" class="cta-button">Contact</a>
+            
             <button class="mobile-menu-toggle">☰</button>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-content reveal">
-            <h1>
-                <span class="white-text">About</span>
-                <span class="copper-text">HLPFL</span>
-            </h1>
-            <p>We're on a mission to make professional web development accessible to every first-time founder, regardless of budget.</p>
-        </div>
-        <div class="scroll-indicator" onclick="document.querySelector('#story').scrollIntoView({behavior: 'smooth'})">
-            <span class="scroll-text">SCROLL</span>
-            <div class="scroll-arrow"></div>
-        </div>
-    </section>
-
-    <!-- Our Story Section -->
-    <section id="story">
-        <div class="container">
-            <div class="section-header reveal">
-                <h2>Our Story</h2>
-                <p>From failed ventures to helping founders succeed</p>
-            </div>
-            <div class="story-content reveal">
-                <h3>It Started With Failure</h3>
-                <p>HLPFL was born from personal experience with the challenges first-time founders face. Our founder started his entrepreneurial journey at 18, launching his first venture with nothing but ambition and a laptop. Over the next 6 years, he built and launched over 20 different business ventures – some succeeded, many failed, but each one taught invaluable lessons.</p>
-                
-                <p>The biggest lesson? Most first-time founders fail not because their ideas are bad, but because they can't afford the tools and services they need to compete. Professional web development was consistently out of reach, with agencies charging $5,000-$50,000 for basic websites that took months to deliver.</p>
-                
-                <div class="story-highlight">
-                    <p>"I remember sitting in my college dorm room, looking at quotes from web developers. $10,000 for a simple website? I had $200 in my bank account. That's when I decided to learn web development myself – and eventually, to make it accessible for others like me."</p>
-                </div>
-                
-                <h3>The Mission</h3>
-                <p>After years of building websites for his own ventures and learning what actually works, our founder realized he could help other first-time founders avoid the struggles he faced. HLPFL was created with a simple mission: deliver high-quality, professional websites at prices first-time founders can actually afford.</p>
-                
-                <p>We use AI-powered development tools not to cut corners, but to work more efficiently – passing those savings directly to our clients. We don't outsource because we believe in building real relationships with the founders we serve. And we offer sliding scale pricing because we remember what it's like to have more ambition than capital.</p>
-                
-                <h3>Today</h3>
-                <p>Today, HLPFL serves first-time founders across the United States from our base in Grand Rapids, Michigan. We've helped launch dozens of businesses, from e-commerce stores to SaaS platforms to local service providers. Every project is an opportunity to help another founder avoid the struggles we faced and focus on what matters: building their business.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Mission & Values Section -->
-    <section id="values">
-        <div class="container">
-            <div class="section-header reveal">
-                <h2>Our Values</h2>
-                <p>The principles that guide everything we do</p>
-            </div>
-            <div class="values-grid">
-                <div class="value-card reveal">
-                    <span class="value-icon">💰</span>
-                    <h3>Accessibility First</h3>
-                    <p>Professional web development shouldn't be a luxury. We believe every founder deserves access to quality websites, regardless of their current financial situation.</p>
-                </div>
-                <div class="value-card reveal">
-                    <span class="value-icon">🤝</span>
-                    <h3>Real Partnership</h3>
-                    <p>We're not just service providers – we're partners in your success. Your wins are our wins, and we're invested in helping you grow.</p>
-                </div>
-                <div class="value-card reveal">
-                    <span class="value-icon">🔍</span>
-                    <h3>Full Transparency</h3>
-                    <p>No hidden fees, no surprises, no fine print. We believe in honest communication and clear expectations from day one.</p>
-                </div>
-                <div class="value-card reveal">
-                    <span class="value-icon">⚡</span>
-                    <h3>Speed & Quality</h3>
-                    <p>Fast delivery doesn't mean cutting corners. We use modern tools and efficient processes to deliver quality work quickly.</p>
-                </div>
-                <div class="value-card reveal">
-                    <span class="value-icon">🇺🇸</span>
-                    <h3>Local Commitment</h3>
-                    <p>100% US-based work means better communication, no timezone issues, and supporting the local economy. We never outsource.</p>
-                </div>
-                <div class="value-card reveal">
-                    <span class="value-icon">🚀</span>
-                    <h3>Founder Mindset</h3>
-                    <p>We think like founders because we are founders. We understand the hustle, the risks, and the dreams that drive entrepreneurship.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us Section -->
-    <section id="why-choose-us">
-        <div class="container">
-            <div class="section-header reveal">
-                <h2>Why Choose HLPFL?</h2>
-                <p>What makes us different from other web development agencies</p>
-            </div>
-            <div class="why-grid">
-                <div class="why-card reveal">
-                    <div class="why-number">01</div>
-                    <h3>We've Been There</h3>
-                    <p>We're not corporate suits who've never struggled. We're founders who've experienced the challenges you're facing right now. We get it.</p>
-                </div>
-                <div class="why-card reveal">
-                    <div class="why-number">02</div>
-                    <h3>Affordable Pricing</h3>
-                    <p>Sliding scale pricing based on your budget. We work with what you have, not what agencies think you should spend.</p>
-                </div>
-                <div class="why-card reveal">
-                    <div class="why-number">03</div>
-                    <h3>Lightning Fast</h3>
-                    <p>72-hour delivery when you provide materials. We respect your time and understand that speed matters in business.</p>
-                </div>
-                <div class="why-card reveal">
-                    <div class="why-number">04</div>
-                    <h3>No Outsourcing</h3>
-                    <p>100% US-based work from Grand Rapids, MI. You'll always talk to the people actually building your website.</p>
-                </div>
-                <div class="why-card reveal">
-                    <div class="why-number">05</div>
-                    <h3>Modern Technology</h3>
-                    <p>We use AI-powered tools to work efficiently, but every project gets human expertise and attention to detail.</p>
-                </div>
-                <div class="why-card reveal">
-                    <div class="why-number">06</div>
-                    <h3>Real Support</h3>
-                    <p>Post-launch support included with every package. We're here for questions, updates, and ongoing partnership.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section>
-        <div class="container">
-            <div class="stats reveal">
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <h3>6+</h3>
-                        <p>Years Experience</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>20+</h3>
-                        <p>Ventures Built</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>100%</h3>
-                        <p>US-Based Work</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>72hrs</h3>
-                        <p>Average Delivery</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Team Section -->
-    <section id="team">
-        <div class="container">
-            <div class="section-header reveal">
-                <h2>Meet Our Founder</h2>
-                <p>The person behind HLPFL's mission</p>
-            </div>
-            <div class="team-content reveal">
-                <div class="founder-card">
-                    <div class="founder-avatar">HL</div>
-                    <h3>[Founder Name]</h3>
-                    <p class="founder-title">Founder & Lead Developer</p>
-                    <p class="founder-bio">At just 24 years old, [Founder Name] brings 6+ years of entrepreneurial experience and a deep understanding of the challenges first-time founders face. Having launched over 20 ventures – from successful e-commerce stores to failed SaaS products – he learned firsthand what works and what doesn't in the startup world.</p>
-                    <p class="founder-bio">After years of building websites for his own ventures and helping friends launch their businesses, he founded HLPFL with a mission to make professional web development accessible to every founder, regardless of budget. His approach combines modern AI-powered tools with hands-on expertise to deliver quality websites at unprecedented speed and affordability.</p>
-                    <p class="founder-bio">Based in Grand Rapids, Michigan, [Founder Name] is committed to supporting the local entrepreneurial ecosystem while serving founders across the United States. When he's not building websites, you'll find him mentoring young entrepreneurs, exploring new technologies, or working on his next venture.</p>
-                    
-                    <div class="founder-stats">
-                        <div class="founder-stat">
-                            <h4>24</h4>
-                            <p>Years Old</p>
-                        </div>
-                        <div class="founder-stat">
-                            <h4>6+</h4>
-                            <p>Years Experience</p>
-                        </div>
-                        <div class="founder-stat">
-                            <h4>20+</h4>
-                            <p>Ventures Launched</p>
-                        </div>
-                        <div class="founder-stat">
-                            <h4>100%</h4>
-                            <p>Dedicated</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section>
-        <div class="container">
-            <div class="cta-section reveal">
-                <h2>Ready to Work Together?</h2>
-                <p>Let's have a free 30-minute discovery call to discuss your vision and see how we can help bring your website to life. No pressure, no sales pitch – just honest conversation about your goals.</p>
-                <a href="contact.html" class="cta-button" style="font-size: 1.1rem; padding: 1rem 2.5rem;">Get My Free Quote</a>
-            </div>
-        </div>
-    </section>
+    
 
     
 
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <div class="footer-section">
+            <div class="footer-section footer-brand">
+                <div class="footer-logo">
+                    <svg width="120" height="120" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="footerLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#C87941;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#E89A6A;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="100" cy="100" r="90" fill="none" stroke="url(#footerLogoGradient)" stroke-width="8"/>
+                        <text x="100" y="120" font-family="Arial, sans-serif" font-size="80" font-weight="bold" 
+                              fill="url(#footerLogoGradient)" text-anchor="middle">H</text>
+                    </svg>
+                </div>
                 <h3>HLPFL</h3>
-                <p style="color: var(--text-muted); line-height: 1.8;">Affordable, high-quality websites for first-time founders. 100% US-based work from Grand Rapids, MI.</p>
+                <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 1.5rem;">
+                    Affordable, high-quality websites for first-time founders. 100% US-based work from Grand Rapids, MI.
+                </p>
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+                    <a href="#" class="social-link" aria-label="GitHub">⚡</a>
+                </div>
             </div>
             <div class="footer-section">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="#home">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
                     <li><a href="about.html">About</a></li>
@@ -1065,26 +1588,69 @@
                     <li><a href="services.html">Web Development</a></li>
                     <li><a href="services.html">Web Design</a></li>
                     <li><a href="services.html">E-commerce</a></li>
-                    <li><a href="services.html">SEO</a></li>
-                    <li><a href="services.html#faq">FAQ</a></li>
+                    <li><a href="services.html">SEO Optimization</a></li>
+                    <li><a href="services.html">Maintenance</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h3>Contact</h3>
+                <h3>Get In Touch</h3>
                 <ul>
-                    <li><a href="mailto:contact@hlpfl.dev">contact@hlpfl.dev</a></li>
-                    <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+                    <li><a href="mailto:hello@hlpfl.dev">hello@hlpfl.dev</a></li>
                     <li>Grand Rapids, MI</li>
+                    <li>24-hour response time</li>
                 </ul>
+                <a href="contact.html" class="footer-cta">Start Your Project →</a>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 HLPFL. All rights reserved. | <a href="#" style="color: var(--primary);">Privacy Policy</a> | <a href="#" style="color: var(--primary);">Terms of Service</a></p>
+            <p>&copy; 2024 HLPFL. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#" style="color: var(--primary);">Privacy Policy</a>
+                <span style="color: var(--text-muted);">•</span>
+                <a href="#" style="color: var(--primary);">Terms of Service</a>
+                <span style="color: var(--text-muted);">•</span>
+                <a href="#" style="color: var(--primary);">Cookie Policy</a>
+            </div>
         </div>
     </footer>
 
 <script>
         // Loading Screen
+
+        // Create floating particles
+        function createParticles() {
+            const particlesContainer = document.querySelector('.loading-particles');
+            if (!particlesContainer) return;
+            
+            const particleCount = 30;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                
+                // Random size between 2px and 8px
+                const size = Math.random() * 6 + 2;
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+                
+                // Random horizontal position
+                particle.style.left = Math.random() * 100 + '%';
+                
+                // Random animation duration between 10s and 20s
+                const duration = Math.random() * 10 + 10;
+                particle.style.animationDuration = duration + 's';
+                
+                // Random delay
+                const delay = Math.random() * 5;
+                particle.style.animationDelay = delay + 's';
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+        
+        // Initialize particles
+        createParticles();
+
         let progress = 0;
         const loadingBar = document.getElementById('loadingBar');
         const loadingPercentage = document.getElementById('loadingPercentage');
@@ -1165,7 +1731,309 @@
                 }
             });
         });
+    
+        // Cookie Consent Banner
+        function showCookieBanner() {
+            const banner = document.getElementById('cookieBanner');
+            const consent = localStorage.getItem('cookieConsent');
+            
+            if (!consent) {
+                setTimeout(() => {
+                    banner.classList.add('show');
+                }, 1000);
+            }
+        }
+        
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            hideCookieBanner();
+        }
+        
+        function declineCookies() {
+            localStorage.setItem('cookieConsent', 'declined');
+            hideCookieBanner();
+        }
+        
+        function hideCookieBanner() {
+            const banner = document.getElementById('cookieBanner');
+            banner.classList.remove('show');
+        }
+        
+        // Show banner on page load
+        showCookieBanner();
+
+    
+        // Easter Eggs and Animations
+        
+        // Konami Code Easter Egg (↑ ↑ ↓ ↓ ← → ← → B A)
+        let konamiCode = [];
+        const konamiSequence = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+        
+        document.addEventListener('keydown', (e) => {
+            konamiCode.push(e.key);
+            konamiCode = konamiCode.slice(-10);
+            
+            if (konamiCode.join('') === konamiSequence.join('')) {
+                activateKonamiMode();
+            }
+        });
+        
+        function activateKonamiMode() {
+            document.body.classList.add('konami-active');
+            
+            // Create confetti effect
+            for (let i = 0; i < 50; i++) {
+                createConfetti();
+            }
+            
+            setTimeout(() => {
+                document.body.classList.remove('konami-active');
+            }, 5000);
+            
+            console.log('🎮 Konami Code Activated! You found the secret!');
+        }
+        
+        function createConfetti() {
+            const confetti = document.createElement('div');
+            confetti.style.position = 'fixed';
+            confetti.style.width = '10px';
+            confetti.style.height = '10px';
+            confetti.style.background = `hsl(${Math.random() * 360}, 70%, 60%)`;
+            confetti.style.left = Math.random() * 100 + '%';
+            confetti.style.top = '-10px';
+            confetti.style.borderRadius = '50%';
+            confetti.style.pointerEvents = 'none';
+            confetti.style.zIndex = '10000';
+            confetti.style.animation = `fall ${Math.random() * 3 + 2}s linear`;
+            
+            document.body.appendChild(confetti);
+            
+            setTimeout(() => {
+                confetti.remove();
+            }, 5000);
+        }
+        
+        // Add fall animation for confetti
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fall {
+                to {
+                    transform: translateY(100vh) rotate(360deg);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Developer Mode (Press 'D' 3 times quickly)
+        let dPresses = 0;
+        let dTimer;
+        
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'd' || e.key === 'D') {
+                dPresses++;
+                clearTimeout(dTimer);
+                
+                if (dPresses === 3) {
+                    toggleDevMode();
+                    dPresses = 0;
+                }
+                
+                dTimer = setTimeout(() => {
+                    dPresses = 0;
+                }, 1000);
+            }
+        });
+        
+        function toggleDevMode() {
+            document.body.classList.toggle('dev-mode-active');
+            const isActive = document.body.classList.contains('dev-mode-active');
+            console.log(isActive ? '🔧 Developer Mode: ON' : '🔧 Developer Mode: OFF');
+        }
+        
+        // Logo click counter (10 clicks = surprise)
+        let logoClicks = 0;
+        const logo = document.querySelector('.logo');
+        
+        if (logo) {
+            logo.addEventListener('click', () => {
+                logoClicks++;
+                
+                if (logoClicks === 10) {
+                    logoSurprise();
+                    logoClicks = 0;
+                }
+            });
+        }
+        
+        function logoSurprise() {
+            const messages = [
+                '🎉 You found the secret!',
+                '🚀 Keep clicking for more surprises!',
+                '💎 You are persistent!',
+                '🌟 Achievement Unlocked: Logo Master',
+                '🎨 Thanks for exploring!'
+            ];
+            
+            const message = messages[Math.floor(Math.random() * messages.length)];
+            
+            // Create toast notification
+            const toast = document.createElement('div');
+            toast.textContent = message;
+            toast.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: linear-gradient(135deg, #C87941, #E89A6A);
+                color: white;
+                padding: 1rem 2rem;
+                border-radius: 10px;
+                font-weight: 600;
+                z-index: 10000;
+                animation: slideInRight 0.5s ease;
+                box-shadow: 0 10px 40px rgba(200, 121, 65, 0.4);
+            `;
+            
+            document.body.appendChild(toast);
+            
+            setTimeout(() => {
+                toast.style.animation = 'slideInRight 0.5s ease reverse';
+                setTimeout(() => toast.remove(), 500);
+            }, 3000);
+        }
+        
+        // Add smooth reveal on scroll for elements
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.6s ease forwards';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all cards and sections
+        document.querySelectorAll('.service-card, .portfolio-card, .value-card, .pricing-card').forEach(el => {
+            observer.observe(el);
+        });
+
+    
+        // Performance Optimizations
+        
+        // Lazy load images
+        if ('loading' in HTMLImageElement.prototype) {
+            const images = document.querySelectorAll('img[loading="lazy"]');
+            images.forEach(img => {
+                img.src = img.dataset.src;
+            });
+        } else {
+            // Fallback for browsers that don't support lazy loading
+            const script = document.createElement('script');
+            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js';
+            document.body.appendChild(script);
+        }
+        
+        // Debounce scroll events for better performance
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+        
+        // Optimize scroll event listeners
+        const optimizedScroll = debounce(() => {
+            // Scroll-based animations
+        }, 10);
+        
+        window.addEventListener('scroll', optimizedScroll, { passive: true });
+        
+        // Preload critical resources
+        function preloadCriticalResources() {
+            const criticalLinks = document.querySelectorAll('a[href*="contact"], a[href*="services"]');
+            criticalLinks.forEach(link => {
+                const url = link.getAttribute('href');
+                if (url && !url.startsWith('#')) {
+                    const preloadLink = document.createElement('link');
+                    preloadLink.rel = 'prefetch';
+                    preloadLink.href = url;
+                    document.head.appendChild(preloadLink);
+                }
+            });
+        }
+        
+        // Preload on idle
+        if ('requestIdleCallback' in window) {
+            requestIdleCallback(preloadCriticalResources);
+        } else {
+            setTimeout(preloadCriticalResources, 2000);
+        }
+        
+        // Service Worker for offline support (optional)
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                // Uncomment to enable service worker
+                // navigator.serviceWorker.register('/sw.js');
+            });
+        }
+        
+        // Monitor performance
+        if ('PerformanceObserver' in window) {
+            const perfObserver = new PerformanceObserver((list) => {
+                for (const entry of list.getEntries()) {
+                    if (entry.entryType === 'largest-contentful-paint') {
+                        console.log('LCP:', entry.startTime);
+                    }
+                }
+            });
+            
+            try {
+                perfObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+            } catch (e) {
+                // Browser doesn't support this metric
+            }
+        }
+        
+        // Optimize form submissions
+        const forms = document.querySelectorAll('form');
+        forms.forEach(form => {
+            form.addEventListener('submit', (e) => {
+                const submitBtn = form.querySelector('[type="submit"]');
+                if (submitBtn) {
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = 'Sending...';
+                }
+            });
+        });
+
     </script>
    
-   </body>
+   
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <p>
+                    <strong>🍪 We use cookies</strong> to enhance your browsing experience and analyze our traffic. 
+                    By clicking "Accept", you consent to our use of cookies. 
+                    <a href="#" onclick="event.preventDefault();">Learn more</a>
+                </p>
+            </div>
+            <div class="cookie-actions">
+                <button class="cookie-btn cookie-btn-accept" onclick="acceptCookies()">Accept All</button>
+                <button class="cookie-btn cookie-btn-decline" onclick="declineCookies()">Decline</button>
+            </div>
+        </div>
+    </div>
+
+</body>
 </html>
