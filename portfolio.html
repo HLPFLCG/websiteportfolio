@@ -355,9 +355,6 @@
             animation: fadeInUp 0.8s ease 0.2s both;
             backdrop-filter: blur(10px);
         }
-        
-        .hero-title {
-           }
            
            .hero-title .white-text {
                color: var(--text);
@@ -906,9 +903,23 @@
         </div>
     </section>
 
+     <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content reveal">
+            <h1>
+                   <span class=white-text>Your First Website</span>
+                   <span class=copper-text>Shouldn't Break the Bank</span>
+               </h1>
+            <p>High-quality websites for first-time founders at prices you can actually afford. No outsourcing, full transparency, 100% US-based work.</p>
+            <div class="hero-cta">
+                <a href="contact.html" class="cta-button">Get Your Free Quote</a>
+                <a href="#how-it-works" class="secondary-button">See How It Works</a>
+            </div>
+        </div>
+
     <!-- Stats Section -->
     <section class="stats-section">
-           <div class="scroll-indicator" onclick="document.querySelector(".stats-section").scrollIntoView({behavior: "smooth"})">
+           <div class="scroll-indicator" onclick="document.querySelector('#stats-section').scrollIntoView({behavior: 'smooth'})">
                <span class="scroll-text">SCROLL</span>
                <div class="scroll-arrow"></div>
            </div>
