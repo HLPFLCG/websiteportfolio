@@ -5,22 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Primary Meta Tags -->
-    <title>HLPFL | Premium Web Development & Digital Solutions</title>
-    <meta name="title" content="HLPFL | Premium Web Development & Digital Solutions">
-    <meta name="description" content="Professional web development, design, and digital solutions. Custom websites, portfolio sites, and business platforms built with excellence.">
-    <meta name="keywords" content="web development, custom websites, web design, digital solutions, portfolio development, HLPFL">
+    <title>Portfolio | HLPFL - Our Work & Case Studies</title>
+    <meta name="title" content="Portfolio | HLPFL - Our Work & Case Studies">
+    <meta name="description" content="Explore our portfolio of successful web development projects. See how we've helped businesses grow with custom websites and digital solutions.">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://hlpfl.dev/">
-    <meta property="og:title" content="HLPFL | Premium Web Development & Digital Solutions">
-    <meta property="og:description" content="Professional web development, design, and digital solutions. Custom websites built with excellence.">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://hlpfl.dev/">
-    <meta property="twitter:title" content="HLPFL | Premium Web Development & Digital Solutions">
-    <meta property="twitter:description" content="Professional web development, design, and digital solutions. Custom websites built with excellence.">
+    <meta property="og:url" content="https://hlpfl.dev/portfolio.html">
+    <meta property="og:title" content="Portfolio | HLPFL - Our Work & Case Studies">
+    <meta property="og:description" content="Explore our portfolio of successful web development projects.">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,7 +48,7 @@
             overflow-x: hidden;
         }
         
-        /* Loading Screen - Enhanced */
+        /* Loading Screen */
         .loading-screen {
             position: fixed;
             top: 0;
@@ -113,38 +106,12 @@
             transition: width 0.3s ease;
             box-shadow: 0 0 30px rgba(200, 121, 65, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.3);
             animation: shimmer 2s infinite;
-            position: relative;
-        }
-        
-        .loading-bar::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 50%;
-            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), transparent);
-            border-radius: 10px 10px 0 0;
         }
         
         @keyframes shimmer {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
-        }
-        
-        .loading-text {
-            margin-top: 2rem;
-            color: var(--text-muted);
-            font-size: 0.875rem;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            animation: textPulse 2s ease-in-out infinite;
-        }
-        
-        @keyframes textPulse {
-            0%, 100% { opacity: 0.5; }
-            50% { opacity: 1; }
         }
         
         .loading-percentage {
@@ -157,7 +124,7 @@
             background-clip: text;
         }
         
-        /* Floating Particles Background */
+        /* Floating Particles */
         .particles-container {
             position: fixed;
             top: 0;
@@ -180,20 +147,10 @@
         }
         
         @keyframes particleFloat {
-            0% {
-                transform: translateY(100vh) translateX(0);
-                opacity: 0;
-            }
-            10% {
-                opacity: 0.5;
-            }
-            90% {
-                opacity: 0.5;
-            }
-            100% {
-                transform: translateY(-100px) translateX(100px);
-                opacity: 0;
-            }
+            0% { transform: translateY(100vh) translateX(0); opacity: 0; }
+            10% { opacity: 0.5; }
+            90% { opacity: 0.5; }
+            100% { transform: translateY(-100px) translateX(100px); opacity: 0; }
         }
         
         /* Container */
@@ -203,7 +160,7 @@
             padding: 0 2rem;
         }
         
-        /* Navigation - Enhanced Logo Size */
+        /* Navigation */
         nav {
             position: fixed;
             top: 0;
@@ -241,7 +198,6 @@
             transform: scale(1.05);
         }
         
-        /* ENHANCED: Logo size increased by 100% */
         .logo-img {
             height: 90px;
             width: auto;
@@ -322,40 +278,18 @@
             overflow: hidden;
             cursor: pointer;
             display: inline-block;
+            border: none;
         }
         
         .btn-primary {
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
             color: white;
-            border: none;
             box-shadow: 0 10px 30px rgba(200, 121, 65, 0.3);
-        }
-        
-        .btn-primary::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
-            transition: left 0.3s ease;
-            z-index: 0;
         }
         
         .btn-primary:hover {
             box-shadow: 0 15px 40px rgba(200, 121, 65, 0.5);
             transform: translateY(-2px);
-        }
-        
-        .btn-primary:hover::before {
-            left: 0;
-        }
-        
-        .btn-primary span,
-        .btn-primary {
-            position: relative;
-            z-index: 1;
         }
         
         .btn-secondary {
@@ -377,7 +311,7 @@
         
         /* Hero Section */
         .hero {
-            min-height: 100vh;
+            min-height: 70vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -431,13 +365,11 @@
             animation: fadeInUp 0.8s ease 0.4s both;
         }
         
-        .typed-text {
+        .gradient-text {
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            position: relative;
-            display: inline-block;
         }
         
         .hero-subtitle {
@@ -448,90 +380,15 @@
             animation: fadeInUp 0.8s ease 0.6s both;
         }
         
-        .hero-cta {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            animation: fadeInUp 0.8s ease 0.8s both;
-            margin-bottom: 3rem;
-        }
-        
-        .hero-features {
-            display: flex;
-            gap: 3rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            animation: fadeInUp 0.8s ease 1s both;
-        }
-        
-        .hero-feature {
-            text-align: center;
-        }
-        
-        .hero-feature-number {
-            display: block;
-            font-size: 2rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 0.5rem;
-        }
-        
-        .hero-feature-text {
-            font-size: 0.875rem;
-            color: var(--text-muted);
-        }
-        
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         
-        /* Scroll Indicator */
-        .scroll-indicator {
-            position: absolute;
-            bottom: 3rem;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: fadeIn 1s ease 1.5s both;
-            color: var(--text-muted);
-        }
-        
-        .scroll-indicator svg {
-            animation: scrollDown 2s ease infinite;
-        }
-        
-        @keyframes scrollDown {
-            0%, 100% { transform: translateY(0); opacity: 0.3; }
-            50% { opacity: 1; transform: translateY(10px); }
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
-        /* Sections */
-        .section {
+        /* Portfolio Grid */
+        .portfolio-section {
             padding: 6rem 2rem;
             position: relative;
-        }
-        
-        .bg-dark {
-            background: var(--dark);
-        }
-        
-        .bg-light {
-            background: var(--dark-light);
         }
         
         .section-header {
@@ -554,9 +411,139 @@
             margin: 0 auto;
         }
         
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .portfolio-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 24px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            position: relative;
+        }
+        
+        .portfolio-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at top left, rgba(200, 121, 65, 0.1), transparent);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 0;
+        }
+        
+        .portfolio-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(200, 121, 65, 0.3);
+            box-shadow: 0 20px 60px rgba(200, 121, 65, 0.2);
+        }
+        
+        .portfolio-card:hover::before {
+            opacity: 1;
+        }
+        
+        .portfolio-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, var(--dark-light), var(--dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .portfolio-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(200, 121, 65, 0.2), rgba(44, 95, 111, 0.2));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        
+        .portfolio-card:hover .portfolio-image::after {
+            opacity: 1;
+        }
+        
+        .portfolio-content {
+            padding: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .portfolio-category {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(200, 121, 65, 0.1);
+            border: 1px solid rgba(200, 121, 65, 0.2);
+            border-radius: 50px;
+            color: var(--primary);
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+        }
+        
+        .portfolio-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+        
+        .portfolio-description {
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        
+        .portfolio-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .portfolio-tag {
+            padding: 0.25rem 0.75rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50px;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+        
+        .portfolio-link {
+            color: var(--primary-light);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: gap 0.3s ease;
+        }
+        
+        .portfolio-link:hover {
+            gap: 1rem;
+        }
+        
         /* Stats Section */
         .stats-section {
             padding: 6rem 2rem;
+            background: var(--dark-light);
             position: relative;
         }
         
@@ -617,145 +604,112 @@
             z-index: 1;
         }
         
-        /* Value Section */
-        .value-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .value-card {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 24px;
-            padding: 2.5rem;
-            transition: all 0.4s ease;
+        /* CTA Section */
+        .cta-section {
+            padding: 8rem 2rem;
+            text-align: center;
             position: relative;
             overflow: hidden;
         }
         
-        .value-card::before {
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(200, 121, 65, 0.1), transparent);
+            animation: pulse 6s ease-in-out infinite;
+        }
+        
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .cta-content h2 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta-content p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--dark-light);
+            padding: 4rem 2rem 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+        }
+        
+        .footer::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at top left, rgba(200, 121, 65, 0.1), transparent);
-            opacity: 0;
-            transition: opacity 0.4s ease;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
         }
         
-        .value-card::after {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 200%;
-            height: 200%;
-            background: conic-gradient(from 0deg, transparent, rgba(200, 121, 65, 0.1), transparent 30%);
-            animation: rotate 8s linear infinite;
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
-        
-        @keyframes rotate {
-            100% { transform: rotate(360deg); }
-        }
-        
-        .value-card:hover {
-            transform: translateY(-10px);
-            border-color: rgba(200, 121, 65, 0.3);
-            box-shadow: 0 20px 60px rgba(200, 121, 65, 0.2);
-        }
-        
-        .value-card:hover::before,
-        .value-card:hover::after {
-            opacity: 1;
-        }
-        
-        .value-icon {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .value-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .value-description {
-            color: var(--text-muted);
-            line-height: 1.7;
-            position: relative;
-            z-index: 1;
-        }
-        
-        /* Process Section */
-        .process-timeline {
-            max-width: 800px;
-            margin: 0 auto 3rem;
-        }
-        
-        .process-step {
-            display: flex;
-            gap: 2rem;
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 4rem;
             margin-bottom: 3rem;
-            position: relative;
         }
         
-        .process-step:not(:last-child)::after {
-            content: '';
-            position: absolute;
-            left: 30px;
-            top: 70px;
-            width: 2px;
-            height: calc(100% + 1rem);
-            background: linear-gradient(to bottom, var(--primary), transparent);
+        .footer-brand .logo {
+            margin-bottom: 1rem;
         }
         
-        .process-number {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: 700;
-            flex-shrink: 0;
-            box-shadow: 0 10px 30px rgba(200, 121, 65, 0.3);
-            position: relative;
-            z-index: 1;
-        }
-        
-        .process-content {
-            flex: 1;
-            padding-top: 0.5rem;
-        }
-        
-        .process-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-        
-        .process-description {
+        .footer-brand p {
             color: var(--text-muted);
             line-height: 1.7;
+            margin-top: 1rem;
         }
         
-        .section-cta {
+        .footer-links h4 {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1.5rem;
+            color: var(--text-muted);
+        }
+        
+        .footer-links a {
+            display: block;
+            color: var(--text);
+            text-decoration: none;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            padding-left: 0;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary);
+            padding-left: 10px;
+        }
+        
+        .footer-bottom {
             text-align: center;
-            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--text-muted);
+            font-size: 0.875rem;
         }
         
         /* Reveal Animation */
@@ -768,11 +722,6 @@
         .reveal.active {
             opacity: 1;
             transform: translateY(0);
-        }
-        
-        /* Parallax Effect */
-        .parallax {
-            transition: transform 0.5s ease-out;
         }
         
         /* Responsive */
@@ -801,51 +750,27 @@
                 display: flex;
             }
             
-            .hero {
-                padding: 8rem 1.5rem 3rem;
-            }
-            
-            .section {
-                padding: 4rem 1.5rem;
+            .portfolio-grid {
+                grid-template-columns: 1fr;
             }
             
             .stats-grid {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 2rem;
             }
             
-            .value-grid {
+            .footer-content {
                 grid-template-columns: 1fr;
+                gap: 2rem;
             }
         }
         
         @media (max-width: 768px) {
-            .hero-cta {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .btn {
-                width: 100%;
-                max-width: 300px;
-                text-align: center;
-            }
-            
-            .hero-features {
-                gap: 2rem;
+            .hero {
+                padding: 8rem 1.5rem 3rem;
             }
             
             .stats-grid {
                 grid-template-columns: 1fr;
-            }
-            
-            .process-step {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            
-            .process-step:not(:last-child)::after {
-                display: none;
             }
             
             .loading-logo {
@@ -868,14 +793,13 @@
 <script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
 </head>
 <body>
-    <!-- Loading Screen - Enhanced -->
+    <!-- Loading Screen -->
     <div class="loading-screen" id="loadingScreen">
         <img src="hlpfl-logo-full.svg" alt="HLPFL" class="loading-logo">
         <div class="loading-bar-container">
             <div class="loading-bar" id="loadingBar"></div>
         </div>
         <div class="loading-percentage" id="loadingPercentage">0%</div>
-        <div class="loading-text">Crafting Your Experience...</div>
     </div>
 
     <!-- Floating Particles -->
@@ -884,20 +808,18 @@
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-wrapper">
-            <!-- Logo - Enhanced Size -->
             <a href="index.html" class="logo">
                 <img src="hlpfl-symbol.svg" alt="HLPFL Logo" class="logo-img">
             </a>
             
-            <!-- Desktop Navigation -->
             <div class="nav-menu" id="nav-menu">
-                <a href="index.html" class="nav-link active">Home</a>
-                <a href="portfolio.html" class="nav-link">Portfolio</a>
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="portfolio.html" class="nav-link active">Portfolio</a>
                 <a href="services.html" class="nav-link">Services</a>
-                <a href="contact.html" class="btn btn-primary">Get Started</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
             </div>
             
-            <!-- Mobile Menu Button -->
             <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
@@ -907,138 +829,229 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero parallax">
+    <section class="hero">
         <div class="hero-background"></div>
         <div class="container">
             <div class="hero-content">
-                <div class="hero-badge">Premium Web Development</div>
+                <div class="hero-badge">Our Work</div>
                 <h1 class="hero-title">
-                    Exceptional <span class="typed-text">Websites</span>
+                    <span class="gradient-text">Portfolio</span> & Case Studies
                 </h1>
                 <p class="hero-subtitle">
-                    Professional web development and digital solutions built with excellence
+                    Explore our successful projects and see how we've helped businesses grow with custom web solutions
                 </p>
-                <div class="hero-cta">
-                    <a href="contact.html" class="btn btn-primary btn-lg">Get Started</a>
-                    <a href="portfolio.html" class="btn btn-secondary btn-lg">View Portfolio</a>
-                </div>
-                <div class="hero-features">
-                    <div class="hero-feature">
-                        <span class="hero-feature-number">50+</span>
-                        <span class="hero-feature-text">Projects Delivered</span>
-                    </div>
-                    <div class="hero-feature">
-                        <span class="hero-feature-number">100%</span>
-                        <span class="hero-feature-text">Client Satisfaction</span>
-                    </div>
-                    <div class="hero-feature">
-                        <span class="hero-feature-number">24/7</span>
-                        <span class="hero-feature-text">Support Available</span>
-                    </div>
-                </div>
             </div>
-        </div>
-        <div class="scroll-indicator">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-            </svg>
         </div>
     </section>
 
-    <!-- Statistics Section -->
-    <section class="stats-section bg-dark parallax">
+    <!-- Stats Section -->
+    <section class="stats-section">
         <div class="container">
             <div class="stats-grid">
                 <div class="stat-item reveal">
                     <div class="stat-number" data-count="500">0</div>
-                    <div class="stat-label">Websites Delivered</div>
+                    <div class="stat-label">Projects Completed</div>
                 </div>
                 <div class="stat-item reveal">
-                    <div class="stat-number">72hrs</div>
-                    <div class="stat-label">Average Delivery</div>
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Client Satisfaction</div>
                 </div>
                 <div class="stat-item reveal">
                     <div class="stat-number">$50M+</div>
                     <div class="stat-label">Revenue Generated</div>
                 </div>
                 <div class="stat-item reveal">
-                    <div class="stat-number">98%</div>
-                    <div class="stat-label">Client Retention</div>
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Industries Served</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Value Proposition Section -->
-    <section class="section value-section bg-light parallax">
+    <!-- Portfolio Section -->
+    <section class="portfolio-section">
         <div class="container">
             <div class="section-header reveal">
-                <h2 class="section-title">Why Entrepreneurs Choose Us</h2>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">A selection of our best work across various industries</p>
             </div>
-            <div class="value-grid">
-                <div class="value-card reveal">
-                    <div class="value-icon">⚡</div>
-                    <h3 class="value-title">72-Hour Turnaround</h3>
-                    <p class="value-description">
-                        Get your website live in 3 days when you have your content ready. Most projects complete in 1-2 weeks. No months-long waits.
-                    </p>
+            
+            <div class="portfolio-grid">
+                <!-- Project 1 -->
+                <div class="portfolio-card reveal">
+                    <div class="portfolio-image">🎵</div>
+                    <div class="portfolio-content">
+                        <span class="portfolio-category">Music Industry</span>
+                        <h3 class="portfolio-title">Artist Portfolio Platform</h3>
+                        <p class="portfolio-description">
+                            Custom portfolio website for independent musicians with integrated music player, booking system, and merchandise store.
+                        </p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">React</span>
+                            <span class="portfolio-tag">E-commerce</span>
+                            <span class="portfolio-tag">Streaming</span>
+                        </div>
+                        <a href="contact.html" class="portfolio-link">
+                            View Case Study →
+                        </a>
+                    </div>
                 </div>
-                <div class="value-card reveal">
-                    <div class="value-icon">💎</div>
-                    <h3 class="value-title">Premium, Custom Design</h3>
-                    <p class="value-description">
-                        No templates. No shortcuts. Every website is built from scratch to match your brand and convert your visitors into customers.
-                    </p>
+
+                <!-- Project 2 -->
+                <div class="portfolio-card reveal">
+                    <div class="portfolio-image">🏢</div>
+                    <div class="portfolio-content">
+                        <span class="portfolio-category">Corporate</span>
+                        <h3 class="portfolio-title">Enterprise Dashboard</h3>
+                        <p class="portfolio-description">
+                            Modern analytics dashboard for Fortune 500 company with real-time data visualization and reporting tools.
+                        </p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">Vue.js</span>
+                            <span class="portfolio-tag">Analytics</span>
+                            <span class="portfolio-tag">API</span>
+                        </div>
+                        <a href="contact.html" class="portfolio-link">
+                            View Case Study →
+                        </a>
+                    </div>
                 </div>
-                <div class="value-card reveal">
-                    <div class="value-icon">💰</div>
-                    <h3 class="value-title">Exceptional Value</h3>
-                    <p class="value-description">
-                        Get enterprise-quality websites at a fraction of traditional agency costs. Premium results without the premium price tag.
-                    </p>
+
+                <!-- Project 3 -->
+                <div class="portfolio-card reveal">
+                    <div class="portfolio-image">🛍️</div>
+                    <div class="portfolio-content">
+                        <span class="portfolio-category">E-commerce</span>
+                        <h3 class="portfolio-title">Fashion Retail Store</h3>
+                        <p class="portfolio-description">
+                            Full-featured online store with inventory management, payment processing, and customer loyalty program.
+                        </p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">Shopify</span>
+                            <span class="portfolio-tag">Payments</span>
+                            <span class="portfolio-tag">CRM</span>
+                        </div>
+                        <a href="contact.html" class="portfolio-link">
+                            View Case Study →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="portfolio-card reveal">
+                    <div class="portfolio-image">🍕</div>
+                    <div class="portfolio-content">
+                        <span class="portfolio-category">Restaurant</span>
+                        <h3 class="portfolio-title">Restaurant Ordering System</h3>
+                        <p class="portfolio-description">
+                            Online ordering platform with menu management, delivery tracking, and customer reviews integration.
+                        </p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">Next.js</span>
+                            <span class="portfolio-tag">Ordering</span>
+                            <span class="portfolio-tag">Mobile</span>
+                        </div>
+                        <a href="contact.html" class="portfolio-link">
+                            View Case Study →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="portfolio-card reveal">
+                    <div class="portfolio-image">💼</div>
+                    <div class="portfolio-content">
+                        <span class="portfolio-category">SaaS</span>
+                        <h3 class="portfolio-title">Project Management Tool</h3>
+                        <p class="portfolio-description">
+                            Cloud-based project management platform with team collaboration, time tracking, and reporting features.
+                        </p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">React</span>
+                            <span class="portfolio-tag">Cloud</span>
+                            <span class="portfolio-tag">Teams</span>
+                        </div>
+                        <a href="contact.html" class="portfolio-link">
+                            View Case Study →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="portfolio-card reveal">
+                    <div class="portfolio-image">🏥</div>
+                    <div class="portfolio-content">
+                        <span class="portfolio-category">Healthcare</span>
+                        <h3 class="portfolio-title">Medical Practice Portal</h3>
+                        <p class="portfolio-description">
+                            Patient portal with appointment scheduling, medical records access, and telemedicine capabilities.
+                        </p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">HIPAA</span>
+                            <span class="portfolio-tag">Security</span>
+                            <span class="portfolio-tag">Portal</span>
+                        </div>
+                        <a href="contact.html" class="portfolio-link">
+                            View Case Study →
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Process Section -->
-    <section class="section process-section bg-light parallax">
-        <div class="container">
-            <div class="section-header reveal">
-                <h2 class="section-title">How It Works</h2>
-                <p class="section-subtitle">Three simple steps to your dream website</p>
-            </div>
-            <div class="process-timeline">
-                <div class="process-step reveal">
-                    <div class="process-number">1</div>
-                    <div class="process-content">
-                        <h3 class="process-title">Consultation</h3>
-                        <p class="process-description">Free 30-minute call to discuss your vision and goals.</p>
-                    </div>
-                </div>
-                <div class="process-step reveal">
-                    <div class="process-number">2</div>
-                    <div class="process-content">
-                        <h3 class="process-title">Design & Build</h3>
-                        <p class="process-description">We create your custom website with regular updates.</p>
-                    </div>
-                </div>
-                <div class="process-step reveal">
-                    <div class="process-number">3</div>
-                    <div class="process-content">
-                        <h3 class="process-title">Launch</h3>
-                        <p class="process-description">Your website goes live with 30 days of support included.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="section-cta">
-                <a href="services.html" class="btn btn-secondary btn-lg">Learn More About Our Process</a>
-            </div>
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content reveal">
+            <h2>Ready to Start Your Project?</h2>
+            <p>Let's discuss how we can help you achieve your goals with a custom web solution.</p>
+            <a href="contact.html" class="btn btn-primary btn-lg">Get Your Free Quote</a>
         </div>
     </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <img src="hlpfl-symbol.svg" alt="HLPFL" class="logo-img" style="height: 60px;">
+                    </div>
+                    <p>Professional web development and digital solutions built with excellence. Helping entrepreneurs and businesses succeed online.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <a href="about.html">About</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="services.html">Services</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <a href="services.html#web-development">Web Development</a>
+                    <a href="services.html#design">Design</a>
+                    <a href="services.html#ecommerce">E-commerce</a>
+                    <a href="services.html#seo">SEO</a>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <a href="mailto:hello@hlpfl.dev">hello@hlpfl.dev</a>
+                    <a href="#">Grand Rapids, MI</a>
+                    <a href="#">24/7 Support</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 HLPFL. All rights reserved. Built with care for entrepreneurs.</p>
+            </div>
+        </div>
+    </footer>
 
     <script>
-        // Enhanced Loading Screen with Percentage
+        // Loading Screen
         window.addEventListener('load', () => {
             const loadingScreen = document.getElementById('loadingScreen');
             const loadingBar = document.getElementById('loadingBar');
@@ -1080,16 +1093,6 @@
             }
         });
         
-        // Parallax Effect
-        const parallaxElements = document.querySelectorAll('.parallax');
-        window.addEventListener('scroll', () => {
-            parallaxElements.forEach(el => {
-                const speed = 0.5;
-                const yPos = -(window.pageYOffset * speed);
-                el.style.transform = `translateY(${yPos}px)`;
-            });
-        });
-        
         // Reveal animations on scroll
         const reveals = document.querySelectorAll('.reveal');
         
@@ -1105,7 +1108,7 @@
         };
         
         window.addEventListener('scroll', revealOnScroll);
-        revealOnScroll(); // Initial check
+        revealOnScroll();
         
         // Animated Number Counters
         const statNumbers = document.querySelectorAll('.stat-number[data-count]');
@@ -1142,20 +1145,6 @@
         };
         
         window.addEventListener('scroll', animateNumbers);
-        
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
     </script>
 </body>
 </html>
