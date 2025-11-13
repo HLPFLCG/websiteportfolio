@@ -55,14 +55,14 @@
             overflow-x: hidden;
         }
         
-        /* Loading Screen - Enhanced */
+        /* Loading Screen */
         .loading-screen {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            background: var(--dark);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -77,11 +77,10 @@
         }
         
         .loading-logo {
-            width: 400px;
+            width: 300px;
             height: auto;
-            margin-bottom: 4rem;
-            animation: logoFloat 3s ease-in-out infinite, logoPulse 2s ease-in-out infinite;
-            filter: drop-shadow(0 0 30px rgba(200, 121, 65, 0.5));
+            margin-bottom: 3rem;
+            animation: logoFloat 3s ease-in-out infinite;
         }
         
         @keyframes logoFloat {
@@ -89,72 +88,30 @@
             50% { transform: translateY(-20px); }
         }
         
-        @keyframes logoPulse {
-            0%, 100% { filter: drop-shadow(0 0 30px rgba(200, 121, 65, 0.5)); }
-            50% { filter: drop-shadow(0 0 50px rgba(200, 121, 65, 0.8)); }
-        }
-        
         .loading-bar-container {
-            width: 400px;
-            height: 6px;
+            width: 300px;
+            height: 4px;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
             overflow: hidden;
             position: relative;
-            box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.5);
         }
         
         .loading-bar {
             height: 100%;
-            background: linear-gradient(90deg, var(--primary), var(--primary-light), var(--primary));
-            background-size: 200% 100%;
+            background: linear-gradient(90deg, var(--primary), var(--primary-light));
             border-radius: 10px;
             width: 0%;
             transition: width 0.3s ease;
-            box-shadow: 0 0 30px rgba(200, 121, 65, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.3);
-            animation: shimmer 2s infinite;
-            position: relative;
-        }
-        
-        .loading-bar::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 50%;
-            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), transparent);
-            border-radius: 10px 10px 0 0;
-        }
-        
-        @keyframes shimmer {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            box-shadow: 0 0 20px rgba(200, 121, 65, 0.5);
         }
         
         .loading-text {
-            margin-top: 2rem;
+            margin-top: 1.5rem;
             color: var(--text-muted);
             font-size: 0.875rem;
-            letter-spacing: 0.2em;
+            letter-spacing: 0.1em;
             text-transform: uppercase;
-            animation: textPulse 2s ease-in-out infinite;
-        }
-        
-        @keyframes textPulse {
-            0%, 100% { opacity: 0.5; }
-            50% { opacity: 1; }
-        }
-        
-        .loading-percentage {
-            margin-top: 1rem;
-            font-size: 2rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
         }
         
         /* Floating Particles Background */
@@ -196,6 +153,35 @@
             }
         }
         
+        /* Custom Cursor */
+        body {
+            cursor: none;
+        }
+        
+        .cursor {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--primary);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: all 0.1s ease;
+            transform: translate(-50%, -50%);
+        }
+        
+        .cursor-follower {
+            width: 8px;
+            height: 8px;
+            background: var(--primary);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: all 0.15s ease;
+            transform: translate(-50%, -50%);
+        }
+        
         /* Container */
         .container {
             max-width: 1400px;
@@ -203,7 +189,7 @@
             padding: 0 2rem;
         }
         
-        /* Navigation - Enhanced Logo Size */
+        /* Navigation */
         nav {
             position: fixed;
             top: 0;
@@ -241,20 +227,15 @@
             transform: scale(1.05);
         }
         
-        /* ENHANCED: Logo size increased by 100% */
         .logo-img {
-            height: 90px;
+            height: 45px;
             width: auto;
-            filter: drop-shadow(0 0 15px rgba(200, 121, 65, 0.4));
-            transition: all 0.3s ease;
-        }
-        
-        nav.scrolled .logo-img {
-            height: 70px;
+            filter: drop-shadow(0 0 10px rgba(200, 121, 65, 0.3));
+            transition: filter 0.3s ease;
         }
         
         .logo:hover .logo-img {
-            filter: drop-shadow(0 0 25px rgba(200, 121, 65, 0.7));
+            filter: drop-shadow(0 0 20px rgba(200, 121, 65, 0.6));
         }
         
         .nav-menu {
@@ -383,7 +364,7 @@
             justify-content: center;
             position: relative;
             overflow: hidden;
-            padding: 10rem 2rem 4rem;
+            padding: 8rem 2rem 4rem;
         }
         
         .hero-background {
@@ -785,14 +766,6 @@
                 padding: 1rem 2rem;
             }
             
-            .logo-img {
-                height: 70px;
-            }
-            
-            nav.scrolled .logo-img {
-                height: 55px;
-            }
-            
             .nav-menu {
                 display: none;
             }
@@ -802,7 +775,7 @@
             }
             
             .hero {
-                padding: 8rem 1.5rem 3rem;
+                padding: 6rem 1.5rem 3rem;
             }
             
             .section {
@@ -849,42 +822,37 @@
             }
             
             .loading-logo {
-                width: 250px;
-            }
-            
-            .loading-bar-container {
-                width: 300px;
+                width: 200px;
             }
             
             .logo-img {
-                height: 50px;
-            }
-            
-            nav.scrolled .logo-img {
-                height: 40px;
+                height: 35px;
             }
         }
     </style>
 <script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
 </head>
 <body>
-    <!-- Loading Screen - Enhanced -->
+    <!-- Loading Screen -->
     <div class="loading-screen" id="loadingScreen">
         <img src="hlpfl-logo-full.svg" alt="HLPFL" class="loading-logo">
         <div class="loading-bar-container">
             <div class="loading-bar" id="loadingBar"></div>
         </div>
-        <div class="loading-percentage" id="loadingPercentage">0%</div>
-        <div class="loading-text">Crafting Your Experience...</div>
+        <div class="loading-text">Loading Experience...</div>
     </div>
 
     <!-- Floating Particles -->
     <div class="particles-container" id="particlesContainer"></div>
 
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-wrapper">
-            <!-- Logo - Enhanced Size -->
+            <!-- Logo -->
             <a href="index.html" class="logo">
                 <img src="hlpfl-symbol.svg" alt="HLPFL Logo" class="logo-img">
             </a>
@@ -1038,15 +1006,14 @@
     </section>
 
     <script>
-        // Enhanced Loading Screen with Percentage
+        // Loading Screen
         window.addEventListener('load', () => {
             const loadingScreen = document.getElementById('loadingScreen');
             const loadingBar = document.getElementById('loadingBar');
-            const loadingPercentage = document.getElementById('loadingPercentage');
             
             let progress = 0;
             const interval = setInterval(() => {
-                progress += Math.random() * 15 + 5;
+                progress += Math.random() * 30;
                 if (progress >= 100) {
                     progress = 100;
                     clearInterval(interval);
@@ -1055,8 +1022,7 @@
                     }, 500);
                 }
                 loadingBar.style.width = progress + '%';
-                loadingPercentage.textContent = Math.floor(progress) + '%';
-            }, 150);
+            }, 200);
         });
 
         // Create Floating Particles
@@ -1069,6 +1035,33 @@
             particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
             particlesContainer.appendChild(particle);
         }
+
+        // Custom Cursor
+        const cursor = document.querySelector('.cursor');
+        const cursorFollower = document.querySelector('.cursor-follower');
+        
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+            
+            setTimeout(() => {
+                cursorFollower.style.left = e.clientX + 'px';
+                cursorFollower.style.top = e.clientY + 'px';
+            }, 100);
+        });
+        
+        // Hover effect on interactive elements
+        const interactiveElements = document.querySelectorAll('a, button, .btn');
+        interactiveElements.forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor.style.transform = 'translate(-50%, -50%) scale(1.5)';
+                cursorFollower.style.transform = 'translate(-50%, -50%) scale(1.5)';
+            });
+            el.addEventListener('mouseleave', () => {
+                cursor.style.transform = 'translate(-50%, -50%) scale(1)';
+                cursorFollower.style.transform = 'translate(-50%, -50%) scale(1)';
+            });
+        });
         
         // Navbar scroll effect
         const nav = document.getElementById('navbar');
