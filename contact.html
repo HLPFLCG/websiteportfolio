@@ -344,8 +344,8 @@
         .hero-content {
             position: relative;
             z-index: 1;
-            text-align: center;
-            max-width: 800px;
+            text-align: left;
+            max-width: 1200px;
         }
         
         .hero-badge {
@@ -363,6 +363,19 @@
         }
         
         .hero-title {
+           }
+           
+           .hero-title .white-text {
+               color: var(--text);
+               display: block;
+           }
+           
+           .hero-title .copper-text {
+               background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+               -webkit-background-clip: text;
+               -webkit-text-fill-color: transparent;
+               background-clip: text;
+               display: block;
             font-size: clamp(2.5rem, 8vw, 4.5rem);
             font-weight: 700;
             line-height: 1.1;
@@ -383,6 +396,45 @@
             from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
+           
+           .scroll-indicator {
+               position: absolute;
+               bottom: 3rem;
+               left: 50%;
+               transform: translateX(-50%);
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               gap: 0.5rem;
+               cursor: pointer;
+               transition: all 0.3s ease;
+               z-index: 10;
+           }
+           
+           .scroll-indicator:hover {
+               transform: translateX(-50%) translateY(5px);
+           }
+           
+           .scroll-text {
+               font-size: 0.75rem;
+               letter-spacing: 0.2em;
+               color: var(--text-muted);
+               font-weight: 500;
+           }
+           
+           .scroll-arrow {
+               width: 24px;
+               height: 24px;
+               border-left: 2px solid var(--text-muted);
+               border-bottom: 2px solid var(--text-muted);
+               transform: rotate(-45deg);
+               animation: scrollBounce 2s infinite;
+           }
+           
+           @keyframes scrollBounce {
+               0%, 100% { transform: rotate(-45deg) translateY(0); }
+               50% { transform: rotate(-45deg) translateY(10px); }
+           }
         
         /* Contact Section */
         .contact-section {
@@ -660,6 +712,20 @@
         @media (max-width: 768px) {
             .hero {
                 padding: 8rem 1.5rem 3rem;
+                   text-align: center;
+               }
+               
+               .hero-content {
+                   text-align: center;
+               }
+               
+               .hero-title {
+                   font-size: 2.5rem;
+               }
+               
+               .hero-subtitle {
+                   margin-left: auto;
+                   margin-right: auto;
             }
             
             .contact-form {
@@ -726,7 +792,6 @@
         <div class="hero-background"></div>
         <div class="container">
             <div class="hero-content">
-                <div class="hero-badge">Get In Touch</div>
                 <h1 class="hero-title">Let's Build Something Amazing</h1>
                 <p class="hero-subtitle">
                     Ready to start your project? Fill out the form below and we'll get back to you within 24 hours.
@@ -735,6 +800,10 @@
         </div>
     </section>
 
+           <div class="scroll-indicator" onclick="document.querySelector(".contact-section").scrollIntoView({behavior: "smooth"})">
+               <span class="scroll-text">SCROLL</span>
+               <div class="scroll-arrow"></div>
+           </div>
     <!-- Contact Section -->
     <section class="contact-section">
         <div class="container">

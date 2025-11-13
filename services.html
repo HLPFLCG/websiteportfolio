@@ -200,27 +200,87 @@
         
         /* Page Header */
         .page-header {
-            padding: 12rem 2rem 6rem;
-            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+            padding: 8rem 2rem 4rem;
             position: relative;
             z-index: 2;
         }
         
+        .page-header-content {
+            max-width: 1200px;
+            position: relative;
+            z-index: 2;
+            text-align: left;
+        }
+        
         .page-header h1 {
-            font-size: clamp(3rem, 6vw, 5rem);
+            font-size: clamp(3.5rem, 8vw, 7rem);
             font-weight: 700;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
+            line-height: 1.1;
+        }
+        
+        .page-header h1 .white-text {
+            color: var(--text);
+            display: block;
+        }
+        
+        .page-header h1 .copper-text {
             background: linear-gradient(135deg, var(--primary), var(--primary-light));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            display: block;
         }
         
         .page-header p {
-            font-size: 1.5rem;
+            font-size: clamp(1.1rem, 2vw, 1.35rem);
             color: var(--text-muted);
-            max-width: 800px;
-            margin: 0 auto;
+            max-width: 650px;
+            line-height: 1.7;
+        }
+        
+        .scroll-indicator {
+            position: absolute;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+        
+        .scroll-indicator:hover {
+            transform: translateX(-50%) translateY(5px);
+        }
+        
+        .scroll-text {
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        
+        .scroll-arrow {
+            width: 24px;
+            height: 24px;
+            border-left: 2px solid var(--text-muted);
+            border-bottom: 2px solid var(--text-muted);
+            transform: rotate(-45deg);
+            animation: scrollBounce 2s infinite;
+        }
+        
+        @keyframes scrollBounce {
+            0%, 100% { transform: rotate(-45deg) translateY(0); }
+            50% { transform: rotate(-45deg) translateY(10px); }
         }
         
         /* Section Styles */
@@ -544,6 +604,20 @@
             
             .page-header {
                 padding: 10rem 1.5rem 4rem;
+                text-align: center;
+            }
+            
+            .page-header-content {
+                text-align: center;
+            }
+            
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .page-header p {
+                margin-left: auto;
+                margin-right: auto;
             }
             
             section {
@@ -597,8 +671,17 @@
 
     <!-- Page Header -->
     <div class="page-header">
-        <h1>Our Services</h1>
-        <p>Comprehensive web development solutions tailored for first-time founders. From simple landing pages to complex e-commerce platforms.</p>
+        <div class="page-header-content reveal">
+            <h1>
+                <span class="white-text">Our</span>
+                <span class="copper-text">Services</span>
+            </h1>
+            <p>Comprehensive web development solutions tailored for first-time founders. From simple landing pages to complex e-commerce platforms.</p>
+        </div>
+        <div class="scroll-indicator" onclick="document.querySelector('#services').scrollIntoView({behavior: 'smooth'})">
+            <span class="scroll-text">SCROLL</span>
+            <div class="scroll-arrow"></div>
+        </div>
     </div>
 
     <!-- Services Section -->
