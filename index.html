@@ -1266,7 +1266,24 @@
     </footer>
 
     <script>
+        // Loading Screen
+        let progress = 0;
+        const loadingBar = document.getElementById('loadingBar');
+        const loadingPercentage = document.getElementById('loadingPercentage');
+        const loadingScreen = document.getElementById('loadingScreen');
         
+        const loadingInterval = setInterval(() => {
+            progress += Math.random() * 30;
+            if (progress >= 100) {
+                progress = 100;
+                clearInterval(loadingInterval);
+                setTimeout(() => {
+                    loadingScreen.classList.add('hidden');
+                }, 500);
+            }
+            loadingBar.style.width = progress + '%';
+            loadingPercentage.textContent = Math.floor(progress) + '%';
+        }, 200);
 
         // Create Floating Particles
         const particlesContainer = document.getElementById('particles');
