@@ -22,6 +22,51 @@
             box-sizing: border-box;
         }
         
+        /* Loading Screen */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+        
+        .loading-screen.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .loading-content {
+            text-align: center;
+            z-index: 10000;
+        }
+        
+        .loading-spinner {
+            width: 60px;
+            height: 60px;
+            border: 3px solid rgba(200, 121, 65, 0.3);
+            border-top: 3px solid var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .loading-text {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+        
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             background: var(--dark);
@@ -32,39 +77,86 @@
             justify-content: center;
             overflow: hidden;
             position: relative;
+            opacity: 0;
+            transition: opacity 0.5s ease-in;
         }
         
-        /* Floating Particles */
+        body.loaded {
+            opacity: 1;
+        }
+        
+        /* Floating Particles - Enhanced */
         .particles {
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             overflow: hidden;
             z-index: 1;
+            pointer-events: none;
         }
         
         .particle {
             position: absolute;
-            background: radial-gradient(circle, rgba(200, 121, 65, 0.6) 0%, rgba(200, 121, 65, 0) 70%);
+            background: radial-gradient(circle, rgba(200, 121, 65, 0.8) 0%, rgba(200, 121, 65, 0.4) 40%, rgba(200, 121, 65, 0) 70%);
             border-radius: 50%;
             animation: float linear infinite;
+            will-change: transform, opacity;
+            filter: blur(0.5px);
         }
         
         @keyframes float {
             0% {
-                transform: translateY(100vh) scale(0);
+                transform: translateY(100vh) translateX(0) scale(0);
+                opacity: 0;
+            }
+            5% {
+                opacity: 1;
+            }
+            15% {
+                transform: translateY(85vh) translateX(10px) scale(1);
+                opacity: 0.9;
+            }
+            50% {
+                transform: translateY(50vh) translateX(-15px) scale(1.2);
+                opacity: 0.8;
+            }
+            85% {
+                transform: translateY(15vh) translateX(20px) scale(1.1);
+                opacity: 0.9;
+            }
+            95% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-10vh) translateX(0) scale(1);
+                opacity: 0;
+            }
+        }
+        
+        /* Additional particle animation for variety */
+        @keyframes float-drift {
+            0% {
+                transform: translateY(100vh) translateX(0) scale(0);
                 opacity: 0;
             }
             10% {
                 opacity: 1;
             }
+            30% {
+                transform: translateY(70vh) translateX(-30px) scale(1.3);
+                opacity: 0.7;
+            }
+            60% {
+                transform: translateY(40vh) translateX(25px) scale(0.9);
+                opacity: 0.8;
+            }
             90% {
                 opacity: 1;
             }
             100% {
-                transform: translateY(-100vh) scale(1);
+                transform: translateY(-10vh) translateX(0) scale(1);
                 opacity: 0;
             }
         }
@@ -215,11 +307,34 @@
             color: white;
             transform: translateY(-3px);
         }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .particles {
+                opacity: 0.7;
+            }
+            
+            .particle {
+                filter: blur(0.3px);
+            }
+        }
     </style>
 <script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
 </head>
 <body>
-    <div class="particles" id="particles"></div>
+    <!-- Loading Screen with Particles -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <div class="loading-text">Loading...</div>
+        </div>
+    </div>
+    
+    <!-- Particles for Loading Screen -->
+    <div class="particles" id="loadingParticles"></div>
+    
+    <!-- Main Particles -->
+    <div class="particles" id="mainParticles"></div>
     
     <div class="thank-you-container">
         <div class="success-icon">✓</div>
@@ -247,31 +362,95 @@
     </div>
     
     <script>
-        // Create floating particles
-        function createParticles() {
-            const particlesContainer = document.getElementById('particles');
-            const particleCount = 25;
+        // Enhanced particle creation function
+        function createParticles(containerId, count = 25) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
             
-            for (let i = 0; i < particleCount; i++) {
+            // Clear existing particles
+            container.innerHTML = '';
+            
+            for (let i = 0; i < count; i++) {
                 const particle = document.createElement('div');
                 particle.className = 'particle';
                 
+                // Random size between 2-8px
                 const size = Math.random() * 6 + 2;
                 particle.style.width = size + 'px';
                 particle.style.height = size + 'px';
+                
+                // Random horizontal position
                 particle.style.left = Math.random() * 100 + '%';
                 
-                const duration = Math.random() * 10 + 10;
+                // Random animation duration between 8-15 seconds
+                const duration = Math.random() * 7 + 8;
                 particle.style.animationDuration = duration + 's';
                 
+                // Random animation delay
                 const delay = Math.random() * 5;
                 particle.style.animationDelay = delay + 's';
                 
-                particlesContainer.appendChild(particle);
+                // Randomly choose between two animations for variety
+                if (Math.random() > 0.5) {
+                    particle.style.animationName = 'float-drift';
+                }
+                
+                // Vary opacity for depth effect
+                const opacity = Math.random() * 0.5 + 0.5;
+                particle.style.opacity = opacity;
+                
+                container.appendChild(particle);
             }
         }
         
-        createParticles();
+        // Initialize particles immediately for loading screen
+        createParticles('loadingParticles', 20);
+        
+        // Page loading logic
+        window.addEventListener('DOMContentLoaded', function() {
+            // Create main page particles
+            createParticles('mainParticles', 30);
+            
+            // Simulate loading time (you can adjust this)
+            setTimeout(function() {
+                // Hide loading screen
+                const loadingScreen = document.getElementById('loadingScreen');
+                if (loadingScreen) {
+                    loadingScreen.classList.add('hidden');
+                }
+                
+                // Show main content
+                document.body.classList.add('loaded');
+                
+                // Remove loading particles after transition
+                setTimeout(function() {
+                    const loadingParticles = document.getElementById('loadingParticles');
+                    if (loadingParticles) {
+                        loadingParticles.style.display = 'none';
+                    }
+                }, 500);
+                
+            }, 1500); // 1.5 second loading time
+        });
+        
+        // Regenerate particles periodically for continuous effect
+        setInterval(function() {
+            createParticles('mainParticles', 30);
+        }, 30000); // Regenerate every 30 seconds
+        
+        // Handle visibility change to pause/resume animations
+        document.addEventListener('visibilitychange', function() {
+            const particles = document.querySelectorAll('.particle');
+            if (document.hidden) {
+                particles.forEach(particle => {
+                    particle.style.animationPlayState = 'paused';
+                });
+            } else {
+                particles.forEach(particle => {
+                    particle.style.animationPlayState = 'running';
+                });
+            }
+        });
     </script>
 </body>
 </html>
