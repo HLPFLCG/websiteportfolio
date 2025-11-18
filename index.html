@@ -9,20 +9,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+    <script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
 </head>
 <body>
     <div class="scroll-progress"></div>
     <div class="cursor-follower"></div>
     <div class="cursor-dot"></div>
+    
+    <!-- Enhanced Loading Screen with Logo -->
     <div class="loading-screen">
         <div class="loading-content">
             <div class="loading-logo">
-                <span class="logo-letter" data-letter="H">H</span>
-                <span class="logo-letter" data-letter="L">L</span>
-                <span class="logo-letter" data-letter="P">P</span>
-                <span class="logo-letter" data-letter="F">F</span>
-                <span class="logo-letter" data-letter="L">L</span>
+                <img src="hlpfl-symbol.svg" alt="HLPFL Logo" />
             </div>
             <div class="loading-bar">
                 <div class="loading-progress"></div>
@@ -31,10 +29,12 @@
         </div>
     </div>
 
+    <!-- Transition Overlay for Smooth Page Transitions -->
     <div class="transition-overlay"></div>
     <div class="particles-canvas"></div>
     <div class="noise-overlay"></div>
 
+    <!-- Enhanced Navigation -->
     <nav class="navbar" data-scroll-section>
         <div class="nav-container">
             <div class="nav-logo">
@@ -66,6 +66,7 @@
     </nav>
 
     <main>
+        <!-- Hero Section -->
         <section id="home" class="hero" data-scroll-section>
             <div class="hero-background">
                 <div class="hero-gradient"></div>
@@ -78,648 +79,447 @@
                 </div>
                 <div class="morphing-shapes">
                     <div class="morph-shape morph-1"></div>
-                    <div class="morph-shape morph-2"></div>
                 </div>
             </div>
             
             <div class="hero-content">
-                <div class="hero-badge" data-fade-up data-delay="0.1">
-                    <span class="badge-text">🚀 Welcome to the Future</span>
-                    <span class="badge-glow"></span>
-                </div>
-                
-                <h1 class="hero-title" data-split-text>
-                    <span class="title-line">Digital</span>
-                    <span class="title-line">Innovation</span>
-                    <span class="title-line">Agency</span>
-                    <span class="title-highlight">Excellence</span>
+                <h1 class="hero-title">
+                    Your First Website<br>Shouldn't Break the Bank
                 </h1>
-                
-                <p class="hero-subtitle" data-fade-up data-delay="0.2">
-                    Transforming ideas into extraordinary digital experiences with cutting-edge technology and creative mastery
+                <p class="hero-subtitle">
+                    High-quality websites for first-time founders at prices you can actually afford. No outsourcing, full transparency, 100% US-based work.
                 </p>
-                
-                <div class="hero-stats" data-fade-up data-delay="0.3">
-                    <div class="stat-mini">
-                        <span class="stat-number-mini" data-counter="150">0</span>
-                        <span class="stat-label-mini">Projects</span>
-                    </div>
-                    <div class="stat-mini">
-                        <span class="stat-number-mini" data-counter="98">0</span>
-                        <span class="stat-label-mini">Success %</span>
-                    </div>
-                    <div class="stat-mini">
-                        <span class="stat-number-mini" data-counter="24">0</span>
-                        <span class="stat-label-mini">Awards</span>
-                    </div>
-                </div>
-                
-                <div class="hero-cta" data-fade-up data-delay="0.4">
-                    <a href="#work" class="btn-primary" data-scroll-to>
-                        <span class="btn-text">View Our Work</span>
-                        <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
-                        <div class="btn-glow"></div>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary" data-scroll-to>
+                        <span>Get Your Free Quote</span>
+                        <i class="fas fa-arrow-right"></i>
                     </a>
-                    <a href="#contact" class="btn-secondary" data-scroll-to>
-                        <span class="btn-text">Get Started</span>
-                        <span class="btn-icon"><i class="fas fa-rocket"></i></span>
-                        <div class="btn-border"></div>
+                    <a href="#process" class="btn btn-secondary" data-scroll-to>
+                        <span>See How It Works</span>
+                        <i class="fas fa-play"></i>
                     </a>
                 </div>
-                
-                <div class="hero-scroll" data-scroll-indicator>
-                    <div class="scroll-mouse">
-                        <div class="scroll-wheel"></div>
-                    </div>
-                    <span class="scroll-text">Scroll to explore</span>
+                <div class="scroll-indicator">
+                    <span>SCROLL</span>
+                    <div class="scroll-arrow"></div>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="about" data-scroll-section>
-            <div class="container">
-                <div class="about-grid">
-                    <div class="about-content" data-sticky-element>
-                        <div class="section-badge" data-fade-up>
-                            <span>Who We Are</span>
+        <!-- Features Section -->
+        <section id="about" class="features" data-scroll-section>
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Why Choose HLPFL?</h2>
+                    <p class="section-subtitle">We understand the challenges first-time founders face. That's why we've built a service that actually works for you.</p>
+                </div>
+                
+                <div class="grid grid-3">
+                    <div class="card feature-card" data-animate>
+                        <div class="card-icon">
+                            <i class="fas fa-bolt"></i>
                         </div>
-                        <h2 class="section-title" data-split-text>
-                            <span class="title-gradient">About HLPFL</span>
-                        </h2>
-                        <p class="about-text" data-fade-up data-delay="0.1">
-                            We are a cutting-edge digital agency specializing in creating innovative solutions that push the boundaries of web technology and design. Our team of experts combines creative vision with technical excellence.
-                        </p>
-                        
-                        <div class="features-list" data-fade-up data-delay="0.2">
-                            <div class="feature-item">
-                                <div class="feature-icon">
-                                    <i class="fas fa-rocket"></i>
-                                    <div class="icon-glow"></div>
-                                </div>
-                                <div class="feature-content">
-                                    <h4>Innovation First</h4>
-                                    <p>Cutting-edge solutions that领先</p>
-                                </div>
-                            </div>
-                            <div class="feature-item">
-                                <div class="feature-icon">
-                                    <i class="fas fa-users"></i>
-                                    <div class="icon-glow"></div>
-                                </div>
-                                <div class="feature-content">
-                                    <h4>Expert Team</h4>
-                                    <p>Talented professionals dedicated to excellence</p>
-                                </div>
-                            </div>
-                            <div class="feature-item">
-                                <div class="feature-icon">
-                                    <i class="fas fa-trophy"></i>
-                                    <div class="icon-glow"></div>
-                                </div>
-                                <div class="feature-content">
-                                    <h4>Proven Results</h4>
-                                    <p>Track record of successful projects</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="stats-grid" data-fade-up data-delay="0.3">
-                            <div class="stat-item">
-                                <span class="stat-number" data-counter="150">0</span>
-                                <span class="stat-label">Projects</span>
-                                <div class="stat-progress">
-                                    <div class="progress-fill" data-progress="100"></div>
-                                </div>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number" data-counter="75">0</span>
-                                <span class="stat-label">Clients</span>
-                                <div class="stat-progress">
-                                    <div class="progress-fill" data-progress="85"></div>
-                                </div>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number" data-counter="98">0</span>
-                                <span class="stat-label">Success %</span>
-                                <div class="stat-progress">
-                                    <div class="progress-fill" data-progress="98"></div>
-                                </div>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number" data-counter="8">0</span>
-                                <span class="stat-label">Years</span>
-                                <div class="stat-progress">
-                                    <div class="progress-fill" data-progress="80"></div>
-                                </div>
-                            </div>
-                        </div>
+                        <h3 class="card-title">Lightning-Fast Delivery</h3>
+                        <p class="card-description">Get your website live in 72 hours when you provide all materials. We use AI-powered development to deliver quality at speed without compromising on excellence.</p>
                     </div>
                     
-                    <div class="about-visual" data-parallax-element>
-                        <div class="about-image-container">
-                            <div class="about-image-wrapper">
-                                <div class="image-placeholder">
-                                    <div class="image-grid">
-                                        <div class="grid-line"></div>
-                                        <div class="grid-line"></div>
-                                        <div class="grid-line"></div>
-                                        <div class="grid-line"></div>
-                                    </div>
-                                    <div class="floating-elements">
-                                        <div class="float-element elem-1"></div>
-                                        <div class="float-element elem-2"></div>
-                                        <div class="float-element elem-3"></div>
-                                    </div>
-                                </div>
-                                <div class="image-overlay">
-                                    <div class="overlay-text">
-                                        <span>8 Years of Excellence</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="about-shapes">
-                                <div class="about-shape shape-a"></div>
-                                <div class="about-shape shape-b"></div>
-                            </div>
+                    <div class="card feature-card" data-animate>
+                        <div class="card-icon">
+                            <i class="fas fa-dollar-sign"></i>
                         </div>
+                        <h3 class="card-title">Actually Affordable</h3>
+                        <p class="card-description">Sliding scale pricing based on your budget. We believe every founder deserves a professional website, regardless of their current financial situation.</p>
+                    </div>
+                    
+                    <div class="card feature-card" data-animate>
+                        <div class="card-icon">
+                            <i class="fas fa-flag-usa"></i>
+                        </div>
+                        <h3 class="card-title">100% US-Based Work</h3>
+                        <p class="card-description">No outsourcing, no language barriers, no timezone issues. All work is done right here in Grand Rapids, MI by our dedicated team.</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Quick Stats -->
+        <section class="stats" data-scroll-section>
+            <div class="section-container">
+                <div class="grid grid-4">
+                    <div class="stat-item" data-animate>
+                        <div class="stat-number">72hrs</div>
+                        <div class="stat-label">Average Turnaround</div>
+                    </div>
+                    <div class="stat-item" data-animate>
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">US-Based Work</div>
+                    </div>
+                    <div class="stat-item" data-animate>
+                        <div class="stat-number">6+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-item" data-animate>
+                        <div class="stat-number">20+</div>
+                        <div class="stat-label">Ventures Built</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
         <section id="services" class="services" data-scroll-section>
-            <div class="container">
-                <div class="section-header" data-center-text>
-                    <div class="section-badge" data-fade-up>
-                        <span>What We Do</span>
-                    </div>
-                    <h2 class="section-title" data-split-text>
-                        <span class="title-gradient">Our Services</span>
-                    </h2>
-                    <p class="section-subtitle" data-fade-up data-delay="0.1">
-                        Comprehensive digital solutions powered by innovation and creativity
-                    </p>
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">What We Build</h2>
+                    <p class="section-subtitle">Custom digital experiences tailored to your unique vision and budget.</p>
                 </div>
                 
-                <div class="services-showcase">
-                    <div class="service-categories">
-                        <button class="category-btn active" data-category="all">All Services</button>
-                        <button class="category-btn" data-category="development">Development</button>
-                        <button class="category-btn" data-category="design">Design</button>
-                        <button class="category-btn" data-category="strategy">Strategy</button>
+                <div class="grid grid-3">
+                    <div class="card service-card" data-animate>
+                        <div class="card-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3 class="card-title">Web Development</h3>
+                        <p class="card-description">Custom websites built with modern technologies, responsive design, and optimized performance.</p>
                     </div>
                     
-                    <div class="services-grid">
-                        <div class="service-card premium" data-scroll-card data-category="development">
-                            <div class="service-number">01</div>
-                            <div class="service-icon">
-                                <div class="icon-bg">
-                                    <div class="icon-particles"></div>
-                                </div>
-                                <div class="icon-content">
-                                    <i class="fas fa-code"></i>
-                                </div>
-                            </div>
-                            <h3 class="service-title">Web Development</h3>
-                            <p class="service-description">Custom web applications built with cutting-edge technologies and best practices</p>
-                            <div class="service-features">
-                                <span class="feature-tag">React</span>
-                                <span class="feature-tag">Node.js</span>
-                                <span class="feature-tag">Cloud</span>
-                            </div>
-                            <div class="service-hover-effect">
-                                <div class="hover-particles"></div>
-                            </div>
+                    <div class="card service-card" data-animate>
+                        <div class="card-icon">
+                            <i class="fas fa-paint-brush"></i>
                         </div>
-                        
-                        <div class="service-card" data-scroll-card data-category="design">
-                            <div class="service-number">02</div>
-                            <div class="service-icon">
-                                <div class="icon-bg">
-                                    <div class="icon-particles"></div>
-                                </div>
-                                <div class="icon-content">
-                                    <i class="fas fa-palette"></i>
-                                </div>
-                            </div>
-                            <h3 class="service-title">UI/UX Design</h3>
-                            <p class="service-description">Beautiful interfaces that deliver exceptional user experiences</p>
-                            <div class="service-features">
-                                <span class="feature-tag">Figma</span>
-                                <span class="feature-tag">Prototyping</span>
-                                <span class="feature-tag">Research</span>
-                            </div>
-                            <div class="service-hover-effect">
-                                <div class="hover-particles"></div>
-                            </div>
+                        <h3 class="card-title">Web Design</h3>
+                        <p class="card-description">Beautiful, user-centered designs that capture your brand essence and convert visitors.</p>
+                    </div>
+                    
+                    <div class="card service-card" data-animate>
+                        <div class="card-icon">
+                            <i class="fas fa-shopping-cart"></i>
                         </div>
-                        
-                        <div class="service-card premium" data-scroll-card data-category="development">
-                            <div class="service-number">03</div>
-                            <div class="service-icon">
-                                <div class="icon-bg">
-                                    <div class="icon-particles"></div>
-                                </div>
-                                <div class="icon-content">
-                                    <i class="fas fa-mobile-alt"></i>
-                                </div>
-                            </div>
-                            <h3 class="service-title">Mobile Apps</h3>
-                            <p class="service-description">Native and cross-platform mobile applications</p>
-                            <div class="service-features">
-                                <span class="feature-tag">iOS</span>
-                                <span class="feature-tag">Android</span>
-                                <span class="feature-tag">Flutter</span>
-                            </div>
-                            <div class="service-hover-effect">
-                                <div class="hover-particles"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="service-card" data-scroll-card data-category="development">
-                            <div class="service-number">04</div>
-                            <div class="service-icon">
-                                <div class="icon-bg">
-                                    <div class="icon-particles"></div>
-                                </div>
-                                <div class="icon-content">
-                                    <i class="fas fa-robot"></i>
-                                </div>
-                            </div>
-                            <h3 class="service-title">AI Solutions</h3>
-                            <p class="service-description">Intelligent automation and machine learning implementations</p>
-                            <div class="service-features">
-                                <span class="feature-tag">ML</span>
-                                <span class="feature-tag">NLP</span>
-                                <span class="feature-tag">CV</span>
-                            </div>
-                            <div class="service-hover-effect">
-                                <div class="hover-particles"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="service-card" data-scroll-card data-category="strategy">
-                            <div class="service-number">05</div>
-                            <div class="service-icon">
-                                <div class="icon-bg">
-                                    <div class="icon-particles"></div>
-                                </div>
-                                <div class="icon-content">
-                                    <i class="fas fa-chart-line"></i>
-                                </div>
-                            </div>
-                            <h3 class="service-title">Data Analytics</h3>
-                            <p class="service-description">Actionable insights from your business data</p>
-                            <div class="service-features">
-                                <span class="feature-tag">Big Data</span>
-                                <span class="feature-tag">BI</span>
-                                <span class="feature-tag">Dashboard</span>
-                            </div>
-                            <div class="service-hover-effect">
-                                <div class="hover-particles"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="service-card premium" data-scroll-card data-category="development">
-                            <div class="service-number">06</div>
-                            <div class="service-icon">
-                                <div class="icon-bg">
-                                    <div class="icon-particles"></div>
-                                </div>
-                                <div class="icon-content">
-                                    <i class="fas fa-cloud"></i>
-                                </div>
-                            </div>
-                            <h3 class="service-title">Cloud Solutions</h3>
-                            <p class="service-description">Scalable cloud infrastructure and deployment</p>
-                            <div class="service-features">
-                                <span class="feature-tag">AWS</span>
-                                <span class="feature-tag">Azure</span>
-                                <span class="feature-tag">DevOps</span>
-                            </div>
-                            <div class="service-hover-effect">
-                                <div class="hover-particles"></div>
-                            </div>
-                        </div>
+                        <h3 class="card-title">E-commerce</h3>
+                        <p class="card-description">Online stores that drive sales with seamless shopping experiences and secure payments.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="work" class="work" data-scroll-section>
-            <div class="container">
-                <div class="section-header" data-center-text>
-                    <div class="section-badge" data-fade-up>
-                        <span>Portfolio</span>
-                    </div>
-                    <h2 class="section-title" data-split-text>
-                        <span class="title-gradient">Our Work</span>
-                    </h2>
-                    <p class="section-subtitle" data-fade-up data-delay="0.1">
-                        Projects that showcase our expertise and innovation
-                    </p>
-                </div>
-                
-                <div class="work-filter">
-                    <button class="filter-btn active" data-filter="all">All</button>
-                    <button class="filter-btn" data-filter="web">Web</button>
-                    <button class="filter-btn" data-filter="mobile">Mobile</button>
-                    <button class="filter-btn" data-filter="ai">AI</button>
-                </div>
-                
-                <div class="work-grid">
-                    <div class="work-item featured" data-work-item data-category="web">
-                        <div class="work-image">
-                            <div class="image-placeholder">
-                                <div class="image-overlay"></div>
-                                <div class="image-content">
-                                    <div class="project-number">01</div>
-                                    <h3 class="work-title">Project Alpha</h3>
-                                    <p class="work-category">Web Development</p>
-                                    <div class="work-tech">
-                                        <span>React</span>
-                                        <span>Node.js</span>
-                                        <span>MongoDB</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="work-hover-info">
-                                <div class="hover-content">
-                                    <h4>Revolutionary Web Platform</h4>
-                                    <p>Full-stack application serving 10M+ users</p>
-                                    <a href="#" class="project-link">
-                                        <span>View Case Study</span>
-                                        <i class="fas fa-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="work-item" data-work-item data-category="mobile">
-                        <div class="work-image">
-                            <div class="image-placeholder">
-                                <div class="image-overlay"></div>
-                                <div class="image-content">
-                                    <div class="project-number">02</div>
-                                    <h3 class="work-title">Brand Evolution</h3>
-                                    <p class="work-category">UI/UX Design</p>
-                                    <div class="work-tech">
-                                        <span>Figma</span>
-                                        <span>Prototyping</span>
-                                        <span>Research</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="work-hover-info">
-                                <div class="hover-content">
-                                    <h4>Complete Brand Redesign</h4>
-                                    <p>Award-winning design system</p>
-                                    <a href="#" class="project-link">
-                                        <span>View Case Study</span>
-                                        <i class="fas fa-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="work-item featured" data-work-item data-category="mobile">
-                        <div class="work-image">
-                            <div class="image-placeholder">
-                                <div class="image-overlay"></div>
-                                <div class="image-content">
-                                    <div class="project-number">03</div>
-                                    <h3 class="work-title">Mobile First</h3>
-                                    <p class="work-category">Mobile App</p>
-                                    <div class="work-tech">
-                                        <span>Flutter</span>
-                                        <span>Firebase</span>
-                                        <span>ML Kit</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="work-hover-info">
-                                <div class="hover-content">
-                                    <h4>Cross-Platform Mobile App</h4>
-                                    <p>5M+ downloads, 4.8★ rating</p>
-                                    <a href="#" class="project-link">
-                                        <span>View Case Study</span>
-                                        <i class="fas fa-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="work-item" data-work-item data-category="ai">
-                        <div class="work-image">
-                            <div class="image-placeholder">
-                                <div class="image-overlay"></div>
-                                <div class="image-content">
-                                    <div class="project-number">04</div>
-                                    <h3 class="work-title">AI Dashboard</h3>
-                                    <p class="work-category">AI Solution</p>
-                                    <div class="work-tech">
-                                        <span>Python</span>
-                                        <span>TensorFlow</span>
-                                        <span>D3.js</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="work-hover-info">
-                                <div class="hover-content">
-                                    <h4>Intelligent Analytics Platform</h4>
-                                    <p>Real-time AI-powered insights</p>
-                                    <a href="#" class="project-link">
-                                        <span>View Case Study</span>
-                                        <i class="fas fa-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+        <!-- Process Section -->
         <section id="process" class="process" data-scroll-section>
-            <div class="container">
-                <div class="section-header" data-center-text>
-                    <div class="section-badge" data-fade-up>
-                        <span>How We Work</span>
-                    </div>
-                    <h2 class="section-title" data-split-text>
-                        <span class="title-gradient">Our Process</span>
-                    </h2>
-                    <p class="section-subtitle" data-fade-up data-delay="0.1">
-                        A proven methodology for delivering exceptional results
-                    </p>
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">How It Works</h2>
+                    <p class="section-subtitle">Four simple steps to get your website live</p>
                 </div>
                 
                 <div class="process-timeline">
-                    <div class="process-line"></div>
-                    <div class="process-item" data-fade-up>
-                        <div class="process-number">01</div>
-                        <div class="process-icon">
-                            <i class="fas fa-lightbulb"></i>
-                            <div class="icon-glow"></div>
-                        </div>
-                        <div class="process-content">
-                            <h3>Discovery</h3>
-                            <p>Understanding your vision, goals, and requirements through in-depth consultation and research</p>
+                    <div class="process-step" data-animate>
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Discovery Call</h3>
+                            <p class="step-description">Find out if we're a good fit for one another. No promises, we're not for everyone.</p>
                         </div>
                     </div>
                     
-                    <div class="process-item" data-fade-up data-delay="0.1">
-                        <div class="process-number">02</div>
-                        <div class="process-icon">
-                            <i class="fas fa-pencil-ruler"></i>
-                            <div class="icon-glow"></div>
-                        </div>
-                        <div class="process-content">
-                            <h3>Strategy & Design</h3>
-                            <p>Crafting comprehensive strategies and stunning designs that align with your objectives</p>
+                    <div class="process-step" data-animate>
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Provide Materials</h3>
+                            <p class="step-description">Share your content, images, branding, and any assets you have. Don't have everything? No worries.</p>
                         </div>
                     </div>
                     
-                    <div class="process-item" data-fade-up data-delay="0.2">
-                        <div class="process-number">03</div>
-                        <div class="process-icon">
-                            <i class="fas fa-code"></i>
-                            <div class="icon-glow"></div>
-                        </div>
-                        <div class="process-content">
-                            <h3>Development</h3>
-                            <p>Building robust, scalable solutions using cutting-edge technologies and best practices</p>
+                    <div class="process-step" data-animate>
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3 class="step-title">We Build</h3>
+                            <p class="step-description">Our team gets to work using development tools to create your custom website efficiently without cutting corners.</p>
                         </div>
                     </div>
                     
-                    <div class="process-item" data-fade-up data-delay="0.3">
-                        <div class="process-number">04</div>
-                        <div class="process-icon">
-                            <i class="fas fa-rocket"></i>
-                            <div class="icon-glow"></div>
-                        </div>
-                        <div class="process-content">
-                            <h3>Launch & Support</h3>
-                            <p>Deploying your solution and providing ongoing support to ensure continued success</p>
+                    <div class="process-step" data-animate>
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Review & Launch</h3>
+                            <p class="step-description">You review, we refine, and then we launch. Typically within 72 hours of receiving all materials. Then we celebrate your success!</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="contact" data-scroll-section>
-            <div class="container">
-                <div class="contact-content">
-                    <div class="contact-info" data-sticky-element>
-                        <div class="section-badge" data-fade-up>
-                            <span>Get In Touch</span>
+        <!-- Testimonials Section -->
+        <section id="work" class="testimonials" data-scroll-section>
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">What Our Clients Say</h2>
+                    <p class="section-subtitle">Real feedback from real founders who took the leap</p>
+                </div>
+                
+                <div class="testimonials-grid">
+                    <div class="testimonial-card" data-animate>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
                         </div>
-                        <h2 class="section-title" data-split-text>
-                            <span class="title-gradient">Let's Connect</span>
-                        </h2>
-                        <p class="contact-text" data-fade-up data-delay="0.1">
-                            Ready to transform your digital presence? We're here to help you achieve your goals and exceed expectations.
-                        </p>
-                        
-                        <div class="contact-channels" data-fade-up data-delay="0.2">
-                            <div class="channel-item">
-                                <div class="channel-icon">
-                                    <i class="fas fa-envelope"></i>
-                                    <div class="icon-pulse"></div>
-                                </div>
-                                <div class="channel-info">
-                                    <span class="channel-label">Email</span>
-                                    <a href="mailto:hello@hlpfl.dev" class="channel-link">hello@hlpfl.dev</a>
-                                </div>
-                            </div>
-                            
-                            <div class="channel-item">
-                                <div class="channel-icon">
-                                    <i class="fas fa-phone"></i>
-                                    <div class="icon-pulse"></div>
-                                </div>
-                                <div class="channel-info">
-                                    <span class="channel-label">Phone</span>
-                                    <a href="tel:+1234567890" class="channel-link">+1 (234) 567-890</a>
-                                </div>
-                            </div>
-                            
-                            <div class="channel-item">
-                                <div class="channel-icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    <div class="icon-pulse"></div>
-                                </div>
-                                <div class="channel-info">
-                                    <span class="channel-label">Office</span>
-                                    <span class="channel-link">San Francisco, CA</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="social-proof" data-fade-up data-delay="0.3">
-                            <div class="social-title">Follow us</div>
-                            <div class="social-links">
-                                <a href="#" class="social-link">
-                                    <i class="fab fa-twitter"></i>
-                                    <div class="social-glow"></div>
-                                </a>
-                                <a href="#" class="social-link">
-                                    <i class="fab fa-linkedin"></i>
-                                    <div class="social-glow"></div>
-                                </a>
-                                <a href="#" class="social-link">
-                                    <i class="fab fa-github"></i>
-                                    <div class="social-glow"></div>
-                                </a>
-                                <a href="#" class="social-link">
-                                    <i class="fab fa-dribbble"></i>
-                                    <div class="social-glow"></div>
-                                </a>
+                        <p class="testimonial-text">"As a first-time founder with limited budget, HLPFL was a lifesaver. They delivered a professional website in 3 days that helped me land my first clients. The sliding scale pricing meant I could actually afford it!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>Heather</h4>
+                                <p>Founder, HCJK Collection</p>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="contact-form-wrapper" data-fade-up data-delay="0.2">
-                        <form class="contact-form">
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <input type="text" class="form-input" placeholder="Your Name" required>
-                                    <div class="input-border"></div>
-                                    <div class="input-focus"></div>
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-input" placeholder="Your Email" required>
-                                    <div class="input-border"></div>
-                                    <div class="input-focus"></div>
-                                </div>
+                    <div class="testimonial-card" data-animate>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"I was skeptical about the 72-hour promise, but they actually delivered! The transparency throughout the process was refreshing. No hidden fees, no surprises, just honest work from a US-based team."</p>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>James Chen</h4>
+                                <p>Founder</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card" data-animate>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"After two failed business attempts, I was hesitant to invest in a website. HLPFL worked with my budget and created something that actually converts. Three months later, I'm profitable!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>Marcus Johnson</h4>
+                                <p>Founder</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="pricing" data-scroll-section>
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Simple, Transparent Pricing</h2>
+                    <p class="section-subtitle">Choose the package that fits your needs and budget. No hidden fees, ever.</p>
+                </div>
+                
+                <div class="pricing-grid">
+                    <div class="pricing-card" data-animate>
+                        <div class="pricing-header">
+                            <h3 class="pricing-title">Starter</h3>
+                            <div class="pricing-price">
+                                <span class="currency">$</span>
+                                <span class="amount">____</span>
+                                <span class="period">One-time payment</span>
+                            </div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Single-page website</li>
+                            <li><i class="fas fa-check"></i> Mobile responsive design</li>
+                            <li><i class="fas fa-check"></i> Contact form integration</li>
+                            <li><i class="fas fa-check"></i> Basic SEO setup</li>
+                            <li><i class="fas fa-check"></i> 72-hour delivery</li>
+                            <li><i class="fas fa-check"></i> 1 round of revisions</li>
+                            <li><i class="fas fa-check"></i> 30 days support</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-secondary" data-scroll-to>Get Started</a>
+                    </div>
+                    
+                    <div class="pricing-card featured" data-animate>
+                        <div class="pricing-badge">MOST POPULAR</div>
+                        <div class="pricing-header">
+                            <h3 class="pricing-title">Professional</h3>
+                            <div class="pricing-price">
+                                <span class="currency">$</span>
+                                <span class="amount">____</span>
+                                <span class="period">One-time payment</span>
+                            </div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Up to 5 pages</li>
+                            <li><i class="fas fa-check"></i> Custom design</li>
+                            <li><i class="fas fa-check"></i> Advanced animations</li>
+                            <li><i class="fas fa-check"></i> Contact & booking forms</li>
+                            <li><i class="fas fa-check"></i> Full SEO optimization</li>
+                            <li><i class="fas fa-check"></i> 72-hour delivery</li>
+                            <li><i class="fas fa-check"></i> 3 rounds of revisions</li>
+                            <li><i class="fas fa-check"></i> 90 days support</li>
+                            <li><i class="fas fa-check"></i> Analytics setup</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary" data-scroll-to>Get Started</a>
+                    </div>
+                    
+                    <div class="pricing-card" data-animate>
+                        <div class="pricing-header">
+                            <h3 class="pricing-title">Enterprise</h3>
+                            <div class="pricing-price">
+                                <span class="currency">$</span>
+                                <span class="amount">____</span>
+                                <span class="period">One-time payment</span>
+                            </div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Unlimited pages</li>
+                            <li><i class="fas fa-check"></i> Premium custom design</li>
+                            <li><i class="fas fa-check"></i> Advanced features</li>
+                            <li><i class="fas fa-check"></i> E-commerce integration</li>
+                            <li><i class="fas fa-check"></i> Custom functionality</li>
+                            <li><i class="fas fa-check"></i> Priority delivery</li>
+                            <li><i class="fas fa-check"></i> Unlimited revisions</li>
+                            <li><i class="fas fa-check"></i> 6 months support</li>
+                            <li><i class="fas fa-check"></i> Advanced analytics</li>
+                            <li><i class="fas fa-check"></i> Ongoing maintenance</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-secondary" data-scroll-to>Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq" data-scroll-section>
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <p class="section-subtitle">Everything you need to know about working with HLPFL</p>
+                </div>
+                
+                <div class="faq-list">
+                    <div class="faq-item" data-animate>
+                        <div class="faq-question">
+                            <h3>How can you deliver a website in 72 hours?</h3>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We use AI-powered development tools combined with our 6+ years of experience to streamline the process. When you provide all materials upfront (content, images, branding), we can work efficiently without back-and-forth delays. Our process is optimized for speed without sacrificing quality.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item" data-animate>
+                        <div class="faq-question">
+                            <h3>What if I don't have all my content ready?</h3>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>No problem! We'll help you figure out what you need during the discovery call. If you need more time to gather materials, we'll work with your timeline. The 72-hour delivery starts once we have everything we need from you.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item" data-animate>
+                        <div class="faq-question">
+                            <h3>How does the sliding scale pricing work?</h3>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>During our discovery call, we'll discuss your budget honestly. We offer flexible pricing based on your current financial situation and the scope of your project. Our goal is to make professional web development accessible to all first-time founders, regardless of budget constraints.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item" data-animate>
+                        <div class="faq-question">
+                            <h3>What happens after my website launches?</h3>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>All packages include post-launch support (30-180 days depending on your package). We're here to answer questions, make minor updates, and ensure your website continues to perform well. We also offer ongoing maintenance packages if you need continued support.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact" data-scroll-section>
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Ready to Launch Your Website?</h2>
+                    <p class="section-subtitle">Let's have a free 30-minute discovery call to discuss your vision and see if we're a good fit. No pressure, no sales pitch – just honest conversation about your goals.</p>
+                </div>
+                
+                <div class="contact-content">
+                    <div class="contact-info" data-animate>
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h3>Email Us</h3>
+                            <p><a href="mailto:hello@hlpfl.dev">hello@hlpfl.dev</a></p>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <h3>Call Us</h3>
+                            <p><a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h3>Visit Us</h3>
+                            <p>Grand Rapids, MI</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form" data-animate>
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" id="name" name="name" class="form-input" required>
                             </div>
                             
                             <div class="form-group">
-                                <input type="text" class="form-input" placeholder="Subject" required>
-                                <div class="input-border"></div>
-                                <div class="input-focus"></div>
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" id="email" name="email" class="form-input" required>
                             </div>
                             
                             <div class="form-group">
-                                <textarea class="form-input" placeholder="Tell us about your project..." rows="5" required></textarea>
-                                <div class="input-border"></div>
-                                <div class="input-focus"></div>
+                                <label for="company" class="form-label">Company</label>
+                                <input type="text" id="company" name="company" class="form-input">
                             </div>
                             
-                            <button type="submit" class="btn-primary">
-                                <span class="btn-text">Send Message</span>
-                                <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
-                                <div class="btn-glow"></div>
+                            <div class="form-group">
+                                <label for="budget" class="form-label">Budget Range</label>
+                                <select id="budget" name="budget" class="form-input">
+                                    <option value="">Select budget range</option>
+                                    <option value="$500-$1000">$500 - $1,000</option>
+                                    <option value="$1000-$2500">$1,000 - $2,500</option>
+                                    <option value="$2500-$5000">$2,500 - $5,000</option>
+                                    <option value="$5000+">$5,000+</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message" class="form-label">Tell us about your project</label>
+                                <textarea id="message" name="message" class="form-textarea" rows="5" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">
+                                <span>Get My Free Quote</span>
+                                <i class="fas fa-paper-plane"></i>
                             </button>
                         </form>
                         
-                        <div class="form-success-message">
+                        <div class="form-success" id="form-success">
                             <i class="fas fa-check-circle"></i>
-                            <h4>Message Sent!</h4>
-                            <p>We'll get back to you within 24 hours.</p>
+                            <h3>Thank you!</h3>
+                            <p>We'll be in touch within 24 hours to schedule your discovery call.</p>
                         </div>
                     </div>
                 </div>
@@ -727,85 +527,58 @@
         </section>
     </main>
 
-    <footer class="footer" data-scroll-section>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="footer-logo">
-                        <span class="logo-text">HLPFL</span>
-                        <div class="logo-glow"></div>
-                    </div>
-                    <p class="footer-tagline">Digital Innovation Excellence</p>
-                    <div class="footer-social">
-                        <a href="#" class="social-link">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="social-link">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="#" class="social-link">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="#" class="social-link">
-                            <i class="fab fa-dribbble"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="footer-links-grid">
-                    <div class="footer-links-column">
-                        <h4>Services</h4>
-                        <ul>
-                            <li><a href="#services">Web Development</a></li>
-                            <li><a href="#services">UI/UX Design</a></li>
-                            <li><a href="#services">Mobile Apps</a></li>
-                            <li><a href="#services">AI Solutions</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-links-column">
-                        <h4>Company</h4>
-                        <ul>
-                            <li><a href="#about">About Us</a></li>
-                            <li><a href="#work">Portfolio</a></li>
-                            <li><a href="#process">Process</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-links-column">
-                        <h4>Resources</h4>
-                        <ul>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Case Studies</a></li>
-                            <li><a href="#">Documentation</a></li>
-                            <li><a href="#">Support</a></li>
-                        </ul>
-                    </div>
-                </div>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>HLPFL</h3>
+                <p>Affordable, high-quality websites for first-time founders. 100% US-based work from Grand Rapids, MI.</p>
             </div>
             
-            <div class="footer-bottom">
-                <div class="footer-bottom-content">
-                    <p>&copy; 2024 HLPFL. All rights reserved.</p>
-                    <div class="footer-bottom-links">
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms of Service</a>
-                        <a href="#">Cookie Policy</a>
-                    </div>
-                </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home" data-scroll-to>Home</a></li>
+                    <li><a href="#about" data-scroll-to>Services</a></li>
+                    <li><a href="#work" data-scroll-to>Portfolio</a></li>
+                    <li><a href="#process" data-scroll-to>About</a></li>
+                    <li><a href="#contact" data-scroll-to>Contact</a></li>
+                </ul>
             </div>
+            
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#services" data-scroll-to>Web Development</a></li>
+                    <li><a href="#services" data-scroll-to>Web Design</a></li>
+                    <li><a href="#services" data-scroll-to>E-commerce</a></li>
+                    <li><a href="#services" data-scroll-to>SEO</a></li>
+                    <li><a href="#faq" data-scroll-to>FAQ</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul>
+                    <li><a href="mailto:hello@hlpfl.dev">hello@hlpfl.dev</a></li>
+                    <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+                    <li>Grand Rapids, MI</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 HLPFL. All rights reserved. | Privacy Policy | Terms of Service</p>
         </div>
     </footer>
 
-    <div class="scroll-to-top" data-scroll-to-top>
+    <!-- Scroll to Top Button -->
+    <div class="scroll-to-top" id="scroll-to-top">
+        <svg class="progress-ring" width="56" height="56">
+            <circle class="progress-ring-circle" cx="28" cy="28" r="26"></circle>
+            <circle class="progress-ring-progress" cx="28" cy="28" r="26"></circle>
+        </svg>
         <i class="fas fa-arrow-up"></i>
-        <div class="scroll-progress-circle">
-            <svg viewBox="0 0 100 100">
-                <circle class="progress-bg" cx="50" cy="50" r="45"></circle>
-                <circle class="progress-fill" cx="50" cy="50" r="45"></circle>
-            </svg>
-        </div>
     </div>
 
     <script src="script.js"></script>
