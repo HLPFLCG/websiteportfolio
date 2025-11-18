@@ -1,5 +1,5 @@
 // HLPFL Website - Consolidated Scripts
-// Handles loading screen, persistent sparkled background, and common functionality
+// Handles loading screen, persistent sparkled background, easter eggs, and common functionality
 
 (function() {
     'use strict';
@@ -278,12 +278,212 @@
         }
     }
 
+    // Easter Eggs Initialization
+    function initEasterEggs() {
+        // Logo Triple Click Easter Egg
+        const logo = document.querySelector('.logo');
+        if (logo) {
+            let clickCount = 0;
+            let clickTimer;
+            
+            logo.addEventListener('click', (e) => {
+                e.preventDefault();
+                clickCount++;
+                logo.classList.remove('click-1', 'click-2', 'click-3');
+                logo.classList.add(`click-${clickCount}`);
+                
+                clearTimeout(clickTimer);
+                clickTimer = setTimeout(() => {
+                    if (clickCount === 3) {
+                        showLogoEasterEgg();
+                    }
+                    clickCount = 0;
+                    logo.classList.remove('click-1', 'click-2', 'click-3');
+                }, 500);
+            });
+        }
+
+        // Konami Code Easter Egg
+        let konamiCode = [];
+        const konamiPattern = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+        
+        document.addEventListener('keydown', (e) => {
+            konamiCode.push(e.key);
+            konamiCode = konamiCode.slice(-10);
+            
+            if (konamiCode.join(',') === konamiPattern.join(',')) {
+                activateKonamiCode();
+            }
+        });
+
+        // Secret Navigation Easter Egg (Hold Shift + N)
+        document.addEventListener('keydown', (e) => {
+            if (e.shiftKey && e.key === 'N') {
+                toggleSecretNav();
+            }
+        });
+
+        // Hidden Text Easter Eggs
+        initHiddenTextEggs();
+
+        // Matrix Rain Easter Egg (Type "matrix" anywhere)
+        let matrixTyping = [];
+        document.addEventListener('keypress', (e) => {
+            matrixTyping.push(e.key);
+            matrixTyping = matrixTyping.slice(-6);
+            
+            if (matrixTyping.join('') === 'matrix') {
+                activateMatrixRain();
+                matrixTyping = [];
+            }
+        });
+    }
+
+    // Logo Easter Egg Message
+    function showLogoEasterEgg() {
+        const messages = [
+            "You found the secret! 🎉",
+            "HLPFL - Where dreams become websites ✨",
+            "You've unlocked the premium experience! 🚀",
+            "Secret mode activated! 🎯",
+            "Welcome to the inner circle! 🌟"
+        ];
+        
+        const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+        createFloatingMessage(randomMessage);
+    }
+
+    // Create floating message
+    function createFloatingMessage(text) {
+        const message = document.createElement('div');
+        message.textContent = text;
+        message.style.cssText = `
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(135deg, #c87941, #e09560);
+            color: white;
+            padding: 1.5rem 2rem;
+            border-radius: 12px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            z-index: 10002;
+            animation: floatMessage 3s ease forwards;
+            box-shadow: 0 20px 40px rgba(200, 121, 65, 0.5);
+        `;
+        
+        document.body.appendChild(message);
+        
+        setTimeout(() => {
+            message.remove();
+        }, 3000);
+    }
+
+    // Konami Code Activation
+    function activateKonamiCode() {
+        document.body.classList.add('konami-active');
+        createFloatingMessage("🎮 KONAMI CODE ACTIVATED! 🎮");
+        
+        // Add rainbow effect to all links temporarily
+        const links = document.querySelectorAll('a, .btn');
+        links.forEach(link => {
+            link.style.animation = 'rainbow 2s linear infinite';
+        });
+        
+        setTimeout(() => {
+            document.body.classList.remove('konami-active');
+            links.forEach(link => {
+                link.style.animation = '';
+            });
+        }, 5000);
+    }
+
+    // Secret Navigation Toggle
+    function toggleSecretNav() {
+        let secretNav = document.querySelector('.secret-nav');
+        if (!secretNav) {
+            secretNav = document.createElement('div');
+            secretNav.className = 'secret-nav';
+            secretNav.innerHTML = `
+                <h4 style="color: var(--primary); margin-bottom: 1rem;">🔓 Secret Navigation</h4>
+                <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="btn" style="display: block; width: 100%; margin-bottom: 0.5rem;">Top</button>
+                <button onclick="document.querySelector('.hero').scrollIntoView({behavior: 'smooth'})" class="btn" style="display: block; width: 100%; margin-bottom: 0.5rem;">Hero</button>
+                <button onclick="document.querySelector('footer').scrollIntoView({behavior: 'smooth'})" class="btn" style="display: block; width: 100%;">Footer</button>
+            `;
+            document.body.appendChild(secretNav);
+        }
+        
+        secretNav.classList.toggle('active');
+    }
+
+    // Hidden Text Easter Eggs
+    function initHiddenTextEggs() {
+        // Add secret messages to certain elements
+        const secretTexts = [
+            { selector: '.hero h1', text: " Excellence in every pixel " },
+            { selector: '.btn', text: " Click with purpose " },
+            { selector: '.section-title', text: " Crafted with passion " }
+        ];
+
+        secretTexts.forEach(({ selector, text }) => {
+            const elements = document.querySelectorAll(selector);
+            elements.forEach(element => {
+                element.title = text;
+                element.addEventListener('mouseenter', () => {
+                    if (Math.random() > 0.9) { // 10% chance
+                        element.style.position = 'relative';
+                        element.setAttribute('data-secret', text);
+                    }
+                });
+            });
+        });
+    }
+
+    // Matrix Rain Effect
+    function activateMatrixRain() {
+        let matrixRain = document.querySelector('.matrix-rain');
+        if (!matrixRain) {
+            matrixRain = document.createElement('div');
+            matrixRain.className = 'matrix-rain';
+            document.body.appendChild(matrixRain);
+        }
+
+        matrixRain.classList.add('active');
+        createFloatingMessage("💻 MATRIX MODE ACTIVATED! 💻");
+
+        // Create matrix columns
+        for (let i = 0; i < 50; i++) {
+            const column = document.createElement('div');
+            column.className = 'matrix-column';
+            column.style.left = Math.random() * 100 + '%';
+            column.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            column.style.animationDelay = Math.random() * 2 + 's';
+            
+            let text = '';
+            for (let j = 0; j < 20; j++) {
+                text += Math.random() > 0.5 ? '1' : '0';
+            }
+            column.textContent = text;
+            
+            matrixRain.appendChild(column);
+        }
+
+        setTimeout(() => {
+            matrixRain.classList.remove('active');
+            setTimeout(() => {
+                matrixRain.innerHTML = '';
+            }, 1000);
+        }, 5000);
+    }
+
     // Initialize everything when DOM is ready
     document.addEventListener('DOMContentLoaded', () => {
         initSparkledBackground();
         initLoadingScreen();
         initNavigation();
         initContactForm();
+        initEasterEggs();
     });
 
     // Initialize sparkled background immediately for better visual effect
