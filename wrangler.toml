@@ -1,0 +1,12 @@
+name = "hlpfl-website"
+compatibility_date = "2024-01-01"
+
+[env.production]
+routes = [
+  { pattern = "hlpfl.dev/*", zone_name = "hlpfl.dev" }
+]
+
+[env.staging]
+routes = [
+  { pattern = "staging.hlpfl.dev/*", zone_name = "hlpfl.dev" }
+]
