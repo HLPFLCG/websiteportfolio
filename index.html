@@ -3,420 +3,811 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Primary Meta Tags -->
-    <title>HLPFL | Premium Web Development for Modern Brands</title>
-    <meta name="title" content="HLPFL | Premium Web Development">
-    <meta name="description" content="Transform your brand with premium web development solutions. We create stunning, high-performance websites that drive results and elevate your digital presence.">
-    <meta name="keywords" content="premium web development, luxury websites, high-end design, modern web solutions, HLPFL">
-    <meta name="author" content="HLPFL">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://hlpfl.dev/">
-    <meta property="og:title" content="HLPFL | Premium Web Development">
-    <meta property="og:description" content="Transform your brand with premium web development solutions. We create stunning, high-performance websites that drive results.">
-    <meta property="og:image" content="https://hlpfl.dev/og-image.jpg">
-    <meta property="og:site_name" content="HLPFL">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://hlpfl.dev/">
-    <meta property="twitter:title" content="HLPFL | Premium Web Development">
-    <meta property="twitter:description" content="Transform your brand with premium web development solutions.">
-    <meta property="twitter:image" content="https://hlpfl.dev/twitter-image.jpg">
-    
-    <!-- Additional SEO Meta Tags -->
-    <meta name="theme-color" content="#ff6b35">
-    <meta name="msapplication-TileColor" content="#ff6b35">
-    <meta name="application-name" content="HLPFL">
-    <meta name="apple-mobile-web-app-title" content="HLPFL">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="hlpfl-symbol.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
-    <link rel="manifest" href="site.webmanifest">
-    
-    <!-- Google Fonts - Premium Typography -->
+    <title>HLPFL - Digital Innovation Agency</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Premium Styles -->
-    <link rel="stylesheet" href="premium-styles.css">
-    
-    <!-- Security Headers Meta -->
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="X-Frame-Options" content="DENY">
-    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
-    <meta name="referrer" content="strict-origin-when-cross-origin">
-    
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "HLPFL",
-        "url": "https://hlpfl.dev",
-        "logo": "https://hlpfl.dev/hlpfl-logo-full.svg",
-        "description": "Premium web development solutions for modern brands",
-        "sameAs": [
-            "https://twitter.com/hlpfl",
-            "https://linkedin.com/company/hlpfl"
-        ]
-    }
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
 </head>
 <body>
-    <!-- Premium Loading Screen - NO ORANGE OVERLAY -->
+    <div class="scroll-progress"></div>
+    <div class="cursor-follower"></div>
+    <div class="cursor-dot"></div>
     <div class="loading-screen">
-        <img src="hlpfl-logo-full.svg" alt="HLPFL" class="loading-logo">
-        <!-- Abundant orange sparkles will be added by JavaScript -->
+        <div class="loading-content">
+            <div class="loading-logo">
+                <span class="logo-letter" data-letter="H">H</span>
+                <span class="logo-letter" data-letter="L">L</span>
+                <span class="logo-letter" data-letter="P">P</span>
+                <span class="logo-letter" data-letter="F">F</span>
+                <span class="logo-letter" data-letter="L">L</span>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <div class="loading-percentage">0%</div>
+        </div>
     </div>
 
-    <!-- Premium Navigation -->
-    <nav class="navbar">
-        <div class="navbar-container">
-            <a href="#" class="navbar-logo">
-                <img src="hlpfl-symbol.svg" alt="HLPFL" class="navbar-logo-symbol">
-                <span class="navbar-logo-text">HLPFL</span>
-            </a>
-            
-            <button class="navbar-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            
-            <ul class="navbar-menu">
-                <li><a href="#home" class="navbar-link active">Home</a></li>
-                <li><a href="#about" class="navbar-link">About</a></li>
-                <li><a href="#services" class="navbar-link">Services</a></li>
-                <li><a href="#portfolio" class="navbar-link">Portfolio</a></li>
-                <li><a href="#contact" class="navbar-link">Contact</a></li>
-            </ul>
+    <div class="transition-overlay"></div>
+    <div class="particles-canvas"></div>
+    <div class="noise-overlay"></div>
+
+    <nav class="navbar" data-scroll-section>
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">HLPFL</span>
+                <div class="logo-glow"></div>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link" data-scroll-to><span data-text="Home">Home</span></a>
+                <a href="#about" class="nav-link" data-scroll-to><span data-text="About">About</span></a>
+                <a href="#services" class="nav-link" data-scroll-to><span data-text="Services">Services</span></a>
+                <a href="#work" class="nav-link" data-scroll-to><span data-text="Work">Work</span></a>
+                <a href="#process" class="nav-link" data-scroll-to><span data-text="Process">Process</span></a>
+                <a href="#contact" class="nav-link" data-scroll-to><span data-text="Contact">Contact</span></a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="language-toggle" aria-label="Toggle language">
+                    <span>EN</span>
+                </button>
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">
-                Premium Web Development
-                <br>
-                That Elevates Your Brand
-            </h1>
-            <p class="hero-subtitle">
-                Transform your digital presence with stunning, high-performance websites 
-                that captivate audiences and drive measurable results for your business.
-            </p>
-            <div class="hero-actions">
-                <a href="#contact" class="btn btn-primary btn-magnetic">Start Your Project</a>
-                <a href="#portfolio" class="btn btn-secondary">View Our Work</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section" data-animate="fadeUp">
-        <div class="container">
-            <div class="text-center mb-6">
-                <h2 data-animate="fadeUp">Crafting Digital Excellence</h2>
-                <p class="max-w-3xl mx-auto" data-animate="fadeUp" data-animate-delay="0.2">
-                    We combine cutting-edge technology with creative design to build 
-                    websites that not only look stunning but also deliver exceptional 
-                    user experiences and drive business growth.
-                </p>
+    <main>
+        <section id="home" class="hero" data-scroll-section>
+            <div class="hero-background">
+                <div class="hero-gradient"></div>
+                <div class="hero-particles" id="hero-particles"></div>
+                <div class="floating-shapes">
+                    <div class="shape shape-1" data-parallax="0.5" data-float="true"></div>
+                    <div class="shape shape-2" data-parallax="0.3" data-float="true"></div>
+                    <div class="shape shape-3" data-parallax="0.7" data-float="true"></div>
+                    <div class="shape shape-4" data-parallax="0.4" data-float="true"></div>
+                </div>
+                <div class="morphing-shapes">
+                    <div class="morph-shape morph-1"></div>
+                    <div class="morph-shape morph-2"></div>
+                </div>
             </div>
             
-            <div class="features-grid">
-                <div class="feature-card" data-animate="fadeUp" data-animate-delay="0.3">
-                    <div class="feature-icon">🚀</div>
-                    <h3>Lightning Fast</h3>
-                    <p>Optimized for speed and performance, ensuring your visitors have the best experience possible.</p>
+            <div class="hero-content">
+                <div class="hero-badge" data-fade-up data-delay="0.1">
+                    <span class="badge-text">🚀 Welcome to the Future</span>
+                    <span class="badge-glow"></span>
                 </div>
                 
-                <div class="feature-card" data-animate="fadeUp" data-animate-delay="0.4">
-                    <div class="feature-icon">🎨</div>
-                    <h3>Stunning Design</h3>
-                    <p>Beautiful, modern designs that capture your brand essence and engage your audience.</p>
-                </div>
+                <h1 class="hero-title" data-split-text>
+                    <span class="title-line">Digital</span>
+                    <span class="title-line">Innovation</span>
+                    <span class="title-line">Agency</span>
+                    <span class="title-highlight">Excellence</span>
+                </h1>
                 
-                <div class="feature-card" data-animate="fadeUp" data-animate-delay="0.5">
-                    <div class="feature-icon">📱</div>
-                    <h3>Fully Responsive</h3>
-                    <p>Perfect on every device, from desktop to mobile, ensuring a consistent experience everywhere.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="section">
-        <div class="container">
-            <div class="text-center mb-6">
-                <h2 data-animate="fadeUp">Our Premium Services</h2>
-                <p class="max-w-3xl mx-auto" data-animate="fadeUp" data-animate-delay="0.2">
-                    Comprehensive web solutions tailored to meet your unique business needs 
-                    and exceed your expectations.
+                <p class="hero-subtitle" data-fade-up data-delay="0.2">
+                    Transforming ideas into extraordinary digital experiences with cutting-edge technology and creative mastery
                 </p>
-            </div>
-            
-            <div class="services-grid">
-                <div class="service-card card" data-animate="fadeUp" data-animate-delay="0.3">
-                    <h3>Custom Web Design</h3>
-                    <p>Tailored designs that reflect your brand identity and resonate with your target audience.</p>
-                    <a href="#" class="btn btn-secondary">Learn More</a>
-                </div>
                 
-                <div class="service-card card" data-animate="fadeUp" data-animate-delay="0.4">
-                    <h3>E-commerce Solutions</h3>
-                    <p>Complete online stores with seamless shopping experiences and robust functionality.</p>
-                    <a href="#" class="btn btn-secondary">Learn More</a>
-                </div>
-                
-                <div class="service-card card" data-animate="fadeUp" data-animate-delay="0.5">
-                    <h3>Performance Optimization</h3>
-                    <p>Lightning-fast websites that rank well and keep visitors engaged.</p>
-                    <a href="#" class="btn btn-secondary">Learn More</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="section">
-        <div class="container">
-            <div class="text-center mb-6">
-                <h2 data-animate="fadeUp">Recent Projects</h2>
-                <p class="max-w-3xl mx-auto" data-animate="fadeUp" data-animate-delay="0.2">
-                    Explore our portfolio of premium websites that have helped businesses 
-                    achieve their digital goals.
-                </p>
-            </div>
-            
-            <div class="portfolio-grid">
-                <div class="portfolio-item" data-animate="fadeUp" data-animate-delay="0.3">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="Project 1" loading="lazy">
-                    <div class="portfolio-overlay">
-                        <h3>Luxury Brand Website</h3>
-                        <p>Premium e-commerce platform for high-end fashion brand</p>
+                <div class="hero-stats" data-fade-up data-delay="0.3">
+                    <div class="stat-mini">
+                        <span class="stat-number-mini" data-counter="150">0</span>
+                        <span class="stat-label-mini">Projects</span>
+                    </div>
+                    <div class="stat-mini">
+                        <span class="stat-number-mini" data-counter="98">0</span>
+                        <span class="stat-label-mini">Success %</span>
+                    </div>
+                    <div class="stat-mini">
+                        <span class="stat-number-mini" data-counter="24">0</span>
+                        <span class="stat-label-mini">Awards</span>
                     </div>
                 </div>
                 
-                <div class="portfolio-item" data-animate="fadeUp" data-animate-delay="0.4">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Project 2" loading="lazy">
-                    <div class="portfolio-overlay">
-                        <h3>Tech Startup Platform</h3>
-                        <p>Modern SaaS application with advanced features</p>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item" data-animate="fadeUp" data-animate-delay="0.5">
-                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop" alt="Project 3" loading="lazy">
-                    <div class="portfolio-overlay">
-                        <h3>Corporate Website</h3>
-                        <p>Professional website for financial services company</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <div class="text-center mb-6">
-                <h2 data-animate="fadeUp">Let's Create Something Amazing</h2>
-                <p class="max-w-3xl mx-auto" data-animate="fadeUp" data-animate-delay="0.2">
-                    Ready to elevate your digital presence? Get in touch with our team 
-                    to discuss your project and discover how we can help you succeed.
-                </p>
-            </div>
-            
-            <div class="contact-content">
-                <div class="contact-form" data-animate="fadeUp" data-animate-delay="0.3">
-                    <form>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Name *</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email *</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="service">Service Interested In</label>
-                            <select id="service" name="service">
-                                <option value="">Select a service</option>
-                                <option value="design">Web Design</option>
-                                <option value="ecommerce">E-commerce</option>
-                                <option value="optimization">Performance Optimization</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Message *</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
-                </div>
-                
-                <div class="contact-info" data-animate="fadeUp" data-animate-delay="0.4">
-                    <div class="contact-item">
-                        <div class="contact-icon">📧</div>
-                        <div>
-                            <h4>Email</h4>
-                            <p>hello@hlpfl.dev</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">📱</div>
-                        <div>
-                            <h4>Phone</h4>
-                            <p>+1 (555) 123-4567</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">📍</div>
-                        <div>
-                            <h4>Location</h4>
-                            <p>New York, NY</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Premium Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <a href="#" class="footer-logo">
-                        <img src="hlpfl-symbol.svg" alt="HLPFL" class="footer-logo-symbol">
-                        <span class="footer-logo-text">HLPFL</span>
+                <div class="hero-cta" data-fade-up data-delay="0.4">
+                    <a href="#work" class="btn-primary" data-scroll-to>
+                        <span class="btn-text">View Our Work</span>
+                        <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
+                        <div class="btn-glow"></div>
                     </a>
-                    <p class="footer-description">
-                        Transform your digital presence with premium web development 
-                        solutions that drive results and elevate your brand.
+                    <a href="#contact" class="btn-secondary" data-scroll-to>
+                        <span class="btn-text">Get Started</span>
+                        <span class="btn-icon"><i class="fas fa-rocket"></i></span>
+                        <div class="btn-border"></div>
+                    </a>
+                </div>
+                
+                <div class="hero-scroll" data-scroll-indicator>
+                    <div class="scroll-mouse">
+                        <div class="scroll-wheel"></div>
+                    </div>
+                    <span class="scroll-text">Scroll to explore</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about" data-scroll-section>
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-content" data-sticky-element>
+                        <div class="section-badge" data-fade-up>
+                            <span>Who We Are</span>
+                        </div>
+                        <h2 class="section-title" data-split-text>
+                            <span class="title-gradient">About HLPFL</span>
+                        </h2>
+                        <p class="about-text" data-fade-up data-delay="0.1">
+                            We are a cutting-edge digital agency specializing in creating innovative solutions that push the boundaries of web technology and design. Our team of experts combines creative vision with technical excellence.
+                        </p>
+                        
+                        <div class="features-list" data-fade-up data-delay="0.2">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-rocket"></i>
+                                    <div class="icon-glow"></div>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Innovation First</h4>
+                                    <p>Cutting-edge solutions that领先</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-users"></i>
+                                    <div class="icon-glow"></div>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Expert Team</h4>
+                                    <p>Talented professionals dedicated to excellence</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-trophy"></i>
+                                    <div class="icon-glow"></div>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Proven Results</h4>
+                                    <p>Track record of successful projects</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="stats-grid" data-fade-up data-delay="0.3">
+                            <div class="stat-item">
+                                <span class="stat-number" data-counter="150">0</span>
+                                <span class="stat-label">Projects</span>
+                                <div class="stat-progress">
+                                    <div class="progress-fill" data-progress="100"></div>
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" data-counter="75">0</span>
+                                <span class="stat-label">Clients</span>
+                                <div class="stat-progress">
+                                    <div class="progress-fill" data-progress="85"></div>
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" data-counter="98">0</span>
+                                <span class="stat-label">Success %</span>
+                                <div class="stat-progress">
+                                    <div class="progress-fill" data-progress="98"></div>
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" data-counter="8">0</span>
+                                <span class="stat-label">Years</span>
+                                <div class="stat-progress">
+                                    <div class="progress-fill" data-progress="80"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-visual" data-parallax-element>
+                        <div class="about-image-container">
+                            <div class="about-image-wrapper">
+                                <div class="image-placeholder">
+                                    <div class="image-grid">
+                                        <div class="grid-line"></div>
+                                        <div class="grid-line"></div>
+                                        <div class="grid-line"></div>
+                                        <div class="grid-line"></div>
+                                    </div>
+                                    <div class="floating-elements">
+                                        <div class="float-element elem-1"></div>
+                                        <div class="float-element elem-2"></div>
+                                        <div class="float-element elem-3"></div>
+                                    </div>
+                                </div>
+                                <div class="image-overlay">
+                                    <div class="overlay-text">
+                                        <span>8 Years of Excellence</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="about-shapes">
+                                <div class="about-shape shape-a"></div>
+                                <div class="about-shape shape-b"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services" data-scroll-section>
+            <div class="container">
+                <div class="section-header" data-center-text>
+                    <div class="section-badge" data-fade-up>
+                        <span>What We Do</span>
+                    </div>
+                    <h2 class="section-title" data-split-text>
+                        <span class="title-gradient">Our Services</span>
+                    </h2>
+                    <p class="section-subtitle" data-fade-up data-delay="0.1">
+                        Comprehensive digital solutions powered by innovation and creativity
                     </p>
                 </div>
                 
-                <div class="footer-section">
-                    <h3>Services</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Web Design</a></li>
-                        <li><a href="#">E-commerce</a></li>
-                        <li><a href="#">Performance</a></li>
-                        <li><a href="#">Consulting</a></li>
-                    </ul>
+                <div class="services-showcase">
+                    <div class="service-categories">
+                        <button class="category-btn active" data-category="all">All Services</button>
+                        <button class="category-btn" data-category="development">Development</button>
+                        <button class="category-btn" data-category="design">Design</button>
+                        <button class="category-btn" data-category="strategy">Strategy</button>
+                    </div>
+                    
+                    <div class="services-grid">
+                        <div class="service-card premium" data-scroll-card data-category="development">
+                            <div class="service-number">01</div>
+                            <div class="service-icon">
+                                <div class="icon-bg">
+                                    <div class="icon-particles"></div>
+                                </div>
+                                <div class="icon-content">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                            </div>
+                            <h3 class="service-title">Web Development</h3>
+                            <p class="service-description">Custom web applications built with cutting-edge technologies and best practices</p>
+                            <div class="service-features">
+                                <span class="feature-tag">React</span>
+                                <span class="feature-tag">Node.js</span>
+                                <span class="feature-tag">Cloud</span>
+                            </div>
+                            <div class="service-hover-effect">
+                                <div class="hover-particles"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="service-card" data-scroll-card data-category="design">
+                            <div class="service-number">02</div>
+                            <div class="service-icon">
+                                <div class="icon-bg">
+                                    <div class="icon-particles"></div>
+                                </div>
+                                <div class="icon-content">
+                                    <i class="fas fa-palette"></i>
+                                </div>
+                            </div>
+                            <h3 class="service-title">UI/UX Design</h3>
+                            <p class="service-description">Beautiful interfaces that deliver exceptional user experiences</p>
+                            <div class="service-features">
+                                <span class="feature-tag">Figma</span>
+                                <span class="feature-tag">Prototyping</span>
+                                <span class="feature-tag">Research</span>
+                            </div>
+                            <div class="service-hover-effect">
+                                <div class="hover-particles"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="service-card premium" data-scroll-card data-category="development">
+                            <div class="service-number">03</div>
+                            <div class="service-icon">
+                                <div class="icon-bg">
+                                    <div class="icon-particles"></div>
+                                </div>
+                                <div class="icon-content">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                            </div>
+                            <h3 class="service-title">Mobile Apps</h3>
+                            <p class="service-description">Native and cross-platform mobile applications</p>
+                            <div class="service-features">
+                                <span class="feature-tag">iOS</span>
+                                <span class="feature-tag">Android</span>
+                                <span class="feature-tag">Flutter</span>
+                            </div>
+                            <div class="service-hover-effect">
+                                <div class="hover-particles"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="service-card" data-scroll-card data-category="development">
+                            <div class="service-number">04</div>
+                            <div class="service-icon">
+                                <div class="icon-bg">
+                                    <div class="icon-particles"></div>
+                                </div>
+                                <div class="icon-content">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                            </div>
+                            <h3 class="service-title">AI Solutions</h3>
+                            <p class="service-description">Intelligent automation and machine learning implementations</p>
+                            <div class="service-features">
+                                <span class="feature-tag">ML</span>
+                                <span class="feature-tag">NLP</span>
+                                <span class="feature-tag">CV</span>
+                            </div>
+                            <div class="service-hover-effect">
+                                <div class="hover-particles"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="service-card" data-scroll-card data-category="strategy">
+                            <div class="service-number">05</div>
+                            <div class="service-icon">
+                                <div class="icon-bg">
+                                    <div class="icon-particles"></div>
+                                </div>
+                                <div class="icon-content">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                            </div>
+                            <h3 class="service-title">Data Analytics</h3>
+                            <p class="service-description">Actionable insights from your business data</p>
+                            <div class="service-features">
+                                <span class="feature-tag">Big Data</span>
+                                <span class="feature-tag">BI</span>
+                                <span class="feature-tag">Dashboard</span>
+                            </div>
+                            <div class="service-hover-effect">
+                                <div class="hover-particles"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="service-card premium" data-scroll-card data-category="development">
+                            <div class="service-number">06</div>
+                            <div class="service-icon">
+                                <div class="icon-bg">
+                                    <div class="icon-particles"></div>
+                                </div>
+                                <div class="icon-content">
+                                    <i class="fas fa-cloud"></i>
+                                </div>
+                            </div>
+                            <h3 class="service-title">Cloud Solutions</h3>
+                            <p class="service-description">Scalable cloud infrastructure and deployment</p>
+                            <div class="service-features">
+                                <span class="feature-tag">AWS</span>
+                                <span class="feature-tag">Azure</span>
+                                <span class="feature-tag">DevOps</span>
+                            </div>
+                            <div class="service-hover-effect">
+                                <div class="hover-particles"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="work" class="work" data-scroll-section>
+            <div class="container">
+                <div class="section-header" data-center-text>
+                    <div class="section-badge" data-fade-up>
+                        <span>Portfolio</span>
+                    </div>
+                    <h2 class="section-title" data-split-text>
+                        <span class="title-gradient">Our Work</span>
+                    </h2>
+                    <p class="section-subtitle" data-fade-up data-delay="0.1">
+                        Projects that showcase our expertise and innovation
+                    </p>
                 </div>
                 
-                <div class="footer-section">
-                    <h3>Company</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">Team</a></li>
-                        <li><a href="#">Careers</a></li>
-                    </ul>
+                <div class="work-filter">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="web">Web</button>
+                    <button class="filter-btn" data-filter="mobile">Mobile</button>
+                    <button class="filter-btn" data-filter="ai">AI</button>
                 </div>
                 
-                <div class="footer-section">
-                    <h3>Connect</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                    </ul>
+                <div class="work-grid">
+                    <div class="work-item featured" data-work-item data-category="web">
+                        <div class="work-image">
+                            <div class="image-placeholder">
+                                <div class="image-overlay"></div>
+                                <div class="image-content">
+                                    <div class="project-number">01</div>
+                                    <h3 class="work-title">Project Alpha</h3>
+                                    <p class="work-category">Web Development</p>
+                                    <div class="work-tech">
+                                        <span>React</span>
+                                        <span>Node.js</span>
+                                        <span>MongoDB</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="work-hover-info">
+                                <div class="hover-content">
+                                    <h4>Revolutionary Web Platform</h4>
+                                    <p>Full-stack application serving 10M+ users</p>
+                                    <a href="#" class="project-link">
+                                        <span>View Case Study</span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="work-item" data-work-item data-category="mobile">
+                        <div class="work-image">
+                            <div class="image-placeholder">
+                                <div class="image-overlay"></div>
+                                <div class="image-content">
+                                    <div class="project-number">02</div>
+                                    <h3 class="work-title">Brand Evolution</h3>
+                                    <p class="work-category">UI/UX Design</p>
+                                    <div class="work-tech">
+                                        <span>Figma</span>
+                                        <span>Prototyping</span>
+                                        <span>Research</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="work-hover-info">
+                                <div class="hover-content">
+                                    <h4>Complete Brand Redesign</h4>
+                                    <p>Award-winning design system</p>
+                                    <a href="#" class="project-link">
+                                        <span>View Case Study</span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="work-item featured" data-work-item data-category="mobile">
+                        <div class="work-image">
+                            <div class="image-placeholder">
+                                <div class="image-overlay"></div>
+                                <div class="image-content">
+                                    <div class="project-number">03</div>
+                                    <h3 class="work-title">Mobile First</h3>
+                                    <p class="work-category">Mobile App</p>
+                                    <div class="work-tech">
+                                        <span>Flutter</span>
+                                        <span>Firebase</span>
+                                        <span>ML Kit</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="work-hover-info">
+                                <div class="hover-content">
+                                    <h4>Cross-Platform Mobile App</h4>
+                                    <p>5M+ downloads, 4.8★ rating</p>
+                                    <a href="#" class="project-link">
+                                        <span>View Case Study</span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="work-item" data-work-item data-category="ai">
+                        <div class="work-image">
+                            <div class="image-placeholder">
+                                <div class="image-overlay"></div>
+                                <div class="image-content">
+                                    <div class="project-number">04</div>
+                                    <h3 class="work-title">AI Dashboard</h3>
+                                    <p class="work-category">AI Solution</p>
+                                    <div class="work-tech">
+                                        <span>Python</span>
+                                        <span>TensorFlow</span>
+                                        <span>D3.js</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="work-hover-info">
+                                <div class="hover-content">
+                                    <h4>Intelligent Analytics Platform</h4>
+                                    <p>Real-time AI-powered insights</p>
+                                    <a href="#" class="project-link">
+                                        <span>View Case Study</span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="process" class="process" data-scroll-section>
+            <div class="container">
+                <div class="section-header" data-center-text>
+                    <div class="section-badge" data-fade-up>
+                        <span>How We Work</span>
+                    </div>
+                    <h2 class="section-title" data-split-text>
+                        <span class="title-gradient">Our Process</span>
+                    </h2>
+                    <p class="section-subtitle" data-fade-up data-delay="0.1">
+                        A proven methodology for delivering exceptional results
+                    </p>
+                </div>
+                
+                <div class="process-timeline">
+                    <div class="process-line"></div>
+                    <div class="process-item" data-fade-up>
+                        <div class="process-number">01</div>
+                        <div class="process-icon">
+                            <i class="fas fa-lightbulb"></i>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <div class="process-content">
+                            <h3>Discovery</h3>
+                            <p>Understanding your vision, goals, and requirements through in-depth consultation and research</p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-item" data-fade-up data-delay="0.1">
+                        <div class="process-number">02</div>
+                        <div class="process-icon">
+                            <i class="fas fa-pencil-ruler"></i>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <div class="process-content">
+                            <h3>Strategy & Design</h3>
+                            <p>Crafting comprehensive strategies and stunning designs that align with your objectives</p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-item" data-fade-up data-delay="0.2">
+                        <div class="process-number">03</div>
+                        <div class="process-icon">
+                            <i class="fas fa-code"></i>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <div class="process-content">
+                            <h3>Development</h3>
+                            <p>Building robust, scalable solutions using cutting-edge technologies and best practices</p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-item" data-fade-up data-delay="0.3">
+                        <div class="process-number">04</div>
+                        <div class="process-icon">
+                            <i class="fas fa-rocket"></i>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <div class="process-content">
+                            <h3>Launch & Support</h3>
+                            <p>Deploying your solution and providing ongoing support to ensure continued success</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact" data-scroll-section>
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-info" data-sticky-element>
+                        <div class="section-badge" data-fade-up>
+                            <span>Get In Touch</span>
+                        </div>
+                        <h2 class="section-title" data-split-text>
+                            <span class="title-gradient">Let's Connect</span>
+                        </h2>
+                        <p class="contact-text" data-fade-up data-delay="0.1">
+                            Ready to transform your digital presence? We're here to help you achieve your goals and exceed expectations.
+                        </p>
+                        
+                        <div class="contact-channels" data-fade-up data-delay="0.2">
+                            <div class="channel-item">
+                                <div class="channel-icon">
+                                    <i class="fas fa-envelope"></i>
+                                    <div class="icon-pulse"></div>
+                                </div>
+                                <div class="channel-info">
+                                    <span class="channel-label">Email</span>
+                                    <a href="mailto:hello@hlpfl.dev" class="channel-link">hello@hlpfl.dev</a>
+                                </div>
+                            </div>
+                            
+                            <div class="channel-item">
+                                <div class="channel-icon">
+                                    <i class="fas fa-phone"></i>
+                                    <div class="icon-pulse"></div>
+                                </div>
+                                <div class="channel-info">
+                                    <span class="channel-label">Phone</span>
+                                    <a href="tel:+1234567890" class="channel-link">+1 (234) 567-890</a>
+                                </div>
+                            </div>
+                            
+                            <div class="channel-item">
+                                <div class="channel-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <div class="icon-pulse"></div>
+                                </div>
+                                <div class="channel-info">
+                                    <span class="channel-label">Office</span>
+                                    <span class="channel-link">San Francisco, CA</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="social-proof" data-fade-up data-delay="0.3">
+                            <div class="social-title">Follow us</div>
+                            <div class="social-links">
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-twitter"></i>
+                                    <div class="social-glow"></div>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-linkedin"></i>
+                                    <div class="social-glow"></div>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-github"></i>
+                                    <div class="social-glow"></div>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-dribbble"></i>
+                                    <div class="social-glow"></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-wrapper" data-fade-up data-delay="0.2">
+                        <form class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <input type="text" class="form-input" placeholder="Your Name" required>
+                                    <div class="input-border"></div>
+                                    <div class="input-focus"></div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-input" placeholder="Your Email" required>
+                                    <div class="input-border"></div>
+                                    <div class="input-focus"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="text" class="form-input" placeholder="Subject" required>
+                                <div class="input-border"></div>
+                                <div class="input-focus"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <textarea class="form-input" placeholder="Tell us about your project..." rows="5" required></textarea>
+                                <div class="input-border"></div>
+                                <div class="input-focus"></div>
+                            </div>
+                            
+                            <button type="submit" class="btn-primary">
+                                <span class="btn-text">Send Message</span>
+                                <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+                                <div class="btn-glow"></div>
+                            </button>
+                        </form>
+                        
+                        <div class="form-success-message">
+                            <i class="fas fa-check-circle"></i>
+                            <h4>Message Sent!</h4>
+                            <p>We'll get back to you within 24 hours.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" data-scroll-section>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-text">HLPFL</span>
+                        <div class="logo-glow"></div>
+                    </div>
+                    <p class="footer-tagline">Digital Innovation Excellence</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-dribbble"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links-grid">
+                    <div class="footer-links-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#services">Web Development</a></li>
+                            <li><a href="#services">UI/UX Design</a></li>
+                            <li><a href="#services">Mobile Apps</a></li>
+                            <li><a href="#services">AI Solutions</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#work">Portfolio</a></li>
+                            <li><a href="#process">Process</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Case Studies</a></li>
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">Support</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p class="footer-copyright">
-                    © 2024 HLPFL. All rights reserved. Crafted with passion and precision.
-                </p>
-                <div class="footer-social">
-                    <a href="#" aria-label="Twitter">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-                        </svg>
-                    </a>
-                    <a href="#" aria-label="LinkedIn">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
-                            <circle cx="4" cy="4" r="2"></circle>
-                        </svg>
-                    </a>
-                    <a href="#" aria-label="GitHub">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"></path>
-                        </svg>
-                    </a>
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 HLPFL. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Cookie Consent Banner -->
-    <div class="cookie-banner">
-        <div class="cookie-container">
-            <div class="cookie-content">
-                <h3 class="cookie-title">🍪 Cookie Consent</h3>
-                <p class="cookie-description">
-                    We use cookies to enhance your experience and analyze site traffic. 
-                    By accepting, you agree to our use of cookies.
-                </p>
-            </div>
-            <div class="cookie-actions">
-                <button class="btn btn-secondary cookie-decline">Decline</button>
-                <button class="btn btn-primary cookie-accept">Accept</button>
-            </div>
+    <div class="scroll-to-top" data-scroll-to-top>
+        <i class="fas fa-arrow-up"></i>
+        <div class="scroll-progress-circle">
+            <svg viewBox="0 0 100 100">
+                <circle class="progress-bg" cx="50" cy="50" r="45"></circle>
+                <circle class="progress-fill" cx="50" cy="50" r="45"></circle>
+            </svg>
         </div>
     </div>
 
-    <!-- Landing Page Popup -->
-    <div class="popup-overlay">
-        <div class="popup">
-            <div class="popup-header">
-                <h2 class="popup-title">🎉 Welcome to HLPFL</h2>
-                <button class="popup-close" aria-label="Close popup">&times;</button>
-            </div>
-            <div class="popup-content">
-                <p>
-                    Transform your digital presence with premium web development solutions. 
-                    Get a <strong>10% discount</strong> on your first project when you mention this popup!
-                </p>
-                <p>
-                    Our team of experts is ready to create stunning, high-performance websites 
-                    that drive results and elevate your brand.
-                </p>
-            </div>
-            <div class="popup-actions">
-                <button class="btn btn-secondary popup-dismiss">Maybe Later</button>
-                <a href="#contact" class="btn btn-primary">Get Started</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Premium JavaScript -->
-    <script src="premium-scripts.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
